@@ -1,0 +1,239 @@
+# Portuguese translations for sysstat package.
+# Copyright (C) 2007 Free Software Foundation
+# This file is distributed under the same license as the sysstat package.
+# João Victor Duarte Martins <jvdm@sdf.lonestar.org>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sysstat 8.1.1\n"
+"Report-Msgid-Bugs-To: sysstat <at> orange.fr\n"
+"POT-Creation-Date: 2008-02-09 18:30+0100\n"
+"PO-Revision-Date: 2008-02-10 13:58-0200\n"
+"Last-Translator: João Victor Duarte Martins <jvdm@sdf.lonestar.org>\n"
+"Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: common.c:58
+#, c-format
+msgid "sysstat version %s\n"
+msgstr "sysstat versão %s\n"
+
+#: common.c:197 common.c:449 ioconf.c:471 mpstat.c:324 sa_common.c:810
+#: sadc.c:590 sadc.c:599 sadc.c:660 sadc.c:761
+#, c-format
+msgid "Cannot open %s: %s\n"
+msgstr "Não é possível abrir %s: %s\n"
+
+#: common.c:241
+#, c-format
+msgid "Cannot handle so many processors!\n"
+msgstr "Não é possível lidar com tantos processadores!\n"
+
+#: iostat.c:78 mpstat.c:71 pidstat.c:77 sadc.c:81 sadf.c:81 sar.c:79
+msgid "Usage:"
+msgstr "Uso:"
+
+#: iostat.c:78 mpstat.c:71 pidstat.c:77 sadc.c:81 sadf.c:81 sar.c:79
+msgid "options..."
+msgstr "opções..."
+
+#: iostat.c:78 mpstat.c:72 pidstat.c:77 sadc.c:81 sadf.c:81 sar.c:79 sar.c:89
+msgid "interval"
+msgstr "intervalo"
+
+#: iostat.c:78 mpstat.c:72 pidstat.c:77 sadc.c:81 sadf.c:82 sar.c:79
+msgid "count"
+msgstr "vezes"
+
+#: iostat.c:80 mpstat.c:74 pidstat.c:79 sadc.c:83 sadf.c:84 sar.c:81
+#, c-format
+msgid "Options are:\n"
+msgstr "As opções são:\n"
+
+#: iostat.c:84
+msgid "device"
+msgstr "dispositivo"
+
+#: iostat.c:1245
+#, c-format
+msgid "Time: %s\n"
+msgstr "Hora: %s\n"
+
+#: iostat.c:1575
+#, c-format
+msgid "-x and -p options are mutually exclusive\n"
+msgstr "as opções -x e -p são mutuamente exclusivas\n"
+
+#: mpstat.c:77 sadf.c:89 sar.c:89
+msgid "cpu"
+msgstr "cpu"
+
+#: mpstat.c:279 pidstat.c:1364 sar.c:962
+msgid "Average:"
+msgstr "Média:"
+
+#: mpstat.c:630 sar.c:169
+#, c-format
+msgid "Not that many processors!\n"
+msgstr "Não esse tanto de processadores!\n"
+
+#: pidstat.c:83
+msgid "command"
+msgstr "comando"
+
+#: pidstat.c:177 sar.c:1717
+#, c-format
+msgid "Requested activities not available\n"
+msgstr "As atividade requisitadas não estão disponíveis\n"
+
+#: sa_common.c:708
+#, c-format
+msgid "Error while reading system activity file: %s\n"
+msgstr "Erro ao ler o arquivo de atividades do sistema: %s\n"
+
+#: sa_common.c:718
+#, c-format
+msgid "End of system activity file unexpected\n"
+msgstr "Fim inesperado do arquivo de atividades do sistema\n"
+
+#: sa_common.c:736
+#, c-format
+msgid "File created using sar/sadc from sysstat version %d.%d.%d"
+msgstr "Arquivo criado usando o sar/sadc da versão %d.%d.%d do sysstat"
+
+#: sa_common.c:766
+#, c-format
+msgid "Invalid system activity file: %s\n"
+msgstr "Arquivo de atividades do sistema inválido: %s\n"
+
+#: sa_common.c:773
+#, c-format
+msgid "Current sysstat version can no longer read the format of this file (%#x)\n"
+msgstr "A versão atual do sysstat não consegue mais ler o formato deste arquivo (%#x)\n"
+
+#: sa_common.c:853
+#, c-format
+msgid "Requested activities not available in file %s\n"
+msgstr "Atividades requisitadas não estão disponíveis no arquivo %s\n"
+
+#: sadc.c:81
+msgid "outfile"
+msgstr "arquivo de saída"
+
+#: sadc.c:86
+msgid "comment"
+msgstr "comentário"
+
+#: sadc.c:111
+#, c-format
+msgid "Cannot write data to system activity file: %s\n"
+msgstr "Não é possível escrever dados no arquivo de atividades do sistema: %s\n"
+
+#: sadc.c:445
+#, c-format
+msgid "Cannot write system activity file header: %s\n"
+msgstr "Não é possível escrever o cabeçalho do arquivo de atividades do sistema: %s\n"
+
+#: sadc.c:706
+#, c-format
+msgid "Cannot append data to that file (%s)\n"
+msgstr "Não é possível inserir dados no final deste arquivo (%s)\n"
+
+#: sadf.c:82
+msgid "datafile"
+msgstr "arquivo de dados"
+
+#: sadf.c:89 sar.c:90
+msgid "hh:mm:ss"
+msgstr "hh:mm:ss"
+
+# dúvida aqui: sar_options?
+#: sadf.c:89
+msgid "sar_options..."
+msgstr "sar_options..."
+
+#: sadf.c:1767
+#, c-format
+msgid "System activity data file: %s (%#x)\n"
+msgstr "Arquivo de dados das atividades do sistema: %s (%#x)\n"
+
+#: sadf.c:1775
+#, c-format
+msgid "Host: "
+msgstr "Computador: "
+
+#: sadf.c:1780
+#, c-format
+msgid "Activity flag: %#x\n"
+msgstr "Sinalizador de atividade: %#x\n"
+
+#: sadf.c:1781
+#, c-format
+msgid "Size of a long int: %d\n"
+msgstr "Tamanho de um 'long int': %d\n"
+
+#: sadf.c:1782
+#, c-format
+msgid "Number of CPU: %u\n"
+msgstr "Número de CPU: %u\n"
+
+#: sadf.c:1783
+#, c-format
+msgid "Number of interrupts per CPU: %u\n"
+msgstr "Número de interrupções por CPU: %u\n"
+
+#: sadf.c:1784
+#, c-format
+msgid "Number of disks: %u\n"
+msgstr "Número de discos: %u\n"
+
+#: sadf.c:1785
+#, c-format
+msgid "Number of serial lines: %u\n"
+msgstr "Número de linhas seriais: %u\n"
+
+#: sadf.c:1786
+#, c-format
+msgid "Number of network interfaces: %u\n"
+msgstr "Número de interfaces de rede: %u\n"
+
+#: sar.c:89
+msgid "int"
+msgstr "int"
+
+#: sar.c:89
+msgid "filename"
+msgstr "nome do arquivo"
+
+#: sar.c:161
+#, c-format
+msgid "Not an SMP machine...\n"
+msgstr "Não é uma máquina SMP...\n"
+
+#: sar.c:1545
+#, c-format
+msgid "Invalid data format\n"
+msgstr "Formato de dados inválido\n"
+
+#: sar.c:1549
+#, c-format
+msgid "Using a wrong data collector from a different sysstat version\n"
+msgstr "Usando um coletador de dados errado de uma versão diferente do sysstat\n"
+
+#: sar.c:1932
+#, c-format
+msgid "-f and -o options are mutually exclusive\n"
+msgstr "As opções -f e -o são mutuamente exclusivas\n"
+
+#: sar.c:1938
+#, c-format
+msgid "Not reading from a system activity file (use -f option)\n"
+msgstr "Não está sendo lido de um arquivo de atividade do sistema (utilize a opção -f)\n"
+
+#: sar.c:2036
+#, c-format
+msgid "Cannot find the data collector (%s)\n"
+msgstr "Não é possível encontrar o coletor de dados (%s)\n"

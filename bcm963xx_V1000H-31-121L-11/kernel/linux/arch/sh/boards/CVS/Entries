@@ -1,0 +1,29 @@
+D/mach-cayman////
+D/mach-dreamcast////
+D/mach-edosk7705////
+D/mach-highlander////
+D/mach-hp6xx////
+D/mach-landisk////
+D/mach-lboxre2////
+D/mach-microdev////
+D/mach-migor////
+D/mach-r2d////
+D/mach-rsk////
+D/mach-sdk7780////
+D/mach-se////
+D/mach-sh03////
+D/mach-sh7763rdp////
+D/mach-snapgear////
+D/mach-systemh////
+D/mach-titan////
+D/mach-x3proto////
+/Kconfig/1.1.1.1/Wed Feb 22 10:23:36 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:23:36 2012/-ko/Tmain_branch_sdk1204
+/board-ap325rxa.c/1.1.1.1/Wed Feb 22 10:23:36 2012/-ko/Tmain_branch_sdk1204
+/board-edosk7760.c/1.1.1.1/Wed Feb 22 10:23:36 2012/-ko/Tmain_branch_sdk1204
+/board-espt.c/1.1.1.1/Wed Feb 22 10:23:36 2012/-ko/Tmain_branch_sdk1204
+/board-magicpanelr2.c/1.1.1.1/Wed Feb 22 10:23:36 2012/-ko/Tmain_branch_sdk1204
+/board-polaris.c/1.1.1.1/Wed Feb 22 10:23:36 2012/-ko/Tmain_branch_sdk1204
+/board-sh7785lcr.c/1.1.1.1/Wed Feb 22 10:23:36 2012/-ko/Tmain_branch_sdk1204
+/board-shmin.c/1.1.1.1/Wed Feb 22 10:23:36 2012/-ko/Tmain_branch_sdk1204
+/board-urquell.c/1.1.1.1/Wed Feb 22 10:23:36 2012/-ko/Tmain_branch_sdk1204

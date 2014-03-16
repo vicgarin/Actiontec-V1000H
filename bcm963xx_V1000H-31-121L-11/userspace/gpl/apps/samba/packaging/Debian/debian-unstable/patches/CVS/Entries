@@ -1,0 +1,18 @@
+/VERSION.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/cups.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/documentation.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/fhs.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/installswat.sh.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/make-distclean.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/nmbd-signalling.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/non-linux-ports.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/nonpic-libsmbclient.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/samba.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/smbclient-pager.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/smbclient-tar.patch.unused/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/smbmount-mtab-flags.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/smbmount-nomtab.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/smbmount-unix-caps.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/smbstatus-locking.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/undefined-symbols.patch/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+D

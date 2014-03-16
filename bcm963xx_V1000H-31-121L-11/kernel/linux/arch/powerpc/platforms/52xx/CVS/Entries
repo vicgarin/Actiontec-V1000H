@@ -1,0 +1,16 @@
+/Kconfig/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/efika.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/lite5200.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/lite5200_pm.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/lite5200_sleep.S/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/media5200.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/mpc5200_simple.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/mpc52xx_common.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/mpc52xx_gpio.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/mpc52xx_gpt.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/mpc52xx_pci.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/mpc52xx_pic.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/mpc52xx_pm.c/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+/mpc52xx_sleep.S/1.1.1.1/Wed Feb 22 10:23:34 2012/-ko/Tmain_branch_sdk1204
+D

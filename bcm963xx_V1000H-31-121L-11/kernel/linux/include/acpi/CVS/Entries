@@ -1,0 +1,19 @@
+D/platform////
+/acexcep.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/acnames.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/acoutput.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/acpi.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/acpi_bus.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/acpi_drivers.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/acpi_numa.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/acpiosxf.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/acpixf.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/acrestyp.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/actbl.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/actbl1.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/actypes.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/container.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/pdc_intel.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/processor.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/reboot.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/video.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204

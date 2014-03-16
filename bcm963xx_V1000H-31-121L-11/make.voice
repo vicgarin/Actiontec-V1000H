@@ -1,0 +1,691 @@
+#****************************************************************************
+#
+#  Copyright (c) 2001, 2002, 2003, 2004  Broadcom Corporation
+#  All Rights Reserved
+#  No portions of this material may be reproduced in any form without the
+#  written permission of:
+#          Broadcom Corporation
+#          16251 Laguna Canyon Road
+#          Irvine, California 92618
+#  All information contained in this document is Broadcom Corporation
+#  company private, proprietary, and trade secret.
+#
+#****************************************************************************
+
+# Makefile for all voice builds
+
+#############################################################################
+#
+# Define Basic Vodsl Variables
+#
+#############################################################################
+
+export VOXXXLOAD=1
+export VOIPLOAD=1
+XCHANGE_DIR = $(BUILD_DIR)/xChange
+VODSL_DIR =  $(BUILD_DIR)/userspace/private/apps/vodsl
+INC_ENDPOINT_PATH=$(BRCMDRIVERS_DIR)/broadcom/char/endpoint/bcm9$(BRCM_CHIP)/inc
+
+#############################################################################
+#                                                                            
+#  Create the temporary file that will contain the DSP module size
+#                                                                            
+#############################################################################
+$(shell echo '#define DSP_CORE_SIZE 0' >  $(SHARED_DIR)/opensource/include/bcm963xx/dsp_mod_size.h )
+$(shell echo '#define DSP_INIT_SIZE 0' >> $(SHARED_DIR)/opensource/include/bcm963xx/dsp_mod_size.h ) 
+
+
+#############################################################################
+#                                                                            
+#  Setting voip protocol flags                                                
+#                                                                            
+#############################################################################
+
+ifeq ($(strip $(BRCM_SMP_EN)),y)
+export BRCM_SMP_BUILD=y
+endif
+
+ifeq ($(strip $(BRCM_APP_PHONE)),sip)
+export SIPLOAD=1
+
+ifeq ($(strip $(BRCM_SIP_CMGR_CCTRL)),y)
+export SIP_CMGR_CCTRL=1
+endif
+
+ifeq ($(strip $(BRCM_SIP_CMGR_CCTK)),y)
+export SIP_CMGR_CCTK=1
+endif
+
+ifeq ($(strip $(AEI_VDSL_CUSTOMER_NCS)),)
+BRCM_RELEASETAG := $(BRCM_RELEASETAG).sip
+endif
+endif
+
+ifeq ($(strip $(BRCM_APP_PHONE)),eptapp)
+export EPTAPPLOAD=1
+BRCM_RELEASETAG := $(BRCM_RELEASETAG).eptapp
+endif
+
+ifeq ($(strip $(BRCM_APP_PHONE)),mgcp)
+export MGCPLOAD=1
+BRCM_RELEASETAG := $(BRCM_RELEASETAG).mgcp
+endif
+
+#############################################################################
+#  
+#  Setting voip feature flags
+#  
+#############################################################################
+
+ifeq ($(strip $(BRCM_PROFILER_ENABLED)),y)
+   export BRCM_PROFILER_TOOL=1
+else
+   export BRCM_PROFILER_TOOL=0
+endif
+
+ifeq ($(strip $(BRCM_VODSL_STUNC)),y)
+   export BRCM_VODSL_STUN_CLIENT=1
+endif
+
+ifeq ($(strip $(BRCM_VODSL_RANDOMP)),y)
+   export BRCM_VODSL_RANDOM_PORT=1
+endif
+
+ifeq ($(strip $(BRCM_VODSL_VOICE_ANNOUNCEMENT)),y)
+   export BRCM_VODSL_VOICE_ANNOUNCEMENT=1
+endif
+
+ifeq ($(strip $(BRCM_VODSL_PSTN_LIFE_LINE_SUPPORT)),y)
+   export BRCM_VODSL_PSTN_LIFE_LINE_SUPPORT=1
+   export BRCM_VOICE_GLOBAL_CFLAGS = PSTN_LIFE_LINE_SUPPORT=1
+endif
+
+ifeq ($(strip $(BRCM_VODSL_MULTIPLE_SIP_ACCOUNTS)),y)
+   export BRCM_VODSL_MULTI_SIP_ACCNT=1
+endif
+
+ifeq ($(strip $(BRCM_VODSL_CALL_FEATURE_PERSIST_STORE_SUPPORT)),y)	
+   export BRCM_VODSL_CALL_FEATURE_PERSIST_STORE_SUPPORT=1
+endif
+
+ifeq ($(strip $(BUILD_G168)),y)
+   export BRCM_G168_TEST=1
+endif
+
+ifeq ($(strip $(BRCM_VOIP_TO_FXO)),y)
+   export BRCM_VOIP_TO_FXO_SUPPORT=1
+endif
+
+ifeq ($(strip $(BUILD_SIPROXD)),y)
+   export BRCM_SIPROXD=1
+endif
+
+ifeq ($(strip $(BRCM_PBDT_SUPPORT)),y)
+   export BRCM_PBDT_SUPPORT=1
+endif
+
+ifeq ($(strip $(BRCM_TPD_SUPPORT)),y)
+   export BRCM_TPD_SUPPORT=1
+endif
+
+#############################################################################
+#
+# DSP and codec flags definition.  To be used throughout the application
+#
+# XCHANGE_BUILD_APP = Refers to app under xChange/dslx/app
+# BRCM_DSP_CODEC_DEFINES = Codecs supported by system
+# BRCM_DSP_CHAN_DEFINES = Special voip channels ( FXO etc.)
+#  
+#############################################################################
+
+########################################################################
+# Setting Default Values ( all will be exported at end of make.voice ) #
+########################################################################
+
+BRCM_DSP_HAL               :=
+BRCM_DSP_HAL_EXTENSION     :=
+BRCM_DSP_CODEC_DEFINES     := -DXCFG_G711_SUPPORT=1
+BRCM_DSP_CODEC_DEFINES += -DXCFG_G722_SUPPORT=1
+BRCM_DSP_CODEC_DEFINES += -DXCFG_G7231_SUPPORT=1
+BRCM_DSP_CODEC_DEFINES += -DXCFG_G726_SUPPORT=1
+BRCM_DSP_CODEC_DEFINES += -DXCFG_G729_SUPPORT=1
+BRCM_DSP_CODEC_DEFINES += -DXCFG_FAX_SUPPORT=1
+BRCM_DSP_CHAN_DEFINES      := -DNUM_FXO_CHANNELS=0
+XCHANGE_BUILD_APP          := 
+XCHANGE_DSP_APP            := all
+XCHANGE_DSP_APP_EXTENSION  :=
+NUM_IDECT_CHANNELS         :=0
+NUM_EDECT_CHANNELS         :=0
+#################################################################
+# Setting Dsp App specific values. Defaults will be overwritten #
+#################################################################
+
+ifeq ($(strip $(BRCM_VOICE_NONDIST)),y)
+export BRCM_VOICE_NONDIST=y
+else
+ifeq ($(strip $(BRCM_DRIVER_BCMDSP)),)
+# if using distributed code and BCRCM_DRIVER_BCMDSP is not defined
+# then define it BOTH in the profile (so it's defined for all subsequent builds)
+# AND locally (for the current build)
+BRCM_DRIVER_BCMDSP=m
+$(shell echo >> $(TARGETS_DIR)/$(PROFILE)/$(PROFILE) )
+$(shell echo "BRCM_DRIVER_BCMDSP=m" >> $(TARGETS_DIR)/$(PROFILE)/$(PROFILE) )
+endif
+endif
+
+#export chip specific uni flag
+export BRCM_$(BRCM_CHIP)_UNI=$(BRCM_VOIP_UNI)
+
+################
+# 6816 Targets #
+################
+
+ifeq ($(strip $(BRCM_CHIP)),6816)
+
+
+ifeq ($(strip $(BRCM_6816_UNI)),y)
+
+BRCM_DSP_HAL := uni
+XCHANGE_BUILD_APP=Bcm$(BRCM_CHIP)uni
+BRCM_DSP_CHAN_DEFINES  := -DNUM_FXO_CHANNELS=0
+BRCM_DSP_CODEC_DEFINES += -DXCFG_AMRWB_SUPPORT=1
+BRCM_DSP_CODEC_DEFINES += -DXCFG_LPCMWB_SUPPORT=1
+export BRCM_6816_ALLCODECS
+export BRCM_PSTN_SUPPORT=1
+
+endif
+
+BRCM_DSP_CHAN_DEFINES  += -DNUM_IDECT_CHANNELS=$(NUM_IDECT_CHANNELS) -DNUM_EDECT_CHANNELS=$(NUM_EDECT_CHANNELS)
+
+endif
+
+
+################
+# 6368 Targets #
+################
+
+ifeq ($(strip $(BRCM_CHIP)),6368)
+
+ifeq ($(strip $(BRCM_6368_UNI)),y)
+BRCM_DSP_HAL := uni
+XCHANGE_BUILD_APP=Bcm$(BRCM_CHIP)uni
+BRCM_DSP_CHAN_DEFINES  := -DNUM_FXO_CHANNELS=1
+BRCM_DSP_CODEC_DEFINES += -DXCFG_AMRWB_SUPPORT=1
+export BRCM_PSTN_SUPPORT=1
+endif
+
+ifeq ($(strip $(BRCM_6368_NTR)),y)
+BRCM_DSP_HAL := vw_ntr
+export XCHANGE_BUILD_APP=Bcm$(BRCM_CHIP)vw_ntr
+BRCM_DSP_CHAN_DEFINES = -DNUM_FXO_CHANNELS=1
+export BRCM_PSTN_SUPPORT=1
+export BRCM_6368_NTR
+ifneq ($(strip $(BRCM_6368_NTR_SUPPORT)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_6368=1
+endif
+ifneq ($(strip $(BRCM_6368_NTR_MDM_SUPPORT)),)
+export BRCM_NTR_MDM_SUPPORT=1
+endif
+endif
+
+BRCM_DSP_CHAN_DEFINES  += -DNUM_IDECT_CHANNELS=$(NUM_IDECT_CHANNELS) -DNUM_EDECT_CHANNELS=$(NUM_EDECT_CHANNELS)
+
+endif
+
+################
+# 6362 Targets #
+################
+
+########################################################################
+# 6362 app specific settings                                           #
+########################################################################
+
+ifeq ($(strip $(BRCM_6362_UNI)),y)
+BRCM_DSP_HAL := uni
+XCHANGE_BUILD_APP=Bcm$(BRCM_CHIP)uni
+BRCM_DSP_CODEC_DEFINES += -DXCFG_LPCMWB_SUPPORT=1
+BRCM_DSP_CODEC_DEFINES += -DXCFG_AMRWB_SUPPORT=1
+
+############################################################################
+# 6362 DECT support level settings                                         #
+############################################################################
+ifeq ($(strip $(BUILD_DECT)),y)
+NUM_IDECT_CHANNELS := 4
+else
+NUM_IDECT_CHANNELS=0
+endif
+
+export BRCM_PSTN_SUPPORT=1
+
+ifeq ($(strip $(BRCM_6362_DECTTEST)),y)
+export BRCM_6362_DECTTEST_SUPPORT=1
+BRCM_DSP_CHAN_DEFINES  += -DDECT_TEST=1
+endif
+
+ifneq ($(strip $(BRCM_6362_NTR_SUPPORT)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_6362=1
+endif
+ifneq ($(strip $(BRCM_6362_NTR_SUPPORT_COMP)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_6362_COMP=1
+endif
+ifneq ($(strip $(BRCM_6362_NTR_SUPPORT_INT)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_6362_INT=1
+endif
+ifneq ($(strip $(BRCM_6362_NTR_MDM_SUPPORT)),)
+export BRCM_NTR_MDM_SUPPORT=1
+endif
+
+BRCM_DSP_CHAN_DEFINES  := -DNUM_FXO_CHANNELS=1 -DNUM_CHANNELS=3+$(NUM_IDECT_CHANNELS)
+BRCM_DSP_CHAN_DEFINES  += -DNUM_IDECT_CHANNELS=$(NUM_IDECT_CHANNELS) -DNUM_EDECT_CHANNELS=$(NUM_EDECT_CHANNELS)
+
+endif
+
+
+#################
+# 63268 Targets #
+#################
+
+########################################################################
+# 63268 app specific settings                                           #
+########################################################################
+
+ifeq ($(strip $(BRCM_63268_UNI)),y)
+BRCM_DSP_HAL := uni
+XCHANGE_BUILD_APP=Bcm$(BRCM_CHIP)uni
+BRCM_DSP_CODEC_DEFINES += -DXCFG_LPCMWB_SUPPORT=1
+BRCM_DSP_CODEC_DEFINES += -DXCFG_AMRWB_SUPPORT=1
+
+############################################################################
+# 63268 DECT support level settings                                         #
+############################################################################
+ifeq ($(strip $(BUILD_DECT)),y)
+NUM_IDECT_CHANNELS := 4
+else
+NUM_IDECT_CHANNELS=0
+endif
+
+export BRCM_PSTN_SUPPORT=1
+
+ifeq ($(strip $(BRCM_63268_DECTTEST)),y)
+export BRCM_63268_DECTTEST_SUPPORT=1
+BRCM_DSP_CHAN_DEFINES  += -DDECT_TEST=1
+endif
+
+ifneq ($(strip $(BRCM_63268_NTR_SUPPORT)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_63268=1
+endif
+ifneq ($(strip $(BRCM_63268_NTR_SUPPORT_COMP)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_63268_COMP=1
+endif
+ifneq ($(strip $(BRCM_63268_NTR_SUPPORT_INT)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_63268_INT=1
+endif
+ifneq ($(strip $(BRCM_63268_NTR_SUPPORT_BONDING)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_63268_BOND=1
+endif
+ifneq ($(strip $(BRCM_63268_NTR_SUPPORT_COMP_BONDING)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_63268_COMP_BOND=1
+endif
+ifneq ($(strip $(BRCM_63268_NTR_SUPPORT_INT_BONDING)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_63268_INT_BOND=1
+endif
+ifneq ($(strip $(BRCM_63268_NTR_MDM_SUPPORT)),)
+export BRCM_NTR_MDM_SUPPORT=1
+endif
+
+BRCM_DSP_CHAN_DEFINES  := -DNUM_FXO_CHANNELS=1 -DNUM_CHANNELS=3+$(NUM_IDECT_CHANNELS)
+BRCM_DSP_CHAN_DEFINES  += -DNUM_IDECT_CHANNELS=$(NUM_IDECT_CHANNELS) -DNUM_EDECT_CHANNELS=$(NUM_EDECT_CHANNELS) $(ACTION_TEC_DFLAGS)
+
+endif
+
+
+
+################
+# 6328 Targets #
+################
+
+ifeq ($(strip $(BRCM_6328_UNI)),y)
+BRCM_DSP_HAL := uni
+XCHANGE_BUILD_APP=Bcm$(BRCM_CHIP)uni
+BRCM_DSP_CHAN_DEFINES  := -DNUM_FXO_CHANNELS=1
+BRCM_DSP_CODEC_DEFINES += -DXCFG_AMRWB_SUPPORT=1
+export BRCM_PSTN_SUPPORT=1
+
+export BRCM_6328
+
+ifneq ($(strip $(BRCM_6328_NTR_SUPPORT)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_6328=1
+endif
+ifneq ($(strip $(BRCM_6328_NTR_SUPPORT_COMP)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_6328_COMP=1
+endif
+ifneq ($(strip $(BRCM_6328_NTR_SUPPORT_INT)),)
+export BRCM_NTR_SUPPORT=1
+export BRCM_NTR_SUPPORT_6328_INT=1
+endif
+ifneq ($(strip $(BRCM_6328_NTR_MDM_SUPPORT)),)
+export BRCM_NTR_MDM_SUPPORT=1
+endif
+
+BRCM_DSP_CHAN_DEFINES  += -DNUM_IDECT_CHANNELS=$(NUM_IDECT_CHANNELS) -DNUM_EDECT_CHANNELS=$(NUM_EDECT_CHANNELS)
+
+endif
+
+
+ifndef EXTRA_VOICE_TAG
+EXTRA_VOICE_TAG := default
+endif
+
+ifeq ($(strip $(AEI_VDSL_CUSTOMER_NCS)),)
+BRCM_RELEASETAG := $(BRCM_RELEASETAG)_$(BRCM_DSP_HAL)_$(EXTRA_VOICE_TAG)
+endif
+
+#############################################################################
+#
+# LOCALE SELECTION
+#
+#############################################################################
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_ALL_PROFILES)),n)
+
+# User-selected Configuration
+
+LOCALEFLAGS = -DBRCM_VRG_COUNTRY_CFG_CUSTOM_PROFILES=1
+LOCALEFLAGS_TYPE2 = $(addprefix -D , BRCM_VRG_COUNTRY_CFG_CUSTOM_PROFILES=1)
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_NORTH_AMERICA)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_NORTH_AMERICA=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_NORTH_AMERICA=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_AUSTRALIA)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_AUSTRALIA=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_AUSTRALIA=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_AUSTRIA)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_AUSTRIA=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_AUSTRIA=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_BELGIUM)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_BELGIUM=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_BELGIUM=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_BRAZIL)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_BRAZIL=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_BRAZIL=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_CHILE)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_CHILE=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_CHILE=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_CHINA)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_CHINA=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_CHINA=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_CZECH)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_CZECH=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_CZECH=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_DENMARK)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_DENMARK=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_DENMARK=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_ETSI)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_ETSI=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_ETSI=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_FINLAND)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_FINLAND=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_FINLAND=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_FRANCE)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_FRANCE=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_FRANCE=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_GERMANY)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_GERMANY=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_GERMANY=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_HUNGARY)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_HUNGARY=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_HUNGARY=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_INDIA)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_INDIA=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_INDIA=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_IRELAND)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_IRELAND=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_IRELAND=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_ITALY)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_ITALY=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_ITALY=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_JAPAN)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_JAPAN=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_JAPAN=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_NETHERLANDS)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_NETHERLANDS=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_NETHERLANDS=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_NEW_ZEALAND)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_NEW_ZEALAND=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_NEW_ZEALAND=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_POLAND)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_POLAND=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_POLAND=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_ROMANIA)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_ROMANIA=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_ROMANIA=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_SLOVAKIA)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_SLOVAKIA=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_SLOVAKIA=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_SLOVENIA)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_SLOVENIA=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_SLOVENIA=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_SPAIN)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_SPAIN=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_SPAIN=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_SWEDEN)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_SWEDEN=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_SWEDEN=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_NORWAY)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_NORWAY=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_NORWAY=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_SWITZERLAND)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_SWITZERLAND=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_SWITZERLAND=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_TR57)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_TR57=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_TR57=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_UK)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_UK=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_UK=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_TAIWAN)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_TAIWAN=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_TAIWAN=1)
+endif
+
+ifeq ($(strip $(BRCM_VRG_COUNTRY_CFG_UNITED_ARAB_EMIRATES)),y)
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_UNITED_ARAB_EMIRATES=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_UNITED_ARAB_EMIRATES=1)
+endif
+
+else
+
+# Using All Country Profiles
+LOCALEFLAGS = -DBRCM_VRG_COUNTRY_CFG_ALL_PROFILES=1
+LOCALEFLAGS_TYPE2 = $(addprefix -D , BRCM_VRG_COUNTRY_CFG_ALL_PROFILES=1)
+
+endif
+
+LOCALEFLAGS += -DBRCM_VRG_COUNTRY_CFG_STATIC_PROFILE=1
+LOCALEFLAGS_TYPE2 += $(addprefix -D , BRCM_VRG_COUNTRY_CFG_STATIC_PROFILE=1)
+
+#############################################################################
+#                                                                            
+#  SETTING VOIP CMS PROFILE FLAGS                                                
+#                                                                            
+#############################################################################
+
+CMS_VODSL_DMP_FLAGS = -DDMP_TAENDPOINT_1
+
+ifeq ($(strip $(BRCM_APP_PHONE)),sip)
+ifeq ($(strip $(BRCM_SIP_CMGR_CCTRL)),y)
+CMS_VODSL_DMP_FLAGS += -DVOXXXLOAD -DVOIPLOAD -DDMP_ENDPOINT_1 -DSIPLOAD -DSIP_CMGR_CCTRL -DDMP_SIPENDPOINT_1
+endif
+ifeq ($(strip $(BRCM_SIP_CMGR_CCTK)),y)
+CMS_VODSL_DMP_FLAGS += -DVOXXXLOAD -DVOIPLOAD -DDMP_ENDPOINT_1 -DSIPLOAD -DSIP_CMGR_CCTK -DDMP_SIPENDPOINT_1
+endif
+endif
+
+ifeq ($(strip $(BRCM_APP_PHONE)),mgcp)
+CMS_VODSL_DMP_FLAGS += -DVOXXXLOAD -DVOIPLOAD -DDMP_ENDPOINT_1 -DMGCPLOAD -DDMP_MGCPENDPOINT_1
+endif
+
+ifeq ($(strip $(BRCM_APP_PHONE)),eptapp)
+CMS_VODSL_DMP_FLAGS += -DVOXXXLOAD -DVOIPLOAD -DDMP_ENDPOINT_1 -DEPTAPPLOAD
+endif
+
+ifeq ($(strip $(BRCM_NTR_SUPPORT)),1)
+CMS_VODSL_DMP_FLAGS += -DDMP_X_BROADCOM_COM_NTR_1
+endif
+
+ifeq ($(strip $(BRCM_PSTN_SUPPORT)),1)
+CMS_VODSL_DMP_FLAGS += -DDMP_X_BROADCOM_COM_PSTNENDPOINT_1
+endif
+
+CMS_VODSL_DMP_FLAGS += -DDMP_X_BROADCOM_COM_DECTENDPOINT_1
+CMS_VODSL_DMP_FLAGS += -DDMP_X_BROADCOM_COM_DECTD_1
+
+ifeq ($(strip $(BRCM_PROFILER_ENABLED)),y)
+CMS_VODSL_DMP_FLAGS += -DBRCM_PROFILER_ENABLED
+endif
+
+ifeq ($(strip $(BUILD_DECT)),y)
+CMS_VODSL_DMP_FLAGS += -DDMP_X_BROADCOM_COM_DECTEEPROM_1
+CMS_VODSL_DMP_FLAGS += -DDMP_X_BROADCOM_COM_DECTENDPOINT_1
+endif
+
+# Replace "-Dflag" with "-D flag" so that we can pass flag to dslx build script
+BRCM_DSP_CHAN_DEFINES_TYPE2 = $(subst -D,-D ,$(BRCM_DSP_CHAN_DEFINES))
+
+CFLAGS += $(CMS_VODSL_DMP_FLAGS) $(BRCM_DSP_CHAN_DEFINES)
+CMS_COMPILE_FLAGS += $(CMS_VODSL_DMP_FLAGS) $(BRCM_DSP_CHAN_DEFINES)
+
+#############################################
+#
+# ERROR CHECKS
+#
+#############################################
+ifeq ($(strip $(XCHANGE_BUILD_APP)),)
+$(error "XCHANGE_BUILD_APP not defined")
+endif
+
+ifeq ($(strip $(BRCM_DSP_HAL)),)
+$(error "BRCM_DSP_HAL not defined")
+endif
+
+ifeq ($(strip $(LOCALEFLAGS)),)
+$(error "LOCALEFLAGS not defined")
+endif
+
+ifeq ($(strip $(LOCALEFLAGS_TYPE2)),)
+$(error "LOCALEFLAGS_TYPE2 not defined")
+endif
+
+#############################################
+#
+# VODSL EXPORTS
+#
+#############################################
+export \
+BRCM_63268_UNI             \
+BRCM_6328_UNI              \
+BRCM_6362_UNI              \
+BRCM_6368_UNI              \
+BRCM_6816_EXTSLAC          \
+BRCM_6816_LE9530           \
+BRCM_6816_UNI              \
+BRCM_APP_PHONE             \
+BRCM_SIP_CMGR_CCTK         \
+BRCM_SIP_CMGR_CCTRL        \
+BRCM_DSP_HAL               \
+BRCM_DSP_HAL_EXTENSION     \
+BRCM_DSP_CODEC_DEFINES     \
+BRCM_DSP_CHAN_DEFINES      \
+BRCM_DSP_CHAN_DEFINES_TYPE2\
+BRCM_G729_DSPTEST_APP      \
+XCHANGE_BUILD_APP          \
+XCHANGE_DSP_APP            \
+XCHANGE_DSP_APP_EXTENSION  \
+BRCM_VOICE_COUNTRY_JAPAN   \
+BRCM_VOICE_GLOBAL_CFLAGS   \
+BRCM_VOIP_TO_FXO           \
+BUILD_VODSL                \
+BUILD_DECT                 \
+INC_ENDPOINT_PATH          \
+LOCALEFLAGS                \
+LOCALEFLAGS_TYPE2          \
+BRCM_PROFILER_TOOL         \
+XCHANGE_DIR                \
+VODSL_DIR                  \
+DECT_DIR                   \
+NUM_EDECT_CHANNELS         \
+NUM_IDECT_CHANNELS         \
+BRCM_HAL_CAP_SUPPORT       \
+CMS_COMPILE_FLAGS

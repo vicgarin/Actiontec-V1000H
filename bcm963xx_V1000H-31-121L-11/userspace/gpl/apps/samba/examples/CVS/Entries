@@ -1,0 +1,21 @@
+/README/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+/smb.conf.default/1.1.1.1/Wed Apr  6 22:29:19 2011/-ko/Tmain_branch_sdk1204
+D/LDAP////
+D/VFS////
+D/auth////
+D/autofs////
+D/dce-dfs////
+D/libmsrpc////
+D/libsmbclient////
+D/logon////
+D/misc////
+D/nss////
+D/pam_winbind////
+D/pcap2nbench////
+D/pdb////
+D/perfcounter////
+D/printer-accounting////
+D/printing////
+D/scripts////
+D/tridge////
+D/validchars////

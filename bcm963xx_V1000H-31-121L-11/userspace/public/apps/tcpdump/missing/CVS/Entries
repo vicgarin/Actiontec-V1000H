@@ -1,0 +1,18 @@
+/addrinfo.h/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/addrsize.h/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/bittypes.h/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/datalinks.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/dlnames.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/getnameinfo.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/inet_aton.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/inet_ntop.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/inet_pton.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/resolv6.h/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/resolv_ext.h/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/snprintf.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/sockstorage.h/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/strdup.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/strlcat.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/strlcpy.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+/strsep.c/1.1.1.1/Wed Apr  6 22:29:22 2011/-ko/Tmain_branch_sdk1204
+D

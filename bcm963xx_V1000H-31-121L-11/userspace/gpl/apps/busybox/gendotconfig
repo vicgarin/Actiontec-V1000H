@@ -1,0 +1,26 @@
+#!/bin/bash
+
+BRCMCONFIG="brcm.config"
+
+#echo "=======BRCM_BUSYBOX_DEBUG=$BRCM_BUSYBOX_DEBUG======"
+#echo "=======BRCM_BUSYBOX_MINIMAL=$BRCM_BUSYBOX_MINIMAL======"
+
+if [ "$BRCM_BUSYBOX_DEBUG" = "y" -o "$BUILD_WGET_HTTPS" == "y" ] ; then
+if [ "$BRCM_BUSYBOX_DEBUG" = "y" ] ; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_ASH is not set/CONFIG_ASH=y/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_ASH_JOB_CONTROL is not set/CONFIG_ASH_JOB_CONTROL=y/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_ASH_ALIAS is not set/CONFIG_ASH_ALIAS=y/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_ASH_MATH_SUPPORT is not set/CONFIG_ASH_MATH_SUPPORT=y/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_ASH_MAIL is not set/CONFIG_ASH_MAIL=y/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_ASH_OPTIMIZE_FOR_SIZE is not set/CONFIG_ASH_OPTIMIZE_FOR_SIZE=y/'"
+fi
+
+if [ "$BUILD_WGET_HTTPS" == "y" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_WGET_HTTPS is not set/CONFIG_WGET_HTTPS=y/'"
+fi
+    gen="sed $SEDCMD $BRCMCONFIG"
+    eval $gen > .config
+else
+    cp -f $BRCMCONFIG .config
+fi
+

@@ -1,0 +1,16 @@
+/Makefile/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/auth_gss.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_generic_token.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_krb5_crypto.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_krb5_mech.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_krb5_seal.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_krb5_seqnum.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_krb5_unseal.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_krb5_wrap.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_mech_switch.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_spkm3_mech.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_spkm3_seal.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_spkm3_token.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/gss_spkm3_unseal.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/svcauth_gss.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+D

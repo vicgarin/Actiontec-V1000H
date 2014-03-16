@@ -1,0 +1,15 @@
+/Makefile/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/compat.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/compat_mq.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/ipc_sysctl.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/ipcns_notifier.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/mq_sysctl.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/mqueue.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/msg.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/msgutil.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/namespace.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/sem.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/shm.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/util.c/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+/util.h/1.1.1.1/Wed Feb 22 10:24:58 2012/-ko/Tmain_branch_sdk1204
+D

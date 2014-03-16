@@ -1,0 +1,2054 @@
+<credits project="felix">
+
+<full_text id="1">
+Apache Felix Preferences Service
+Copyright 2007-2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+
+<full_text id="2">
+Apache Felix Framework
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="3">
+Apache Felix Framework
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+This product includes software developed by the
+MX4J project (http://mx4j.sourceforge.net).
+</full_text>
+
+<full_text id="4">
+Apache Felix Main
+Copyright 2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="5">
+Apache Felix Jetty HTTP Service
+Copyright 2008-2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed by
+Mortbay (http://mortbay.org)
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="6">
+Apache Felix EventAdmin Bridge WireAdmin
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="7">
+Apache Felix Event Admin
+Copyright 2006-2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+Sun Microsystems, Inc.
+Copyright (c) 1994-2000.
+Licensed under a BSD license.
+</full_text>
+
+<full_text id="8">
+Apache Felix EventAdmin Bridge UPnP
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="9">
+OSGi Foundation EE Classes
+Copyright 2001 Sun Microsystems
+Copyright 2005 OSGi Alliance
+
+This product includes software developed at
+the OSGi Alliance and Sun Microsystems.
+</full_text>
+
+<full_text id="10">
+Apache Felix Commons jzlib
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="11">
+Apache Felix Commons aopalliance
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="12">
+Apache Felix Commons commons-configuration
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="13">
+Apache Felix Commons Quartz
+Copyright 2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+This product includes software developed at
+OpenSymphony (http://www.opensymphony.com/).
+</full_text>
+
+<full_text id="14">
+Apache Felix Commons jstl
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="15">
+Apache Felix Commons JSP API
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="16">
+Apache Felix Commons hsqldb
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="17">
+Apache Felix Commons dom4j
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="18">
+Apache Felix Commons Activation
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="19">
+Apache Felix Commons xml-resolver
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="20">
+Apache Felix Commons antlr
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="21">
+Apache Felix Commons hibernate
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="22">
+Apache Felix Commons jta
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="23">
+Apache Felix Commons POI Scratchpad
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="24">
+Apache Felix Commons xercesImpl
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="25">
+Apache Felix Commons cglib
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="26">
+Apache Felix Commons LogKit
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="27">
+Apache Felix Commons commons-beanutils
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="28">
+Apache Felix Commons commons-el
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="29">
+Apache Felix Commons commons-httpclient
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="30">
+Apache Felix Commons commons-email
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="31">
+Apache Felix Commons commons-codec
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="32">
+Apache Felix Commons ehcache
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="33">
+Apache Felix Commons commons-validator
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="34">
+JLine
+Copyright (c) 2002-2007, Marc Prud'hommeaux <mwp1@cornell.edu>
+All rights reserved.
+
+This product includes software developed at
+JLine (http://jline.sourceforge.net/).
+</full_text>
+
+<full_text id="35">
+Apache Felix Commons POI
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="36">
+Apache Felix Commons mail
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="37">
+Apache Felix Commons Portlet API
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="38">
+Apache Felix Commons commons-logging
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="39">
+Apache Felix Commons jms
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="40">
+Apache Felix Commons Servlet API
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="41">
+Apache Felix Commons commons-jxpath
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="42">
+Apache Felix Commons commons-attributes-api
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="43">
+Apache Felix Commons
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="44">
+Apache Felix Commons jmxtools
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="45">
+Apache Felix Commons log4j
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="46">
+Apache Felix Commons xml-apis
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="47">
+Apache Felix Commons commons-fileupload
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="48">
+Apache Felix Commons commons-digester
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="49">
+Apache Felix Commons commons-attributes-compiler
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="50">
+Apache Felix Commons commons-el
+Copyright 2006-2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="51">
+Apache Felix Main Distribution
+Copyright 2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+
+This product includes software from http://kxml.sourceforge.net.
+Copyright (c) 2002,2003, Stefan Haustein, Oberhausen, Rhld., Germany.
+Licensed under BSD License.
+</full_text>
+
+<full_text id="52">
+Apache Felix Bundle Maven Plugin
+Copyright 2006-2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006-2009 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+This product includes software developed by Peter Kriens
+(http://www.aqute.biz/Code/Bnd)
+Copyright 2006-2009 aQute, All rights reserved
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed by Peter Kriens
+(http://www.aqute.biz/Code/Bnd)
+Copyright 2006-2009 aQute, All rights reserved
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006-2009 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Codehaus (http://www.codehaus.org)
+Licensed under the Apache License 2.0.
+
+This product uses software from http://kxml.sourceforge.net.
+Copyright (c) 2002,2003, Stefan Haustein, Oberhausen, Rhld., Germany.
+Licensed under the BSD License.
+
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+</full_text>
+
+<full_text id="53">
+Apache Felix Shell Service
+Copyright 2006-2010 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Codehaus (http://www.codehaus.org)
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="54">
+OSGi Bundle Repository Classes
+Copyright 2006-2008 The OSGi Alliance
+
+
+I. Included Software
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006-2008 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006-2008 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="55">
+Apache Felix Utils
+Copyright 2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="56">
+Apache Felix Remote Shell
+Copyright 2008-2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="57">
+OSGi Compendium Classes
+Copyright (c) OSGi Alliance (2000, 2009).
+
+This product includes software developed at
+the OSGi Alliance (http://www.osgi.org/).
+</full_text>
+
+<full_text id="58">
+Apache Felix File Install
+Copyright 2008-2010 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="59">
+Apache Felix Framework
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="60">
+Apache Felix OSGi Web Console
+Copyright 2007-2010 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software from http://www.jquery.com
+Copyright (c) 2009 John Resig, http://jquery.com/
+Licensed under the MIT License
+
+This product includes software from http://tablesorter.com
+Copyright (c) 2007 Christian Bach
+Licensed under the MIT License
+
+This product includes software from http://www.fyneworks.com
+Copyright (c) 2008 Fyneworks.com
+Licensed under the MIT License
+
+This product includes icons from the Silk Icon set
+(http://www.famfamfam.com/lab/icons/silk/)
+Copyright (c) 2006 Mark James
+Licensed under the Creative Commons Attribution 2.5 License
+
+This product includes software from http://benchsketch.com/bquery/index.html
+Copyright (c) 2009 Tanner Hildebrand
+Licensed under Tanner Hildebrand's License
+
+This product includes software from http://code.google.com/p/cookies/
+Copyright (c) 2005 - 2009, James Auldridge
+Licensed under the MIT License
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+- JSON License
+- MIT License
+- Creative Commons Attribution 2.5 License
+- Tanner Hildebrand's License
+</full_text>
+
+<full_text id="61">
+Apache Felix Parent POM
+Copyright 2009 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="62">
+Apache Felix Dependency Manager
+Copyright 2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="63">
+Apache Felix Servlet API
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="64">
+Apache Felix Shell Textual Interface
+Copyright 2006-2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Codehaus (http://www.codehaus.org)
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="65">
+Apache Felix Simple Bundle
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="66">
+Apache Felix Service-Based Triangle Service Example
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="67">
+Apache Felix Service-Based Circle Service Example
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="68">
+Apache Felix Service-Based Triangle Service Example
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="69">
+Apache Felix Service-Based Square Service Example
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="70">
+Apache Felix Service-Based Host Example
+Copyright 2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="71">
+Apache Felix Service-Based Square Service Example
+Copyright 2006 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+</full_text>
+
+<full_text id="72">
+Apache Felix Karaf
+Copyright 2010 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="73">
+Apache Felix UPnP Extra
+Copyright 2006-2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006-2008 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="74">
+Apache Felix UPnP Base Driver
+Copyright 2006-2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+ISTI-CNR (http://domoware.isti.cnr.it/).
+Copyright 2007-2008, ISTI-CNR,
+Licensed under the BSD License.
+
+This product includes software developed by Satoshi Konno
+(http://sourceforge.net/projects/cgupnpjava/)
+Copyright 2003-2008 Satoshi Konno,
+Licensed under the BSD License.
+
+The version targeting JVM 1.3 of this product includes software from http://kxml.sourceforge.net.
+Copyright (c) 2002,2003, Stefan Haustein, Oberhausen, Rhld., Germany.
+Licensed under the BSD License.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006-2008 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+</full_text>
+
+<full_text id="75">
+Apache Felix UPnP Tester
+Copyright 2006-2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006-2008 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="76">
+Apache Felix UPnP Sample Binary-Light
+Copyright 2006-2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006-2008 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+</full_text>
+
+<full_text id="77">
+Apache Felix Http Service Filter Sample
+Copyright 2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="78">
+Apache Felix Http Service Proxy
+Copyright 2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="79">
+Apache Felix Http Service Bridge Sample
+Copyright 2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="80">
+Apache Felix Http Service Whiteboard Sample
+Copyright 2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="81">
+Apache Felix Http Service Api
+Copyright 2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="82">
+Apache Felix Http Service Base
+Copyright 2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="83">
+Apache Felix Http Service
+Copyright 2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed by
+Mortbay (http://mortbay.org)
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="84">
+Apache Felix Http Service Bundle
+Copyright 2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed by
+Mortbay (http://mortbay.org)
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="85">
+Apache Felix Http Service Bundle
+Copyright 2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed by
+Mortbay (http://mortbay.org)
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="86">
+Apache Felix Http Service Jetty
+Copyright 2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed by
+Mortbay (http://mortbay.org)
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="87">
+Apache Felix Framework
+Copyright 2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="88">
+Apache Felix iPOJO Composite
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+Copyright (c) 2000-2005 INRIA, France Telecom
+Licensed under BSD License.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+</full_text>
+
+<full_text id="89">
+Apache Felix iPOJO junit4osgi Framework
+Copyright 2008-2009 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed by
+Junit project (http://junit.org)
+Licensed under Common Public License 1.0.
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+- Common Public License 1.0
+</full_text>
+
+<full_text id="90">
+Apache Felix iPOJO Maven Plugin
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Codehaus (http://www.codehaus.org)
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="91">
+Apache Felix iPOJO Ant Task
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+Copyright (c) 2000-2005 INRIA, France Telecom
+Licensed under BSD License.
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+</full_text>
+
+<full_text id="92">
+Apache Felix iPOJO Online Manipulator
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+Copyright (c) 2000-2005 INRIA, France Telecom
+Licensed under BSD License.
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+</full_text>
+
+<full_text id="93">
+Apache Felix iPOJO Webconsole Plugins
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="94">
+Apache Felix iPOJO Metadata
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="95">
+Apache Felix iPOJO Arch Command
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="96">
+Apache Felix iPOJO Annotations
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="97">
+Apache Felix iPOJO Commands for Gogo
+Copyright 2008-2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="98">
+Apache Felix iPOJO API
+Copyright 2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+Copyright (c) 2000-2005 INRIA, France Telecom
+Licensed under BSD License.
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+</full_text>
+
+<full_text id="99">
+Apache Felix iPOJO Event Admin Handler
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="100">
+Apache Felix iPOJO JMX Handler
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="101">
+Apache Felix iPOJO Manipulator
+Copyright 2008-2010 The Apache Software Foundation
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+Copyright (c) 2000-2005 INRIA, France Telecom
+Licensed under BSD License.
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+</full_text>
+
+<full_text id="102">
+Apache Felix SCR Annotations
+Copyright 2007-2010 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="103">
+Apache Felix OBR Maven Plugin
+Copyright 2007-2008 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006-2008 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright 2006-2008 The OSGi Alliance.
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The Codehaus (http://www.codehaus.org)
+Licensed under the Apache License 2.0.
+
+This product uses software from http://kxml.sourceforge.net.
+Copyright (c) 2002,2003, Stefan Haustein, Oberhausen, Rhld., Germany.
+Licensed under the BSD License.
+
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+</full_text>
+
+<full_text id="104">
+Apache Felix Declarative Services
+Copyright 2006-2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0. 
+
+This product includes software from http://kxml.sourceforge.net.
+Copyright (c) 2002,2003, Stefan Haustein, Oberhausen, Rhld., Germany.
+Licensed under BSD License.
+
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0. 
+
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+</full_text>
+
+<full_text id="106">
+Apache Felix OSGi Bundle Repository
+Copyright 2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software from http://kxml.sourceforge.net.
+Copyright (c) 2002,2003, Stefan Haustein, Oberhausen, Rhld., Germany.
+Licensed under BSD License.
+</full_text>
+
+<full_text id="107">
+Apache Felix Framework Security
+Copyright 2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="108">
+OSGi Core Classes
+Copyright (c) OSGi Alliance (2000, 2009).
+
+This product includes software developed at
+the OSGi Alliance (http://www.osgi.org/).
+</full_text>
+
+<full_text id="109">
+Apache Felix Configuration Admin Service
+Copyright 2006-2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0. 
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0. 
+
+This product uses software developed at
+The Codehaus (http://www.codehaus.org)
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+Open Participation Software for Java (http://www.ops4j.org)
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="110">
+Apache Felix SCR Maven Plugin
+Copyright 2007-2010 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0. 
+
+This product uses software developed at http://asm.objectweb.org
+Copyright (c) 2000-2005 INRIA, France Telecom
+Licensed under the BSD License.
+
+This product uses software developed at
+The Codehaus (http://www.codehaus.org)
+Licensed under the Apache License 2.0.
+
+This product uses software developed at
+slf4j (http://www.sl4j.org)
+Licensed under the MIT License.
+
+
+III. License Summary
+- Apache License 2.0
+- BSD License
+- MIT License
+</full_text>
+
+<full_text id="111">
+Apache Felix Gogo Runtime
+Copyright 2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="112">
+Apache Felix Gogo
+Copyright 2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="113">
+Apache Felix Gogo Shell
+Copyright 2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="114">
+Apache Felix Gogo Command
+Copyright 2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="115">
+Apache Felix Gogo
+Copyright 2010 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+</full_text>
+
+<full_text id="116">
+Apache Felix OSGi Web Console Event Plugin
+Copyright 2007-2010 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="117">
+Apache Felix OSGi Web Console UPnP Plugin
+Copyright 2007-2010 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+
+This product includes software from http://bassistance.de/jquery-plugins/jquery-plugin-treeview/
+Copyright (c) 2007 Jorn Zaefferer
+Licensed under the MIT License
+
+This product is based on original source code developer by ProSyst (http://www.prosyst.com/)
+
+
+III. License Summary
+- Apache License 2.0
+- MIT License
+</full_text>
+
+<full_text id="118">
+Apache Felix Web Console Memory Usage Plugin
+Copyright 2010 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2009).
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+<full_text id="119">
+Apache Felix Log Service
+Copyright 2009 The Apache Software Foundation
+
+
+I. Included Software
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+Licensed under the Apache License 2.0.
+
+This product includes software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+
+II. Used Software
+
+This product uses software developed at
+The OSGi Alliance (http://www.osgi.org/).
+Copyright (c) OSGi Alliance (2000, 2007).
+Licensed under the Apache License 2.0.
+
+
+III. License Summary
+- Apache License 2.0
+</full_text>
+
+</credits>

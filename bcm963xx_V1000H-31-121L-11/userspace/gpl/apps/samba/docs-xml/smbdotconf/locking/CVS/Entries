@@ -1,0 +1,15 @@
+/blockinglocks.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/cscpolicy.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/fakeoplocks.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/kerneloplocks.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/level2oplocks.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/locking.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/lockspincount.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/lockspintime.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/oplockbreakwaittime.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/oplockcontentionlimit.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/oplocks.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/posixlocking.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/sharemodes.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/strictlocking.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+D

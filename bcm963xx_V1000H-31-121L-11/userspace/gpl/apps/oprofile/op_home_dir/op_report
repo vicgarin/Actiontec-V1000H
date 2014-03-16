@@ -1,0 +1,11 @@
+#!/bin/sh
+
+IMAGE_PATH1="/mnt/usb1_1/op/bin_symbols/modules/2.6.30/extra"
+IMAGE_PATH2="/mnt/usb1_1/op/bin_symbols/modules/2.6.30/kernel/net/ipv4/netfilter"
+IMAGE_PATH3="/mnt/usb1_1/op/bin_symbols/modules/2.6.30/kernel/net/netfilter"
+
+IMAGE_PATH="$IMAGE_PATH1,$IMAGE_PATH2,$IMAGE_PATH3"
+echo "IMAGE_PATH=$IMAGE_PATH"
+ 
+/mnt/usb1_1/op/opreport -l --image-path=$IMAGE_PATH
+

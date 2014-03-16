@@ -1,0 +1,15 @@
+/cli_dfs.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_ds.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_echo.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_lsarpc.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_netlogon.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_pipe.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_reg.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_samr.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_shutdown.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_spoolss.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_spoolss_notify.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_srvsvc.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/cli_svcctl.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/ndr.c/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+D

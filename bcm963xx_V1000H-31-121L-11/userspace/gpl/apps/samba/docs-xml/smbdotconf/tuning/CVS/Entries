@@ -1,0 +1,24 @@
+/aioreadsize.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/aiowritesize.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/allocationroundupsize.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/blocksize.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/deadtime.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/getwdcache.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/hostnamelookups.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/keepalive.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/maxconnections.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/maxdisksize.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/maxopenfiles.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/maxsmbdprocesses.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/minprintspace.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/namecachetimeout.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/openfilesdatabasehashsize.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/paranoidserversecurity.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/socketoptions.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/strictallocate.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/strictsync.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/syncalways.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/usemmap.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/usesendfile.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+/writecachesize.xml/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+D

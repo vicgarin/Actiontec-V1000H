@@ -1,0 +1,11 @@
+#! /bin/sh
+
+PATH=/sbin:/bin
+export PATH
+
+mount -t proc proc /proc
+/bin/mount -a
+#/sbin/inetd
+
+#disable sysrq at default
+echo 0 > /proc/sys/kernel/sysrq

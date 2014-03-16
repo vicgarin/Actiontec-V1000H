@@ -1,0 +1,29 @@
+#!/bin/sh
+
+help_exit() {
+	echo "usage: get_kernel_range <kernel file>"
+    exit
+}
+
+kernelFile=$1
+
+if [ -z $kernelFile ]; then
+    help_exit
+fi
+
+if [ -e $kernelFile ]; then
+	echo "kernel file is $1"
+else
+	echo "$kernelFile is not exist"
+	exit
+fi	
+
+
+
+
+range_info=`mips-linux-objdump -h $kernelFile 2>/dev/null | grep " .text "`
+tmp1=`echo $range_info | awk '{print $4}'`
+tmp2=`mips-linux-objdump -t $kernelFile 2>/dev/null | grep "_etext" | awk '{ print $1 }'`
+
+KERNEL_RANGE="`echo $tmp1`,`echo $tmp2`"
+echo "KERNEL_RANGE $KERNEL_RANGE"

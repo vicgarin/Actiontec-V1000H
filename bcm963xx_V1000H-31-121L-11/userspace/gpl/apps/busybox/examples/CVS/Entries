@@ -1,0 +1,11 @@
+/busybox.spec/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/depmod.pl/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/devfsd.conf/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/inetd.conf/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/inittab/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/mk2knr.pl/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/undeb/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/unrpm/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+D/bootfloppy////
+D/udhcp////
+D/var_service////

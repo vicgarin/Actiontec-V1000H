@@ -1,0 +1,262 @@
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ <parent>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>felix-parent</artifactId>
+    <version>1.2.1</version>
+    <relativePath>../pom/pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <packaging>bundle</packaging>
+  <name>Apache Felix Main</name>
+  <artifactId>org.apache.felix.main</artifactId>
+  <version>3.1.0-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>${pom.groupId}</groupId>
+      <artifactId>org.apache.felix.framework</artifactId>
+      <version>${framework.version}</version>
+    </dependency>
+  </dependencies>
+  <properties>
+    <log.level>4</log.level>
+    <dollar>$</dollar>
+    <framework.version>3.1.0-SNAPSHOT</framework.version>
+    <gogo.runtime.version>0.7.0-SNAPSHOT</gogo.runtime.version>
+<!--    <gogo.shell.version>0.7.0-SNAPSHOT</gogo.shell.version> -->
+    <gogo.command.version>0.7.0-SNAPSHOT</gogo.command.version>
+    <gogo.usocklistener.version>1.0.0-SNAPSHOT</gogo.usocklistener.version>
+    <org.osgi.compendium.version>1.5.0-SNAPSHOT</org.osgi.compendium.version>
+    <javax.servlet.version>1.0.1-SNAPSHOT</javax.servlet.version>
+    <org.apache.felix.scr.version>1.6.0</org.apache.felix.scr.version>
+    <obr.version>1.6.2</obr.version>
+    <org.apache.felix.log.version>1.0.1</org.apache.felix.log.version>
+    <org.apache.felix.http.jetty.version>2.0.5-SNAPSHOT</org.apache.felix.http.jetty.version>
+    <org.apache.felix.configadmin.version>1.2.8</org.apache.felix.configadmin.version>
+    <org.apache.felix.bundlerepository.version>1.6.4</org.apache.felix.bundlerepository.version>
+    <org.apache.felix.eventadmin.version>1.2.12</org.apache.felix.eventadmin.version>
+    <org.apache.felix.webconsole.version>3.1.8</org.apache.felix.webconsole.version>
+  </properties>
+  <profiles>
+    <profile>
+      <id>release</id>
+      <properties>
+        <log.level>1</log.level>
+        <dollar>$</dollar>
+      </properties>
+    </profile>
+  </profiles>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>1.4.3</version>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <_donotcopy>(CVS|.svn|config.properties)</_donotcopy>
+            <Main-Class>org.apache.felix.main.Main</Main-Class>
+            <Bundle-SymbolicName>org.apache.felix.main</Bundle-SymbolicName>
+            <Bundle-Name>Apache Felix</Bundle-Name>
+            <Bundle-Description>OSGi R4 framework.</Bundle-Description>
+            <Bundle-Vendor>The Apache Software Foundation</Bundle-Vendor>
+            <Embed-Dependency>*;artifactId=org.apache.felix.framework;inline=true</Embed-Dependency>
+            <Private-Package>org.apache.felix.main.*</Private-Package>
+            <Export-Package>!org.osgi.service.obr,org.osgi.*,javax.servlet,org.apache.felix.scr.*</Export-Package>
+            <Import-Package>!*</Import-Package>
+            <Include-Resource>META-INF/LICENSE=LICENSE,META-INF/NOTICE=NOTICE,META-INF/DEPENDENCIES=DEPENDENCIES,{src/main/resources/}</Include-Resource>
+          </instructions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>rat-maven-plugin</artifactId>
+        <configuration>
+          <excludeSubProjects>false</excludeSubProjects>
+          <useEclipseDefaultExcludes>true</useEclipseDefaultExcludes>
+          <useMavenDefaultExcludes>true</useMavenDefaultExcludes>
+          <excludes>
+            <param>doc/*</param>
+            <param>maven-eclipse.xml</param>
+            <param>.checkstyle</param>
+            <param>.externalToolBuilders/*</param>
+          </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+                <artifactItems>
+                  <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.gogo.runtime</artifactId>
+                     <version>${gogo.runtime.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+<!--                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.gogo.shell</artifactId>
+                     <version>${gogo.shell.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem> -->
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.gogo.command</artifactId>
+                     <version>${gogo.command.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.bundlerepository</artifactId>
+                     <version>${obr.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.gogo.usocklistener</artifactId>
+                     <version>${gogo.usocklistener.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.osgi.compendium</artifactId>
+                     <version>${org.osgi.compendium.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>javax.servlet</artifactId>
+                     <version>${javax.servlet.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.scr</artifactId>
+                     <version>${org.apache.felix.scr.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.log</artifactId>
+                     <version>${org.apache.felix.log.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.http.jetty</artifactId>
+                     <version>${org.apache.felix.http.jetty.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.configadmin</artifactId>
+                     <version>${org.apache.felix.configadmin.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.bundlerepository</artifactId>
+                     <version>${org.apache.felix.bundlerepository.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.eventadmin</artifactId>
+                     <version>${org.apache.felix.eventadmin.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                   <artifactItem>
+                     <groupId>${pom.groupId}</groupId>
+                     <artifactId>org.apache.felix.webconsole</artifactId>
+                     <version>${org.apache.felix.webconsole.version}</version>
+                     <type>jar</type>
+                     <overWrite>true</overWrite>
+                     <outputDirectory>${project.basedir}/bundle</outputDirectory>
+                   </artifactItem>
+                 </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <configuration>
+              <tasks>
+                <delete dir="${basedir}/bin" />
+                <mkdir dir="${basedir}/bin" />
+                <delete dir="${basedir}/conf" />
+                <mkdir dir="${basedir}/conf" />
+                <copy file="${basedir}/target/org.apache.felix.main-${pom.version}.jar" tofile="${basedir}/bin/felix.jar" />
+                <copy file="${basedir}/target/classes/config.properties" todir="${basedir}/conf" />
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources> 
+  </build>
+</project>

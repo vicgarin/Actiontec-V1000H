@@ -1,0 +1,8 @@
+#!/bin/sh
+
+OP_BASE_DIR='/var/lib/oprofile'
+
+echo 0 > /dev/oprofile/enable
+echo 1 > /dev/oprofile/dump
+#kill -17 `cat $OP_BASE_DIR/lock`
+

@@ -1,0 +1,13 @@
+
+To compile:
+
+  javac -O Linpack.java
+
+(to run on 963xx Gateway)
+javac -classpath
+/usr/local/jamvm/share/jamvm/classes:/usr/local/classpath/share/classpath/:/usr/local/jamvm/lib
+-O Linpack.java
+
+To run:
+
+  java Linpack

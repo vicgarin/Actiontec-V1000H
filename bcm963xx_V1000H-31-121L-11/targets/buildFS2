@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# This script runs under fakeroot.  The fakeroot utility has 
+# problems under 64-bit/multi-processor/preemptive kernel, so
+# we run it only when necessary.
+
+source $BUILD_DIR/kernel/linux/.config
+
+# Create devices
+# (Swited from device table to fakeroot for device nodes - always use makeDevs)
+./makeDevs
+
+# make root file system image
+if [ "$BRCM_KERNEL_ROOTFS" = "squashfs" ]; then
+        $HOSTTOOLS_DIR/mksquashfs $TARGET_FS $PROFILE_DIR/rootfs.img -be -noappend -all-root -b $BRCM_SQUASHFS_BLOCK_SIZE $FS_COMPRESSION
+else
+ if [ "$BRCM_KERNEL_ROOTFS" = "cramfs" ]; then
+        $HOSTTOOLS_DIR/mkcramfs -r $TARGET_FS $PROFILE_DIR/rootfs.img
+ else
+  if [ "$BRCM_KERNEL_ROOTFS" = "jffs2" ]; then
+        cp $KERNEL_DIR/vmlinux $PROFILE_DIR/.
+        $STRIP --remove-section=.note --remove-section=.comment $PROFILE_DIR/vmlinux
+        $OBJCOPY -O binary $PROFILE_DIR/vmlinux $PROFILE_DIR/vmlinux.bin
+        $HOSTTOOLS_DIR/cmplzma -k -2 $PROFILE_DIR/vmlinux $PROFILE_DIR/vmlinux.bin $PROFILE_DIR/vmlinux.lz
+        cp $PROFILE_DIR/../cfe/cfe${BRCM_CHIP}ram.bin $TARGET_FS/cferam.000
+        cp $PROFILE_DIR/vmlinux.lz $TARGET_FS/.
+        echo -e "/cferam.000" > $HOSTTOOLS_DIR/nocomprlist
+        echo -e "/vmlinux.lz" >> $HOSTTOOLS_DIR/nocomprlist
+        chmod +w $TARGET_FS/etc/fstab
+        echo -e "mtd:data\t/data\tjffs2\tdefaults\t0\t0\n" >> $TARGET_FS/etc/fstab
+        chmod -w $TARGET_FS/etc/fstab
+        $HOSTTOOLS_DIR/mkfs.jffs2 -b -p -n -e $FLASH_NAND_BLOCK_16KB -r $TARGET_FS -o $PROFILE_DIR/rootfs16kb.img -N $HOSTTOOLS_DIR/nocomprlist
+        $HOSTTOOLS_DIR/mkfs.jffs2 -b -p -n -e $FLASH_NAND_BLOCK_128KB -r $TARGET_FS -o $PROFILE_DIR/rootfs128kb.img -N $HOSTTOOLS_DIR/nocomprlist
+        rm $HOSTTOOLS_DIR/nocomprlist
+  fi
+ fi
+fi
+

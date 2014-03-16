@@ -1,0 +1,19 @@
+D/acpi////
+D/asm-generic////
+D/crypto////
+D/drm////
+D/keys////
+D/linux////
+D/math-emu////
+D/media////
+D/mtd////
+D/net////
+D/pcmcia////
+D/rdma////
+D/rxrpc////
+D/scsi////
+D/sound////
+D/trace////
+D/video////
+D/xen////
+/Kbuild/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204

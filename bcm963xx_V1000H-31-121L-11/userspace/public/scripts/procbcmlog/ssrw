@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ ! -n "$1" ] ; then
+  echo "Usage: $0 <b/h/w> <hexaddr> <count> <val>: Read/Write memory on SPI slave device"
+else
+  if [ ! -n "$4" ] ; then
+     echo u $2 $1 $3> /proc/bcmlog
+  else
+     echo u $2 $1 $3 $4 > /proc/bcmlog
+  fi
+fi

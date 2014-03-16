@@ -1,0 +1,10 @@
+Pendragon Software Corporation has restriction and rules on its code.
+
+CaffeineMark 3.0 Benchmark is developed by Pendragon Software
+Corporation.
+For software download and info of this benchmark, go to
+http://www.benchmarkhq.ru/cm39/index.html
+
+Embedded Caffeine Mark is used to run on Gateway.
+All classes can be archived into a jar file with Main-Class attribute
+being CaffeineMarkEmbeddedApp.

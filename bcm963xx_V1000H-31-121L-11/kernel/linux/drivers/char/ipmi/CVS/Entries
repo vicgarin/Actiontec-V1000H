@@ -1,0 +1,12 @@
+/Kconfig/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+/ipmi_bt_sm.c/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+/ipmi_devintf.c/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+/ipmi_kcs_sm.c/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+/ipmi_msghandler.c/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+/ipmi_poweroff.c/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+/ipmi_si_intf.c/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+/ipmi_si_sm.h/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+/ipmi_smic_sm.c/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+/ipmi_watchdog.c/1.1.1.1/Wed Feb 22 10:23:48 2012/-ko/Tmain_branch_sdk1204
+D

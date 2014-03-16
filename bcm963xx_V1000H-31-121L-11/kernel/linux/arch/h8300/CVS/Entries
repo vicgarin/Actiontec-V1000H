@@ -1,0 +1,13 @@
+D/boot////
+D/include////
+D/kernel////
+D/lib////
+D/mm////
+D/platform////
+/Kconfig/1.1.1.1/Wed Feb 22 10:23:12 2012/-ko/Tmain_branch_sdk1204
+/Kconfig.cpu/1.1.1.1/Wed Feb 22 10:23:12 2012/-ko/Tmain_branch_sdk1204
+/Kconfig.debug/1.1.1.1/Wed Feb 22 10:23:12 2012/-ko/Tmain_branch_sdk1204
+/Kconfig.ide/1.1.1.1/Wed Feb 22 10:23:12 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:23:12 2012/-ko/Tmain_branch_sdk1204
+/README/1.1.1.1/Wed Feb 22 10:23:12 2012/-ko/Tmain_branch_sdk1204
+/defconfig/1.1.1.1/Wed Feb 22 10:23:12 2012/-ko/Tmain_branch_sdk1204

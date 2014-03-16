@@ -1,0 +1,18 @@
+/common-smdk.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/dma.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/irq.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/map.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/mci.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/pll.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/pm-core.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/regs-iis.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/regs-spi.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/regs-udc.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/s3c2400.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/s3c2410.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/s3c2412.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/s3c2440.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/s3c2442.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/s3c2443.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+/udc.h/1.1.1.1/Wed Feb 22 10:23:06 2012/-ko/Tmain_branch_sdk1204
+D

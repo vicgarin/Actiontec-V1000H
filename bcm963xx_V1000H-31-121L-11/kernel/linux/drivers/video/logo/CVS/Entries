@@ -1,0 +1,21 @@
+/.gitignore/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/Kconfig/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/clut_vga16.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo.c/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_blackfin_clut224.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_blackfin_vga16.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_dec_clut224.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_linux_clut224.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_linux_mono.pbm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_linux_vga16.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_m32r_clut224.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_mac_clut224.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_parisc_clut224.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_sgi_clut224.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_spe_clut224.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_sun_clut224.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_superh_clut224.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_superh_mono.pbm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+/logo_superh_vga16.ppm/1.1.1.1/Wed Feb 22 10:24:29 2012/-ko/Tmain_branch_sdk1204
+D

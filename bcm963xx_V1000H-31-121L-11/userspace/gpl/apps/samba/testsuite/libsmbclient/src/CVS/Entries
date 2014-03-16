@@ -1,0 +1,26 @@
+/Makefile/1.1.1.1/Wed Apr  6 22:29:17 2011/-ko/Tmain_branch_sdk1204
+D/chmod////
+D/chown////
+D/close////
+D/closedir////
+D/creat////
+D/fstat////
+D/getdents////
+D/init////
+D/list_print_jobs////
+D/lseek////
+D/lseekdir////
+D/mkdir////
+D/open////
+D/open_print_job////
+D/opendir////
+D/print_file////
+D/read////
+D/readdir////
+D/rename////
+D/rmdir////
+D/stat////
+D/telldir////
+D/unlink////
+D/unlink_print_job////
+D/write////

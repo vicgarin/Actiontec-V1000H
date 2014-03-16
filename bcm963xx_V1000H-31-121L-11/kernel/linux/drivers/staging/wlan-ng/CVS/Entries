@@ -1,0 +1,27 @@
+/Kconfig/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/README/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/hfa384x.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/hfa384x_usb.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211conv.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211conv.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211hdr.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211ioctl.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211meta.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211metadef.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211metastruct.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211mgmt.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211msg.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211netdev.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211netdev.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211req.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211req.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211types.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211wep.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/p80211wext.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/prism2mgmt.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/prism2mgmt.h/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/prism2mib.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/prism2sta.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/prism2usb.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+D

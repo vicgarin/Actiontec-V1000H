@@ -1,0 +1,13 @@
+/Makefile/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/aes_s390.c/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/crypt_s390.h/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/crypto_des.h/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/des_check_key.c/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/des_s390.c/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/prng.c/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/sha.h/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/sha1_s390.c/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/sha256_s390.c/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/sha512_s390.c/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+/sha_common.c/1.1.1.1/Wed Feb 22 10:23:35 2012/-ko/Tmain_branch_sdk1204
+D

@@ -1,0 +1,1265 @@
+ACTION_TEC_IPV6_CODE_FOR_IOT=1
+AEI_CONTROL_LAYER=1
+AEI_IPV6_DUMMY_OLD_OBJ=1
+AEI_SUPPORT_6RD=1
+AEI_CONTROL_TR98_IPV6=1
+AEI_SUPPORT_DHCPV6_PD_ONLY=1
+AEI_VDSL_CUSTOMER_NCS=1
+AEI_VDSL_CES=1
+AEI_VDSL_CUSTOMER_TELUS=1
+AEI_VDSL_CUSTOMER_TELUS_V2000H=1
+AEI_VDSL_TR098_TELUS=1
+AEI_SUPPORT_PHYTYPE_IFNAME_CHANGE=1
+ACTION_TEC_IPV6_CODE_FOR_CONFIRM=1
+AEI_VDSL_TR098=1
+AEI_VDSL_MYNETWORK=1
+AEI_VDSL_TR143=1
+AEI_VDSL_TR157=1
+AEI_VDSL_WAN_ETH=1
+AEI_FULLPATH_IDENTIFY_DEFAULT_WAN=1
+AEI_VDSL_HPNA=1
+AEI_UPNP_NAT_FEATURE=1
+AEI_VDSL_DNS_CACHE=1
+AEI_VDSL_TOOLBOX=1
+AEI_VDSL_EXTSW_DEBUG=1
+AEI_VDSL_GLOBAL_SINGLE_FIREWALL=1
+AEI_VDSL_UPGRADE_HISTORY_SPAD=1
+AEI_VDSL_WT107=1
+AEI_VDSL_HTTP_COOKIE=1
+AEI_VDSL_MULTILEVEL=1
+AEI_VDSL_CUSTOMER_AUTO_DETEC_MULTIPLE_PHY=1
+AEI_VDSL_QOS=1
+AEI_VDSL_QOS_STATUS=1
+AEI_VDSL_SMARTDMZ=1
+AEI_VDSL_SMALL_PACKET_PRIORITY=3
+AEI_VDSL_MULTI_LANGUAGE=1
+AEI_VDSL_SIGNED_FIRMWARE=1
+AEI_VDSL_ROOT_LOGIN=1
+AEI_VDSL_CUSTOMER_GINP_PHY=1
+AEI_LOG_FIREWALL_DROP=1
+AEI_SERVICES_BLOCK_FIVE_RULES=1
+AEI_VDSL_WEBSITE_BLOCK=1
+AEI_TWO_IN_ONE_FIRMWARE=1
+AEI_SIGNED_FIRMWARE=1
+AEI_VDSL_CUSTOMER_DHCPFORCERENEW=1
+AEI_VDSL_CUSTOMER_ADVANCED_DMZ=1
+AEI_VDSL_CUSTOMER_DHCP_WAN_OPTION60=1
+AEI_VDSL_CUSTOMER_DHCP_WAN_LEASETIME=1
+AEI_VDSL_TR098_TR64=1
+AEI_VDSL_DHCP_LEASE=1
+AEI_VDSL_STB_NO_FIREWALL=1
+AEI_6368_CHIP=1
+AEI_VDSL_WAN_CONVERT_LAN=1
+AEI_VDSL_CUSTOMER_DSL_PRIORITY=1
+AEI_VDSL_WPS_AP_PIN=1
+AEI_VDSL_MDM_ADJUST_FEATURE=1
+AEI_VDSL_STB_XML=1
+AEI_VDSL_MC_SSM_HIT=1
+AEI_VDSL_ADSL_BONDING_AUTODETECT=1
+AEI_VDSL_MEDIASEARCH_MOD=1
+AEI_VDSL_CUSTOMER_TELUS_SPECIAL=1
+AEI_ASM_GFC_PATCH=1
+AEI_CMS_LOG_DEBUG=1
+AEI_VDSL_CUSTOMER_TELUS_SPECIAL_WAN_ADDR=1
+AEI_PREVENT_DNS_REBIND=1
+AEI_VDSL_RESTART_SSK=1
+AEI_ADSL_SINGLE_LINE_PORT_MATCH=1
+AEI_VDSL_FUNCTION_UPNP_MOD=1
+AEI_ADSL_SINGLE_LINE_AUTOPHY_PATCH=1
+AEI_VDSL_TELUS_DETECT_WAN_SERVICE=1
+AEI_VDSL_FACTORY_TELNET=1
+AEI_VDSL_DOWNGRADE_NVRAM_ADJUST=1
+AEI_VDSL_WP=1
+AEI_VDSL_CRISTAL_ACCESS=1
+AEI_COVERITY_FIX=1
+AEI_ABBA_FIX=1
+NAND_FLASH_BLOCK_SIZE=16
+export ACTION_TEC_IPV6_CODE_FOR_IOT AEI_CONTROL_LAYER AEI_IPV6_DUMMY_OLD_OBJ AEI_SUPPORT_6RD AEI_CONTROL_TR98_IPV6 AEI_SUPPORT_DHCPV6_PD_ONLY AEI_VDSL_CUSTOMER_NCS AEI_VDSL_CES AEI_VDSL_CUSTOMER_TELUS AEI_VDSL_CUSTOMER_TELUS_V2000H AEI_VDSL_TR098_TELUS AEI_SUPPORT_PHYTYPE_IFNAME_CHANGE ACTION_TEC_IPV6_CODE_FOR_CONFIRM AEI_VDSL_TR098 AEI_VDSL_MYNETWORK AEI_VDSL_TR143 AEI_VDSL_TR157 AEI_VDSL_WAN_ETH AEI_FULLPATH_IDENTIFY_DEFAULT_WAN AEI_VDSL_HPNA AEI_UPNP_NAT_FEATURE AEI_VDSL_DNS_CACHE AEI_VDSL_TOOLBOX AEI_VDSL_EXTSW_DEBUG AEI_VDSL_GLOBAL_SINGLE_FIREWALL AEI_VDSL_UPGRADE_HISTORY_SPAD AEI_VDSL_WT107 AEI_VDSL_HTTP_COOKIE AEI_VDSL_MULTILEVEL AEI_VDSL_CUSTOMER_AUTO_DETEC_MULTIPLE_PHY AEI_VDSL_QOS AEI_VDSL_QOS_STATUS AEI_VDSL_SMARTDMZ AEI_VDSL_SMALL_PACKET_PRIORITY AEI_VDSL_MULTI_LANGUAGE AEI_VDSL_SIGNED_FIRMWARE AEI_VDSL_ROOT_LOGIN AEI_VDSL_CUSTOMER_GINP_PHY AEI_LOG_FIREWALL_DROP AEI_SERVICES_BLOCK_FIVE_RULES AEI_VDSL_WEBSITE_BLOCK AEI_TWO_IN_ONE_FIRMWARE AEI_SIGNED_FIRMWARE AEI_VDSL_CUSTOMER_DHCPFORCERENEW AEI_VDSL_CUSTOMER_ADVANCED_DMZ AEI_VDSL_CUSTOMER_DHCP_WAN_OPTION60 AEI_VDSL_CUSTOMER_DHCP_WAN_LEASETIME AEI_VDSL_TR098_TR64 AEI_VDSL_DHCP_LEASE AEI_VDSL_STB_NO_FIREWALL AEI_6368_CHIP AEI_VDSL_WAN_CONVERT_LAN AEI_VDSL_CUSTOMER_DSL_PRIORITY AEI_VDSL_WPS_AP_PIN AEI_VDSL_MDM_ADJUST_FEATURE AEI_VDSL_STB_XML AEI_VDSL_MC_SSM_HIT AEI_VDSL_ADSL_BONDING_AUTODETECT AEI_VDSL_MEDIASEARCH_MOD AEI_VDSL_CUSTOMER_TELUS_SPECIAL AEI_ASM_GFC_PATCH AEI_CMS_LOG_DEBUG AEI_VDSL_CUSTOMER_TELUS_SPECIAL_WAN_ADDR AEI_PREVENT_DNS_REBIND AEI_VDSL_RESTART_SSK AEI_ADSL_SINGLE_LINE_PORT_MATCH AEI_VDSL_FUNCTION_UPNP_MOD AEI_ADSL_SINGLE_LINE_AUTOPHY_PATCH AEI_VDSL_TELUS_DETECT_WAN_SERVICE AEI_VDSL_FACTORY_TELNET AEI_VDSL_DOWNGRADE_NVRAM_ADJUST AEI_VDSL_WP AEI_VDSL_CRISTAL_ACCESS AEI_COVERITY_FIX AEI_ABBA_FIX NAND_FLASH_BLOCK_SIZE 
+#
+# This makefile is included by most of the lower level makefiles
+# to suck in the common defines.
+#
+
+#
+# version.make has the 4.0.0 version number,
+# each directory must set depth appropriately
+#
+include $(BUILD_DIR)/version.make
+ifneq ($(strip $(AEI_TWO_IN_ONE_FIRMWARE)),)
+include $(BUILD_DIR)/version2.make
+endif
+
+BRCM_RELEASETAG=$(BRCM_VERSION).$(BRCM_RELEASE)L.$(BRCM_EXTRAVERSION)
+ifneq ($(strip $(AEI_TWO_IN_ONE_FIRMWARE)),)
+BRCM_RELEASETAG2=$(BRCM_VERSION2).$(BRCM_RELEASE2)L.$(BRCM_EXTRAVERSION2)
+endif
+
+###########################################
+# Define Basic Variables
+#
+###########################################
+
+BL_BUILD_DIR=$(BUILD_DIR)/cfe/build/broadcom/bcm63xx_rom
+KERNEL_VER = 2.6
+ifeq ($(strip $(KERNEL_VER)),2.6)
+INC_KERNEL_BASE = $(BUILD_DIR)/kernel
+ORIGINAL_KERNEL = linuxmips.tar.bz2
+endif
+KERNEL_DIR = $(INC_KERNEL_BASE)/linux
+BRCMDRIVERS_DIR = $(BUILD_DIR)/bcmdrivers
+ORIGINAL_MDK = mdk212.tar.bz2
+
+LINUXDIR = $(INC_KERNEL_BASE)/linux
+HOSTTOOLS_DIR = $(BUILD_DIR)/hostTools
+IMAGES_DIR = $(BUILD_DIR)/images
+RELEASE_DIR = $(BUILD_DIR)/release
+TARGETS_DIR = $(BUILD_DIR)/targets
+DEFAULTCFG_DIR = $(TARGETS_DIR)/defaultcfg
+FSSRC_DIR = $(TARGETS_DIR)/fs.src
+CFE_FILE = $(TARGETS_DIR)/cfe/cfe$(BRCM_CHIP).bin
+CFE_ROM_FILE = $(TARGETS_DIR)/cfe/cfe$(BRCM_CHIP)rom.bin
+SHARED_DIR = $(BUILD_DIR)/shared
+CONFIG_SHELL := $(shell if [ -x "$$BASH" ]; then echo $$BASH; \
+          else if [ -x /bin/bash ]; then echo /bin/bash; \
+          else echo sh; fi ; fi)
+GENDEFCONFIG_CMD = $(HOSTTOOLS_DIR)/scripts/gendefconfig
+
+6510_REF_CODE=$(BUILD_DIR)/userapps/broadcom/6510refCode
+USERSPACE_PUBLIC_LIBS_DIR=$(BUILD_DIR)/userspace/public/libs
+
+KERNEL_DEBUG=0
+KERNEL_KALLSYMS=0
+
+
+#
+# This is for CMS
+# We could put this in the make menuconfig, but it might
+# confuse the users.  For now, we only support one target OS.
+# Everytime we see OALDIR, substitute it with linux
+#
+TARGET_OS = LINUX
+OALDIR = $(subst LINUX,linux,$(strip $(TARGET_OS)))
+
+
+export BL_BUILD_DIR KERNEL_VER KERNEL_DIR BRCMDRIVERS_DIR \
+       LINUXDIR HOSTTOOLS_DIR IMAGES_DIR TARGETS_DIR DEFAULTCFG_DIR \
+       FSSRC_DIR CFE_FILE SHARED_DIR GENDEFCONFIG_CMD \
+       6510_REF_CODE CMS_LOG_FLAGS OALDIR USERSPACE_PUBLIC_LIBS_DIR \
+       KERNEL_DEBUG
+
+
+
+###########################################
+#
+# Import Build Profiles
+#
+###########################################
+BRCM_BOARD=bcm963xx
+
+#
+# If we don't define a PROFILE, try to figure out what the last profile
+# was and use that.
+#
+LAST_PROFILE_COOKIE := $(BUILD_DIR)/.last_profile
+LAST_PROFILE        := $(strip $(shell cat $(LAST_PROFILE_COOKIE) 2>/dev/null))
+ifeq ($(strip $(PROFILE)),)
+PROFILE=$(LAST_PROFILE)
+export PROFILE
+endif
+
+#############################################
+# ACTIONTEC MACRO DEFINES
+#############################################
+ACT_TMP_MACRODEFINE=$(shell find $(TARGETS_DIR)/$(PROFILE) -name DEFINES)
+ifeq ($(strip $(ACT_NEW_MACRODEFINE)),)
+ACT_NEW_MACRODEFINE=$(ACT_TMP_MACRODEFINE)
+endif
+
+ifneq ($(strip $(AEI_VDSL_CUSTOMER_NCS)),)
+export ACTION_TEC_DFLAGS:=$(shell cat $(ACT_NEW_MACRODEFINE) | sed -e "s/^/-D/g" | awk '{print $0}' \
+		| tr '\r\n' ' ')
+endif
+ifneq ($(strip $(AEI_VDSL_BCMSDK)),) 
+ifeq ($(strip $(AEI_VDSL_CUSTOMER_NCS)),)
+export ACTION_TEC_DFLAGS:=$(shell cat $(ACT_NEW_MACRODEFINE) | sed -e "s/^/-D/g" | awk '{print $0}' \
+		| tr '\r\n' ' ')
+endif
+endif
+ifneq ($(strip $(PROFILE)),)
+include $(TARGETS_DIR)/$(PROFILE)/$(PROFILE)
+export BRCM_CHIP
+export BRCM_FLASHPSI_SIZE
+export BRCM_DRIVER_WIRELESS_PCMCIA_DATASWAP BRCM_DRIVER_WIRELESS_EBI_DMA
+export BRCM_DRIVER_USB BRCM_DRIVER_ETHERNET_CONFIG BRCM_DRIVER_GPON BRCM_DRIVER_XTM
+export BRCM_DRIVER_LOG BRCM_GPON_FPGA BRCM_DRIVER_I2C
+export BRCM_DRIVER_PKTFLOW_DEBUG BRCM_DRIVER_PKTFLOW_IPV6 BRCM_DRIVER_PKTFLOW_MCAST
+export BRCM_DRIVER_MoCA_CTP_CANDIDATE
+export BRCM_DRIVER_ISDN
+export BRCM_DEFAULTCFG
+export BRCM_CERT_FILE
+export BRCM_KERNEL_NF_FIREWALL BRCM_KERNEL_NF_MANGLE BRCM_KERNEL_NF_NAT
+export BRCM_KERNEL_NF_NAT_ALG_FTP BRCM_KERNEL_NF_NAT_ALG_SIP BRCM_KERNEL_NF_NAT_ALG_TFTP BRCM_KERNEL_NF_NAT_ALG_H323 BRCM_KERNEL_NF_NAT_ALG_H323_SIGNAL_PROXY
+export BRCM_KERNEL_NF_NAT_ALG_IRC BRCM_KERNEL_NF_NAT_ALG_WM BRCM_KERNEL_NF_NAT_ALG_PT BRCM_KERNEL_NF_NAT_ALG_PPTP BRCM_KERNEL_NF_NAT_ALG_IPSEC
+export BRCM_KERNEL_NF_NAT_ALG_RTSP BRCM_KERNEL_NF_NAT_ALG_SNMP BRCM_KERNEL_NF_NAT_ALG_TALK
+export BRCM_EXT_SWITCH BRCM_EXT_SWITCH_REV
+endif
+
+#mwang: export everything we get from the profile file here.
+#export all the BUILD_xxx here?
+export DESKTOP_LINUX BRCM_BOARD BRCM_UCLIBC 
+export BUILD_HTTPD_SSL
+export BUILD_WGET_HTTPS
+
+###########################################
+#
+# Define Toolchain
+#
+###########################################
+ifeq ($(strip $(BRCM_UCLIBC)),y)
+NTC=1
+ifeq ($(strip $(NTC)),1)
+ifndef TOOLCHAIN
+
+ifndef TOOLCHAIN_TOP
+TOOLCHAIN_TOP = /opt/toolchains/uclibc-crosstools-gcc-4.4.2-1
+endif
+TOOLCHAIN = $(TOOLCHAIN_TOP)/usr
+LIBDIR = $(TOOLCHAIN_TOP)/lib
+USRLIBDIR = $(TOOLCHAIN_TOP)/usr/lib
+EXTRALIBDIR = $(TOOLCHAIN_TOP)/usr/mips-linux-uclibc/lib
+EXTRAINCDIR = $(TOOLCHAIN_TOP)/usr/lib/gcc/mips-linux-uclibc/4.4.2/include
+LIB_PATH        = $(TOOLCHAIN_TOP)/lib
+LIBCDIR         = $(TOOLCHAIN_TOP)/lib
+ifndef NO_WERRS
+export BRCM_WERROR_CFLAGS :=  -Werror=return-type -Werror=uninitialized -Werror=frame-larger-than=1024
+else
+export BRCM_WERROR_CFLAGS :=
+endif
+
+BRCM_COMMON_CFLAGS :=  -Os -march=mips32  -fomit-frame-pointer -fno-strict-aliasing -mabi=32 -G 0 -msoft-float -pipe -Wa,-mips32 $(BRCM_WERROR_CFLAGS)
+
+export BRCM_APP_CFLAGS :=  $(BRCM_COMMON_CFLAGS) -mno-shared
+export BRCM_SO_CFLAGS :=   $(BRCM_COMMON_CFLAGS)
+
+endif
+CROSS_COMPILE = $(TOOLCHAIN)/bin/mips-linux-uclibc-
+else
+TOOLCHAIN=/opt/toolchains/uclibc
+CROSS_COMPILE = $(TOOLCHAIN)/bin/mips-uclibc-
+endif
+else
+TOOLCHAIN=/usr/crossdev/mips
+CROSS_COMPILE = $(TOOLCHAIN)/bin/mips-linux-
+endif
+
+ifeq ($(strip $(DESKTOP_LINUX)),y)
+CROSS_COMPILE = /usr/bin/
+endif
+
+
+AR              = $(CROSS_COMPILE)ar
+AS              = $(CROSS_COMPILE)as
+LD              = $(CROSS_COMPILE)ld
+CC              = $(CROSS_COMPILE)gcc
+CXX             = $(CROSS_COMPILE)g++
+CPP             = $(CROSS_COMPILE)cpp
+NM              = $(CROSS_COMPILE)nm
+STRIP           = $(CROSS_COMPILE)strip
+SSTRIP          = $(CROSS_COMPILE)sstrip
+OBJCOPY         = $(CROSS_COMPILE)objcopy
+OBJDUMP         = $(CROSS_COMPILE)objdump
+RANLIB          = $(CROSS_COMPILE)ranlib
+
+# If building on desktop, don't strip binaries
+ifeq ($(strip $(DESKTOP_LINUX)),y)
+STRIP  = /bin/touch
+SSTRIP = /bin/touch
+endif
+
+# If building on desktop, set LIBDIR for legacy makefiles
+# that still use LIBDIR (e.g. zebra)
+ifeq ($(strip $(DESKTOP_LINUX)),y)
+LIB_PATH        = /usr/lib
+LIBDIR          = /usr/lib
+LIBCDIR         = /usr/lib
+endif
+
+
+# STRIP is used to strip the kernel modules.  Currently, there is no
+# usage scenario which requires unstripped kernel modules.
+
+# SSTRIP is used to strip userspace apps.  If BUILD_GDBSERVER, then
+# SSTRIP is set to /bin/touch, which tells buildFS to not sstrip the
+# userspace binaries. 
+ifeq ($(strip $(BUILD_GDBSERVER)),y)
+SSTRIP = /bin/touch
+endif
+
+
+export TOOLCHAIN_TOP TOOLCHAIN LEGACY_TOOLCHAIN CROSS_COMPILE \
+       AR AS LD CC CXX CPP NM STRIP SSTRIP OBJCOPY OBJDUMP RANLIB \
+       LIB_PATH LIBDIR USRLIBDIR EXTRALIBDIR EXTRAINCDIR LIBCDIR \
+       BUILD_GDBSERVER
+
+
+
+###########################################
+#
+# Application-specific settings
+#
+###########################################
+TARGET_FS = $(TARGETS_DIR)/$(PROFILE)/fs
+PROFILE_DIR = $(TARGETS_DIR)/$(PROFILE)
+INSTALL_DIR=$(PROFILE_DIR)/fs.install
+PROFILE_PATH = $(TARGETS_DIR)/$(PROFILE)/$(PROFILE)
+VENDOR_NAME = bcm
+FS_KERNEL_IMAGE_NAME = $(VENDOR_NAME)$(PROFILE)_fs_kernel
+CFE_FS_KERNEL_IMAGE_NAME = $(VENDOR_NAME)$(PROFILE)_cfe_fs_kernel
+FLASH_IMAGE_NAME = $(VENDOR_NAME)$(PROFILE)_flash_image_$(BRCM_BOARD_ID)
+FLASH_NAND_CFEROM_FS_IMAGE_NAME_16 = $(VENDOR_NAME)$(PROFILE)_nand_cferom_fs_image_16
+FLASH_NAND_FS_IMAGE_NAME_16 = $(VENDOR_NAME)$(PROFILE)_nand_fs_image_16
+FLASH_NAND_CFEROM_FS_IMAGE_NAME_128 = $(VENDOR_NAME)$(PROFILE)_nand_cferom_fs_image_128
+FLASH_NAND_FS_IMAGE_NAME_128 = $(VENDOR_NAME)$(PROFILE)_nand_fs_image_128
+FLASH_NAND_BLOCK_16KB=16384
+FLASH_NAND_BLOCK_128KB=131072
+INC_BRCMDRIVER_PUB_PATH=$(BRCMDRIVERS_DIR)/opensource/include
+INC_BRCMDRIVER_PRIV_PATH=$(BRCMDRIVERS_DIR)/broadcom/include
+INC_ADSLDRV_PATH=$(BRCMDRIVERS_DIR)/broadcom/char/adsl/impl1
+INC_ATMAPI_DRV_PATH=$(BRCMDRIVERS_DIR)/broadcom/char/atmapi/impl1
+INC_MOCACFGDRV_PATH=$(BRCMDRIVERS_DIR)/broadcom/char/moca/impl1
+
+
+INC_BRCMSHARED_PUB_PATH=$(SHARED_DIR)/opensource/include
+INC_BRCMSHARED_PRIV_PATH=$(SHARED_DIR)/broadcom/include
+INC_BRCMBOARDPARMS_PATH=$(SHARED_DIR)/opensource/boardparms
+INC_FLASH_PATH=$(SHARED_DIR)/opensource/flash
+INC_SPI_PATH=$(SHARED_DIR)/opensource/spi
+INC_SPUDRV_PATH=$(BRCMDRIVERS_DIR)/broadcom/char/spudd/impl1
+INC_PWRMNGTDRV_PATH=$(BRCMDRIVERS_DIR)/broadcom/char/pwrmngt/impl1
+INC_ENETDRV_PATH=$(BRCMDRIVERS_DIR)/broadcom/net/enet/impl4
+
+export TARGET_FS PROFILE_DIR INSTALL_DIR PROFILE_PATH VENDOR_NAME \
+       FS_KERNEL_IMAGE_NAME CFE_FS_KERNEL_IMAGE_NAME FLASH_IMAGE_NAME \
+       INC_BRCMDRIVER_PUB_PATH INC_BRCMDRIVER_PRIV_PATH \
+       INC_ADSLDRV_PATH INC_ATMAPI_DRV_PATH \
+       INC_BRCMSHARED_PUB_PATH INC_BRCMSHARED_PRIV_PATH \
+       INC_BRCMBOARDPARMS_PATH INC_FLASH_PATH \
+       INC_PWRMNGTDRV_PATH INC_ENETDRV_PATH INC_SPI_PATH 
+
+
+##################################################################
+#
+# Start CMS specific defines
+#
+##################################################################
+
+ifeq ($(strip $(DESKTOP_LINUX)),y)
+
+#Defines when are are building for Desktop Linux
+
+ifdef BRCM_CMS_COMPILER_OPTS
+CMS_COMPILER_OPTS := -Wall -W $(BRCM_CMS_COMPILER_OPTS) -DDESKTOP_LINUX	-fPIC
+else
+# The -O is needed to detect uninitialized variables, but sometimes prevents
+# gdb from printing out a variable value.  So if you need to do some serious
+# debugging, set BRCM_CMS_COMPILER_OPTS=-g in your shell.
+CMS_COMPILER_OPTS := -Wall -W -O -g -DDESKTOP_LINUX -fPIC
+endif
+
+# Force 32 bit compiles even if the build machine is a 64 bit system
+CMS_COMPILER_OPTS += -m32
+
+CMS_COMMON_LIBS   := -lcms_util -lcms_boardctl -lcrypt -lutil -lrt
+
+CMS_LIB_RPATH = $(ALLOWED_LIB_DIRS):$(INSTALL_DIR)$(subst :,:$(INSTALL_DIR),$(ALLOWED_LIB_DIRS))
+
+else
+
+# Defines when we are building for flash
+CMS_COMPILER_OPTS := $(BRCM_COMMON_CFLAGS) -Wall -Dmips -g -fPIC
+
+CMS_COMMON_LIBS   := -lcms_util -lcms_boardctl -lcrypt -lutil
+
+CMS_LIB_RPATH =
+
+endif
+
+
+# This is the cms_core library plus all the libraries that libcms_core 
+# depend on.
+CMS_CORE_LIBS := -lcms_core -lnanoxml -ldl -lmdm
+ifneq ($(strip $(AEI_CONTROL_LAYER)),)
+CMS_CORE_LIBS +=  -L$(BUILD_DIR)/userspace/private/apps/ctl_layer/lib -ldbussend_msg -ldbus
+endif
+
+ifneq ($(strip $(BRCM_DRIVER_ADSL)),)
+CMS_CORE_LIBS +=  -lxdslctl
+endif
+
+ifneq ($(strip $(BRCM_DRIVER_XTM)),)
+CMS_CORE_LIBS +=  -latmctl
+endif
+
+ifneq ($(strip $(BUILD_MoCACTL)),)
+CMS_CORE_LIBS +=  -lmocactl -lm
+endif
+
+ifneq ($(strip $(BUILD_MoCACTL2)),)
+CMS_CORE_LIBS +=  -lpthread
+endif
+
+ifneq ($(strip $(BUILD_GPONCTL)),)
+CMS_CORE_LIBS +=  -lgponctl
+endif
+
+ifneq ($(strip $(BUILD_OMCI)),)
+CMS_CORE_LIBS +=  -lomci -lomcipm_drv
+endif
+
+ifneq ($(strip $(BUILD_VLANCTL)),)
+CMS_CORE_LIBS +=  -lvlanctl
+endif
+
+ifneq ($(strip $(BUILD_SPUCTL)),)
+CMS_CORE_LIBS +=  -lspuctl
+endif
+
+ifneq ($(strip $(BUILD_PWRCTL)),)
+CMS_CORE_LIBS +=  -lpwrctl
+endif
+
+ifneq ($(strip $(BUILD_ETHSWCTL)),)
+CMS_CORE_LIBS += -lethswctl
+endif
+
+ifneq ($(strip $(BUILD_CMFAPI)),)
+CMS_CORE_LIBS += -lcmfapi
+endif
+
+ifneq ($(strip $(BUILD_WANVLANMUX)),)
+ifeq ($(strip $(BUILD_OMCI)),)
+CMS_CORE_LIBS += -lvlanctl
+endif
+endif
+
+ifneq ($(strip $(BUILD_IGMP_SNOOP)),)
+CMS_CORE_LIBS += -lmcasthal
+endif
+
+CMS_LIB_PATH = $(patsubst %,-L$(INSTALL_DIR)%,$(subst :, ,$(ALLOWED_LIB_DIRS)))
+
+CMS_COMPILER_OPTS += -DMDM_SHARED_MEM
+CMS_COMPILER_OPTS += -DCMS_MEM_DEBUG
+
+export CMS_COMMON_LIBS CMS_CORE_LIBS CMS_COMPILER_OPTS CMS_COMPILE_FLAGS
+
+
+#
+# Several features will trigger the building of libpcap.
+export BUILD_LIBPCAP
+ifneq ($(strip $(BUILD_TCPDUMP)),)
+BUILD_LIBPCAP=y
+endif
+
+ifneq ($(strip $(BUILD_SENDPACKETS)),)
+BUILD_LIBPCAP=y
+endif
+
+
+#
+# Many features will trigger the building of OpenSSL.
+# OpenSSL is both a library and an app.
+# We could distinguish betwen building OpenSSL lib and OpenSSL app,
+# but for now, we always build and install both.  I have a plan to
+# get rid of the app completely.
+#
+ifneq ($(strip $(BUILD_CERT)),)
+DO_BUILD_OPENSSL=y
+endif
+
+ifneq ($(strip $(BUILD_TR69C_SSL)),)
+DO_BUILD_OPENSSL=y
+endif
+
+ifneq ($(strip $(BUILD_HTTPD_SSL)),)
+DO_BUILD_OPENSSL=y
+endif
+
+ifneq ($(strip $(BUILD_IPSEC_TOOLS)),)
+DO_BUILD_OPENSSL=y
+endif
+
+export DO_BUILD_OPENSSL
+
+
+#
+# These profiles are always defined
+#
+CMS_DMP_FLAGS := -DDMP_BASELINE_1 -DDMP_X_BROADCOM_COM_BASELINE_1
+
+
+#
+# these profiles are always defined, but we may also want the
+# ability to compile them out in the future
+#
+CMS_DMP_FLAGS += -DDMP_ETHERNETLAN_1
+CMS_DMP_FLAGS += -DDMP_DEVICEASSOCIATION_1
+CMS_DMP_FLAGS += -DDMP_QOS_1
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_QOS_1
+#we don't support QOSDYNAMICFLOW right now
+CMS_DMP_FLAGS += -DDMP_QOSDYNAMICFLOW_1
+
+ifneq ($(strip $(AEI_VDSL_CUSTOMER_TELUS)),)
+CMS_DMP_FLAGS += -DDMP_QOSSTATS_1
+endif
+
+CMS_DMP_FLAGS += -DDMP_IPPING_1
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_DEBUG_1
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_SECURITY_1
+
+
+#
+# ADSLWAN_1 profile is used to mean presence of xDSL technology on 
+# the modem, the presence of ATM technology, and presence of ADSL.
+# BUILD_DSL is a pre-requisit for loop diag, atm loopback, bonding,
+# vdsl phy, and multi-mode phy.  ATM WAN and PTM WAN have their own
+# controls in make menuconfig, so users should be smart enough to
+# unselect that if DSL driver is not built.
+#
+ifneq ($(strip $(BUILD_DSL)),)
+
+CMS_DMP_FLAGS += -DDMP_ADSLWAN_1 -DDMP_X_BROADCOM_COM_ADSLWAN_1 
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_XTMSTATS_1
+
+ifneq ($(strip $(BUILD_DSL_LOOP_DIAG)),)
+CMS_DMP_FLAGS += -DDMP_DSLDIAGNOSTICS_1
+endif
+
+ifeq ($(strip $(BRCM_PHY_BONDING)),y)
+CMS_DMP_FLAGS += -DSUPPORT_DSL_BONDING -DDMP_X_BROADCOM_COM_DSLBONDING_1
+export BRCM_PHY_BONDING=y
+endif
+
+ifeq ($(strip $(BRCM_MULTI_PHY)),y)
+CMS_DMP_FLAGS += -DSUPPORT_MULTI_PHY
+export BRCM_MULTI_PHY=y
+endif
+
+DSL_EXT_BONDING_DRIVER_DEFINES := -DNONE
+
+ifeq ($(strip $(BRCM_EXT_PHY_BONDING)),y)
+ifeq ($(strip $(BRCM_CHIP)),63268)
+CMS_DMP_FLAGS += -DSUPPORT_EXT_DSL_BONDING -DDMP_X_BROADCOM_COM_DSLBONDING_1 -DSUPPORT_DSL_BONDING
+endif
+ifeq ($(strip $(BRCM_CHIP)),6368)
+CMS_DMP_FLAGS += -DSUPPORT_EXT_DSL_BONDING
+endif
+DSL_EXT_BONDING_DRIVER_DEFINES += -DSUPPORT_EXT_DSL_BONDING
+export BRCM_EXT_PHY_BONDING=y
+endif
+
+export DSL_EXT_BONDING_DRIVER_DEFINES
+
+
+# VDSL flags have to be turned on for VDSL and Multimode phy
+ifneq ($(strip $(BUILD_PHY_VDSL)),)
+CMS_DMP_FLAGS += -DDMP_VDSL2WAN_1 -DDMP_X_BROADCOM_COM_VDSL2WAN_1
+endif
+
+ifneq ($(strip $(BUILD_PHY_MULTIMODE)),)
+CMS_DMP_FLAGS += -DDMP_VDSL2WAN_1 -DDMP_X_BROADCOM_COM_VDSL2WAN_1
+endif
+
+export BUILD_PHY_ADSL BUILD_PHY_VDSL BUILD_PHY_MULTIMODE
+endif
+
+
+# 
+# Various technologies as WAN interface selections
+#
+
+# this means the user wants to have a ATM WAN interface
+# ATMLOOPBACK is automatically selected in config.in when ATM WAN is selected
+ifneq ($(strip $(BUILD_ATMWAN)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_ATMWAN_1
+endif
+
+ifneq ($(strip $(BUILD_ATMLOOPBACK)),)
+CMS_DMP_FLAGS += -DDMP_ATMLOOPBACK_1 -DDMP_X_BROADCOM_COM_ATMLOOPBACK_1 
+endif
+
+# this means the modem has PTM technology and user wants to have
+# a PTM WAN interface
+ifneq ($(strip $(BUILD_PTMWAN)),)
+CMS_DMP_FLAGS += -DDMP_PTMWAN_1 -DDMP_X_BROADCOM_COM_PTMWAN_1
+endif
+
+# this means the user wants to have a Moca WAN interface
+ifneq ($(strip $(BUILD_MOCAWAN)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_MOCAWAN_1
+endif
+
+# this means user wants to have a ethernet WAN interface
+ifneq ($(strip $(BUILD_ETHWAN)),)
+CMS_DMP_FLAGS += -DSUPPORT_ETHWAN -DDMP_ETHERNETWAN_1
+endif
+
+# this means the user wants to have a GPON WAN interface
+ifneq ($(strip $(BUILD_GPONWAN)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_PONWAN_1 -DDMP_X_BROADCOM_COM_GPONWAN_1
+endif
+
+# this means the user wants to have a EPON WAN interface
+ifneq ($(strip $(BUILD_EPONWAN)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_PONWAN_1 -DDMP_X_BROADCOM_COM_EPONWAN_1
+endif
+
+
+# this means user wants to have a L2TP AC (PPPoL2TPAC) WAN service
+ifneq ($(strip $(BUILD_L2TPAC)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_L2TPAC_1
+endif
+
+ifneq ($(strip $(BUILD_MoCACTL)),)
+CMS_DMP_FLAGS += -DSUPPORT_MOCA -DDMP_X_BROADCOM_COM_MOCALAN_1
+endif
+
+ifneq ($(strip $(BRCM_MOCA_SOFT_SWITCHING)),)
+CMS_DMP_FLAGS += -DMOCA_SOFT_SWITCHING
+endif
+
+ifneq ($(strip $(BUILD_MoCACTL2)),)
+CMS_DMP_FLAGS += -DBRCM_MOCA_DAEMON
+endif
+
+# eanble DMP_X_BROADCOM_COM_BPAAPI_1 under the following conditions
+# Both ETHWAN and MOCAWAN are enabled, or
+# some other condition TBD by Anil
+
+ifneq ($(strip $(BUILD_ETHWAN)),)
+ifneq ($(strip $(BUILD_MOCAWAN)),)
+BUILD_BPAAPI := 1
+endif
+endif
+
+ifneq ($(strip $(BUILD_BPAAPI)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_BPAAPI_1
+endif
+
+ifneq ($(strip $(BUILD_SOAP)),)
+CMS_DMP_FLAGS += -DSUPPORT_SOAP
+endif
+
+ifneq ($(strip $(BUILD_IPSEC_TOOLS)),)
+CMS_DMP_FLAGS += -DSUPPORT_IPSEC -DDMP_X_BROADCOM_COM_IPSEC_1
+endif
+ifneq ($(strip $(BUILD_SNMP)),)
+CMS_DMP_FLAGS += -DSUPPORT_SNMP -DDMP_X_BROADCOM_COM_SNMP_1
+endif
+
+ifneq ($(strip $(BUILD_TR64)),)
+CMS_DMP_FLAGS += -DSUPPORT_TR64C -DDMP_X_BROADCOM_COM_TR64_1
+endif
+
+ifneq ($(strip $(BUILD_IPV6)),)
+ifeq ($(strip $(AEI_CONTROL_LAYER)),)
+CMS_DMP_FLAGS += -DSUPPORT_IPV6	-DDMP_X_BROADCOM_COM_IPV6_1
+endif
+endif
+
+ifneq ($(strip $(BUILD_TR69C)),)
+CMS_DMP_FLAGS += -DSUPPORT_TR69C
+endif
+
+ifneq ($(strip $(BUILD_TR69C_SSL)),)
+CMS_DMP_FLAGS += -DSUPPORT_TR69C
+endif
+
+ifneq ($(strip $(BUILD_TR69C_BCM_SSL)),)
+CMS_DMP_FLAGS += -DSUPPORT_TR69C
+endif
+
+# TR157 Spec Profile
+ifneq ($(strip $(AEI_VDSL_TR157)),)
+CMS_DMP_FLAGS += -DDMP_SELFTESTDIAG_1
+CMS_DMP_FLAGS += -DDMP_PERIODICSTATSBASE_1 -DDMP_PERIODICSTATSADV_1
+ifneq ($(strip $(BUILD_UPNP)),)
+CMS_DMP_FLAGS += -DDMP_UPNPDEV_1 -DDMP_UPNPDISCBASIC_1 -DDMP_UPNPDISCADV_1
+endif
+CMS_DMP_FLAGS += -DDMP_USER_1
+CMS_DMP_FLAGS += -DDMP_SIMPLEFIREWALL_1
+CMS_DMP_FLAGS += -DDMP_MEMORYSTATUS_1 -DDMP_PROCESSSTATUS_1
+endif
+
+ifneq ($(strip $(AEI_VDSL_TR143)),)
+CMS_DMP_FLAGS += -DDMP_DOWNLOAD_1 -DDMP_UPLOAD_1 -DDMP_UDPECHO_1
+endif
+
+ifneq ($(strip $(BUILD_EPON_SDK_VOICE_OAM)),)
+CMS_DMP_FLAGS +=   -DDMP_X_CT_ORG_EPON_1 -DDMP_ENDPOINT_1 -DDMP_EPON_VOICE_OAM -DDMP_X_BROADCOM_COM_EPON_1
+endif
+
+ifneq ($(strip $(BUILD_GPON)),)
+
+CMS_DMP_FLAGS += -DDMP_X_ITU_ORG_GPON_1 -DDMP_X_BROADCOM_COM_GPON_1 -DDMP_DEVICE_2
+
+ifeq ($(strip $(BRCM_APP_PHONE)),sip)
+CMS_DMP_FLAGS += -DDMP_X_ITU_ORG_VOICE_1 -DDMP_X_ITU_ORG_VOICE_SIP_1
+endif
+
+ifeq ($(strip $(BRCM_APP_PHONE)),mgcp)
+#CMS_DMP_FLAGS += -DDMP_X_ITU_ORG_VOICE_1 -DDMP_X_ITU_ORG_VOICE_MGC_1
+endif
+
+endif
+
+ifneq ($(strip $(BUILD_OMCI)),)
+CMS_DMP_FLAGS += -DBRCM_OMCI
+ifneq ($(strip $(BRCM_OMCI_VOICE)),)
+CMS_DMP_FLAGS += -DBRCM_OMCI_VOICE
+endif
+endif
+
+ifneq ($(strip $(BUILD_HTTPD)),)
+CMS_DMP_FLAGS += -DSUPPORT_HTTPD
+endif
+
+ifneq ($(strip $(BUILD_QUICKSETUP)),)
+CMS_DMP_FLAGS += -DSUPPORT_QUICKSETUP -DDMP_X_BROADCOM_COM_QUICKSETUP_1
+endif
+
+ifneq ($(strip $(BUILD_HTTPD_SSL)),)
+CMS_DMP_FLAGS += -DSUPPORT_HTTPD -DSUPPORT_HTTPD_SSL
+endif
+
+ifneq ($(strip $(BUILD_CLI_MENU)),)
+CMS_DMP_FLAGS += -DSUPPORT_CLI_MENU
+endif
+
+ifneq ($(strip $(BUILD_CLI_CMD)),)
+CMS_DMP_FLAGS += -DSUPPORT_CLI_CMD -DCLI_CMD_EDIT
+endif
+
+ifneq ($(strip $(BUILD_CONSOLED)),)
+CMS_DMP_FLAGS += -DSUPPORT_CONSOLED
+endif
+
+
+ifneq ($(strip $(BUILD_VECTORINGD)),)
+CMS_DMP_FLAGS += -DSUPPORT_VECTORINGD
+export BUILD_VECTORINGD=y
+endif
+
+
+ifneq ($(strip $(BUILD_TELNETD)),)
+CMS_DMP_FLAGS += -DSUPPORT_TELNETD
+endif
+
+ifneq ($(strip $(BUILD_SSHD)),)
+CMS_DMP_FLAGS += -DSUPPORT_SSHD
+endif
+
+ifneq ($(strip $(BUILD_FTPD)),)
+CMS_DMP_FLAGS += -DSUPPORT_FTPD
+endif
+
+ifneq ($(strip $(BUILD_EBTABLES)),)
+CMS_DMP_FLAGS += -DSUPPORT_EBTABLES
+endif
+
+ifneq ($(strip $(BUILD_TOD)),)
+CMS_DMP_FLAGS += -DSUPPORT_TOD -DDMP_X_BROADCOM_COM_ACCESSTIMERESTRICTION_1
+endif
+
+ifneq ($(strip $(BUILD_URLFILTER)),)
+CMS_DMP_FLAGS += -DSUPPORT_URLFILTER
+endif
+
+ifneq ($(strip $(BUILD_IPROUTE2)),)
+CMS_DMP_FLAGS += -DSUPPORT_POLICYROUTING
+endif
+
+ifneq ($(strip $(BUILD_UPNP)),)
+CMS_DMP_FLAGS += -DSUPPORT_UPNP -DDMP_X_BROADCOM_COM_UPNP_1
+endif
+
+ifneq ($(strip $(BUILD_HASHED_PASSWORDS)),)
+CMS_DMP_FLAGS += -DSUPPORT_HASHED_PASSWORDS
+endif
+
+ifneq ($(strip $(BUILD_DDNSD)),)
+CMS_DMP_FLAGS += -DSUPPORT_DDNSD -DDMP_X_BROADCOM_COM_DYNAMICDNS_1
+endif
+
+ifneq ($(strip $(BUILD_DPROXY)),)
+CMS_DMP_FLAGS += -DSUPPORT_DNSPROXY -DDMP_X_BROADCOM_COM_DNSPROXY_1
+endif
+
+ifneq ($(strip $(BUILD_DNSPROBE)),)
+CMS_DMP_FLAGS += -DSUPPORT_DNSPROBE
+endif
+
+ifneq ($(strip $(BUILD_DPROXYWITHPROBE)),)
+CMS_DMP_FLAGS += -DSUPPORT_DNSPROXYWITHPROBE -DDMP_X_BROADCOM_COM_DNSPROXY_1
+endif
+
+ifneq ($(strip $(BUILD_SUPERDMZ)),)
+CMS_DMP_FLAGS += -DSUPPORT_ADVANCED_DMZ
+endif
+
+ifneq ($(strip $(BUILD_IPPD)),)
+CMS_DMP_FLAGS += -DSUPPORT_IPP -DDMP_X_BROADCOM_COM_IPPRINTING_1
+endif
+
+ifneq ($(strip $(BUILD_DLNA)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_DLNA_1
+export BUILD_DLNA
+endif
+
+ifneq ($(strip $(BUILD_DSLDIAGD)),)
+CMS_DMP_FLAGS += -DSUPPORT_DSLDIAGD
+endif
+
+ifneq ($(strip $(BUILD_SNTP)),)
+CMS_DMP_FLAGS += -DSUPPORT_SNTP -DDMP_TIME_1
+endif
+
+ifneq ($(strip $(BUILD_UDHCP)),)
+CMS_DMP_FLAGS += -DSUPPORT_UDHCP
+endif
+
+ifneq ($(strip $(BUILD_UDHCP_RELAY)),)
+CMS_DMP_FLAGS += -DDHCP_RELAY
+endif
+
+ifneq ($(strip $(BRCM_DRIVER_P8021AG)),)
+CMS_DMP_FLAGS += -DSUPPORT_P8021AG -DDMP_X_BROADCOM_COM_P8021AG_1
+endif
+
+ifneq ($(strip $(BUILD_SPUCTL)),)
+CMS_DMP_FLAGS += -DSUPPORT_SPUCTL 
+endif
+
+ifneq ($(strip $(BUILD_PWRCTL)),)
+CMS_DMP_FLAGS += -DSUPPORT_PWRMNGT -DDMP_X_BROADCOM_COM_PWRMNGT_1
+endif
+
+ifneq ($(strip $(BRCM_HOSTMIPS_PWRSAVE)),)
+CMS_DMP_FLAGS += -DSUPPORT_HOSTMIPS_PWRSAVE
+endif
+
+ifneq ($(strip $(BRCM_DDR_SELF_REFRESH_PWRSAVE)),)
+CMS_DMP_FLAGS += -DSUPPORT_DDR_SELF_REFRESH_PWRSAVE
+endif
+
+ifneq ($(strip $(BRCM_ETH_PWRSAVE)),)
+CMS_DMP_FLAGS += -DSUPPORT_ETH_PWRSAVE
+endif
+
+ifneq ($(strip $(BRCM_AVS_PWRSAVE)),)
+CMS_DMP_FLAGS += -DSUPPORT_AVS_PWRSAVE
+endif
+
+ifneq ($(strip $(BUILD_BMU)),)
+CMS_DMP_FLAGS += -DSUPPORT_BMU
+endif
+
+ifneq ($(strip $(BRCM_STANDBY)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_STANDBY_1
+endif
+
+ifneq ($(strip $(BUILD_CMFD)),)
+CMS_DMP_FLAGS += -DSUPPORT_CMFD
+endif
+
+ifneq ($(strip $(BUILD_GPONCTL)),)
+CMS_DMP_FLAGS += -DSUPPORT_GPONCTL
+endif
+
+ifneq ($(strip $(BUILD_RNGD)),)
+CMS_DMP_FLAGS += -DSUPPORT_HWRANDOM
+endif
+
+ifneq ($(strip $(REVERSION_TR98_URLREDIRECT)),)
+CMS_DMP_FLAGS += -DDMP_CAPTIVEPORTAL_1
+endif
+
+ifneq ($(strip $(BUILD_EPON_SDK)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_EPON_1
+endif
+
+# TR140 Storage Service
+
+ifneq ($(strip $(BUILD_STORAGESERVICE)),)
+CMS_DMP_FLAGS += -DSUPPORT_STORAGESERVICE -DDMP_STORAGESERVICE_1
+endif
+
+ifneq ($(strip $(BUILD_NTFS_3G)),)
+CMS_DMP_FLAGS += -DSUPPORT_NTFS_3G
+endif
+
+ifneq ($(strip $(BUILD_SAMBA)),)
+CMS_DMP_FLAGS += -DSUPPORT_SAMBA
+endif
+
+# end Storage Service
+
+
+ifneq ($(strip $(BUILD_MCAST_PROXY)),)
+   CMS_DMP_FLAGS += -DSUPPORT_IGMP -DDMP_X_BROADCOM_COM_IGMP_1
+   ifneq ($(strip $(BUILD_IPV6)),)
+   ifeq ($(strip $(AEI_VDSL_CUSTOMER_NCS)),)
+      CMS_DMP_FLAGS += -DSUPPORT_MLD -DDMP_X_BROADCOM_COM_MLD_1
+   endif
+   endif
+endif
+
+ifneq ($(strip $(BUILD_AUTODETECTION)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_AUTODETECTION_1
+endif
+
+ifneq ($(strip $(AEI_VDSL_CUSTOMER_NCS)),)
+CMS_DMP_FLAGS += -DDMP_TRACEROUTE_1
+CMS_DMP_FLAGS += -DDMP_WIFIWPS_1
+endif
+
+ifneq ($(strip $(BUILD_OSGI_JVM)),)
+CMS_DMP_FLAGS += -DDMP_X_BROADCOM_COM_OSGI_JVM_1 -DDMP_SM_DEPLOYANDEXECUNITS_1
+CMS_DMP_FLAGS += -DJVM_MIN_HEAP=$(JVM_MIN_HEAP_SIZE)
+CMS_DMP_FLAGS += -DJVM_MAX_HEAP=$(JVM_MAX_HEAP_SIZE)
+CMS_DMP_FLAGS += -DJVM_STACK=$(JVM_STACK_SIZE_PER_THREAD)
+endif
+
+#
+# netfilter modules 
+#
+
+ifneq ($(strip $(BRCM_KERNEL_NF_NAT_ALG_IPSEC)),)
+	CMS_DMP_FLAGS += -DSUPPORT_IPSEC_PASSTHROUGH
+endif
+
+ifneq ($(strip $(BRCM_KERNEL_NF_NAT_ALG_PPTP)),)
+	CMS_DMP_FLAGS += -DSUPPORT_PPTP
+endif
+
+ifneq ($(strip $(BRCM_KERNEL_NF_NAT_ALG_SIP)),)
+	CMS_DMP_FLAGS += -DSUPPORT_SIP
+endif
+
+ifneq ($(strip $(BUILD_CONNTRACK_TOOLS)),)
+CMS_DMP_FLAGS += -DSUPPORT_CONNTRACK_TOOLS
+endif
+
+#
+# netfilter modules end
+#
+
+
+# Somehow this VCONFIG is tangled up with the broadcom port mapping and
+# VLAN mux features.  Will have to sort it out later.
+#
+ifneq ($(strip $(BUILD_VCONFIG)),)
+CMS_DMP_FLAGS += -DSUPPORT_PORT_MAP -DDMP_BRIDGING_1 
+endif
+
+ifneq ($(strip $(BUILD_WANVLANMUX)),)
+CMS_DMP_FLAGS += -DSUPPORT_WANVLANMUX
+endif
+
+ifneq ($(strip $(AEI_VDSL_LAN_VLAN)),)
+CMS_DMP_FLAGS += -DSUPPORT_LANVLAN
+endif
+
+ifneq ($(strip $(BRCM_DRIVER_USB)),)
+CMS_DMP_FLAGS += -DDMP_USBLAN_1
+endif
+
+ifneq ($(strip $(BRCM_TC_RATE_LIMIT)),)
+CMS_DMP_FLAGS += -DSUPPORT_RATE_LIMIT
+endif
+
+ifneq ($(strip $(BRCM_TC_POLICING)),)
+CMS_DMP_FLAGS += -DSUPPORT_POLICING
+endif
+
+ifneq ($(strip $(BRCM_KERNEL_FTRACE)),)
+CMS_DMP_FLAGS += -DSUPPORT_FTRACE
+endif
+
+
+#
+# These variables come from the debug section of make menuconfig
+#
+ifeq ($(strip $(CMS_LOG_DEBUG)),)
+CMS_LOG_FLAGS := -DCMS_LOG0
+else
+ifneq ($(strip $(CMS_LOG_LEVEL_1)),)
+CMS_LOG_FLAGS := -DCMS_LOG2
+endif
+ifneq ($(strip $(CMS_LOG_LEVEL_2)),)
+CMS_LOG_FLAGS := -DCMS_LOG3
+endif
+ifneq ($(strip $(CMS_STARTUP_DEBUG)),)
+CMS_DMP_FLAGS += -DCMS_STARTUP_DEBUG
+endif
+endif
+
+ifneq ($(strip $(CMS_SECURITY_LOG)),)
+CMS_DMP_FLAGS += -DCMS_SECURITY_LOG
+endif
+
+ifneq ($(strip $(CMS_MEM_BOUNDARY_CHECK)),)
+CMS_DMP_FLAGS += -DCMS_MEM_BOUNDARY_CHECK
+endif
+
+ifneq ($(strip $(CMS_MEM_POISON_ALLOC_FREE)),)
+CMS_DMP_FLAGS += -DCMS_MEM_POISON_ALLOC_FREE
+endif
+
+ifneq ($(strip $(CMS_MEM_LEAK_TRACING)),)
+CMS_DMP_FLAGS += -DCMS_MEM_LEAK_TRACING
+endif
+
+ifneq ($(strip $(CMS_FATAL_ASSERT)),)
+CMS_DMP_FLAGS += -DCMS_FATAL_ASSERT
+endif
+
+ifneq ($(strip $(BUILD_DEBUG_TOOLS)),)
+CMS_DMP_FLAGS += -DSUPPORT_DEBUG_TOOLS
+endif
+
+ifneq ($(strip $(CMS_BYPASS_LOGIN)),)
+CMS_DMP_FLAGS += -DCMS_BYPASS_LOGIN
+endif
+
+
+#
+# This needs a little cleanup also.  Instead of explicitly checking for BUILD_CERT,
+# this check should be if (BUILD_HTTPD_SSL or BUILD_TR69_SSL or any other feature
+# that requires SSL).
+#
+ifneq ($(strip $(BUILD_CERT)),)
+CMS_DMP_FLAGS += -DSUPPORT_CERT -DDMP_X_BROADCOM_COM_DIGITALCERTIFICATES_1
+endif
+
+ifneq ($(strip $(BUILD_ZEBRA)),)
+CMS_DMP_FLAGS += -DSUPPORT_RIP
+endif
+
+ifneq ($(strip $(COMPRESSED_CONFIG_FILE)),)
+CMS_DMP_FLAGS += -DCOMPRESSED_CONFIG_FILE
+endif
+
+ifneq ($(strip $(BUILD_BACKUP_PSI)),)
+CMS_DMP_FLAGS += -DSUPPORT_BACKUP_PSI
+endif
+
+ifneq ($(strip $(CMS_CONFIG_COMPAT)),)
+CMS_DMP_FLAGS += -DCMS_CONFIG_COMPAT
+endif
+
+#we use wlan driver as the flags for wireless support on mdm, http, dal etc 
+ifneq ($(strip $(BRCM_DRIVER_WIRELESS)), )
+CMS_WLAN_FLAGS += -DBRCM_WLAN -DWIRELESS
+CMS_DMP_FLAGS += -DDMP_WIFILAN_1  -DDMP_WIFIWMM_1 -DDMP_X_BROADCOM_COM_WIFILAN_1
+export WIRELESS=1
+ifeq ($(BRCM_WAPI),y)
+CMS_WLAN_FLAGS += -DBCMWAPI_WPI -DBCMWAPI_WAI
+endif
+endif
+
+ifeq ($(strip $(BRCM_KERNEL_ROOTFS)),nfs)
+CMS_DMP_FLAGS += -DCMS_CONFIG_NFS
+endif
+
+ifneq ($(strip $(AEI_CONTROL_TR98_IPV6)),)
+CMS_DMP_FLAGS += -DDMP_TR98IPV6_1
+endif
+
+CMS_COMPILE_FLAGS := $(DBGFLAGS) $(CMS_LOG_FLAGS) $(PROFILERFLAGS) \
+                    -D$(TARGET_OS) $(CMS_COMPILER_OPTS) $(CMS_DMP_FLAGS) \
+                    -DCHIP_$(BRCM_CHIP)	-DCONFIG_BCM9$(BRCM_CHIP)
+
+ifneq ($(strip $(BUILD_BRCM_CMS)),)
+CMS_COMPILE_FLAGS += -DBRCM_CMS_BUILD
+endif
+
+###### Need to export kernel config as CMS is not using ioctl call to get NR_RX_BDS
+ifneq ($(strip $(BCM_NR_RX_BDS)),)
+CMS_COMPILE_FLAGS += -DCONFIG_BCM_NR_RX_BDS=$(BCM_NR_RX_BDS)
+endif
+
+ifneq ($(strip $(BRCM_MIPS_RATE_LIMIT)),)
+CMS_COMPILE_FLAGS += -DCONFIG_MIPS_RATE_LIMIT=$(BRCM_MIPS_RATE_LIMIT)
+endif
+
+CMS_COMPILE_FLAGS += -DCONFIG_EPON_NUM_FE_PORTS=$(EPON_NUM_FE_PORTS)
+CMS_COMPILE_FLAGS += -DCONFIG_EPON_NUM_VOIP_PORTS=$(EPON_NUM_VOIP_PORTS)
+
+ifneq ($(strip $(EPON_ONU_TYPE)),)
+CMS_COMPILE_FLAGS +=   -D$(EPON_ONU_TYPE)
+endif
+
+CFLAGS = $(CMS_COMPILE_FLAGS) $(CUSTOM_CFLAGS) $(ALLOWED_INCLUDE_PATHS) $(CMS_WLAN_FLAGS)
+CFLAGS += -I$(TOOLCHAIN)/include -L$(TOOLCHAIN)/lib
+CFLAGS += $(BRCM_WERROR_CFLAGS)
+
+################################################
+# Actiontec compile flags
+################################################
+ifneq ($(strip $(AEI_VDSL_CUSTOMER_NCS)),)
+CMS_COMPILE_FLAGS += $(ACTION_TEC_DFLAGS)
+CUSTOM_CFLAGS += $(ACTION_TEC_DFLAGS)
+EXTRA_CFLAGS = $(ACTION_TEC_DFLAGS)
+endif
+ifneq ($(strip $(AEI_VDSL_BCMSDK)),) 
+ifeq ($(strip $(AEI_VDSL_CUSTOMER_NCS)),)
+CMS_COMPILE_FLAGS += $(ACTION_TEC_DFLAGS)
+CUSTOM_CFLAGS += $(ACTION_TEC_DFLAGS)
+EXTRA_CFLAGS = $(ACTION_TEC_DFLAGS)
+endif
+endif
+export CMS_COMPILE_FLAGS
+
+ifneq ($(strip $(AEI_CONTROL_LAYER)),)
+CFLAGS += -I./userspace/private/apps/ctl_layer/include
+endif
+
+###########################################
+#
+# Generic/common rules which are used by lower layer Makefiles
+#
+###########################################
+
+
+# Every target should have a dependency on this target to make sure
+# the user has specified a profile.
+profile_defined_check: 
+	@if [ "$(PROFILE)" = "" ]; then \
+          echo You need to specify build profile name from $(TARGETS_DIR) using 'make PROFILE=<profile name>...'; exit 1; \
+	fi
+
+# See LAST_PROFILE at the top of this file.
+profile_changed_check: profile_defined_check
+ifneq ($(strip $(IGNORE_LAST_PROFILE)),1)
+	@if [ "$(LAST_PROFILE)" = "" ]; then \
+		echo "$(PROFILE)" > $(LAST_PROFILE_COOKIE); \
+	else \
+		if [ "$(LAST_PROFILE)" != "$(PROFILE)" ]; then \
+			echo "The specified profile, $(PROFILE), differs from the last one built, $(LAST_PROFILE)."; \
+			echo "The entire image must be rebuilt from the top of CommEngine."; \
+			echo "To skip this check, build with IGNORE_LAST_PROFILE=1."; \
+			read -p "Press ENTER to rebuild the entire image or CTRL-C to abort. " resp; \
+			$(MAKE) PROFILE=$(LAST_PROFILE) clean; \
+			$(MAKE) PROFILE=$(PROFILE); \
+			echo "Ignore the make exit error, Error 1"; \
+			exit 1; \
+		fi \
+	fi
+else
+	@if [ "$(LAST_PROFILE)" = "" ]; then \
+		echo "$(PROFILE)" > $(LAST_PROFILE_COOKIE); \
+	fi
+endif
+
+
+prebuild_checks: make_version_check kernel_version_check
+	@echo "shell is $(SHELL).  Bash version is $(shell echo $$BASH_VERSION)"
+	@if [ -z "$(shell echo $$BASH_VERSION)" ]; then \
+		echo "***************************************************"; \
+		echo "ERROR: $(SHELL) does not invoke bash shell"; \
+		echo "***************************************************"; \
+		exit 1; \
+	fi
+
+
+#
+# MAKE_VERSION is an internally defined symbol from make
+#
+REQUIRED_MAKE_VERSION := 3.81
+MAJOR_RMV := $(word 1,$(subst ., ,$(REQUIRED_MAKE_VERSION)))
+MINOR_RMV := $(word 2,$(subst ., ,$(REQUIRED_MAKE_VERSION)))
+MAJOR_MV := $(word 1,$(subst ., ,$(MAKE_VERSION)))
+MINOR_MV := $(word 2,$(subst ., ,$(MAKE_VERSION)))
+
+make_version_check:
+	@echo "make version is $(MAKE_VERSION)"
+	@if [ $(MAJOR_MV) -lt $(MAJOR_RMV) -o $(MAJOR_MV) -eq $(MAJOR_RMV) -a $(MINOR_MV) -lt $(MINOR_RMV) ]; then \
+	  echo "******************************************************"; \
+	  echo "ERROR: You must use GNU Make $(REQUIRED_MAKE_VERSION) to build the image!!"; \
+	  echo "******************************************************"; \
+	  exit 1; \
+	fi
+
+
+REQUIRED_KERNEL_VERSION := 2.6
+KERNEL_VERSION := $(shell uname -r)
+MAJOR_RKV := $(word 1,$(subst ., ,$(REQUIRED_KERNEL_VERSION)))
+MINOR_RKV := $(word 2,$(subst ., ,$(REQUIRED_KERNEL_VERSION)))
+MAJOR_KV := $(word 1,$(subst ., ,$(KERNEL_VERSION)))
+MINOR_KV := $(word 2,$(subst ., ,$(KERNEL_VERSION)))
+
+kernel_version_check:
+	@echo "kernel version is $(KERNEL_VERSION)"
+	@if [ $(MAJOR_KV) -lt $(MAJOR_RKV) -o $(MAJOR_KV) -eq $(MAJOR_RKV) -a $(MINOR_KV) -lt $(MINOR_RKV) ]; then \
+	  echo "******************************************************"; \
+	  echo "ERROR: You must use a relatively recent Linux distribution"; \
+	  echo "ERROR: with a $(REQUIRED_KERNEL_VERSION) kernel to build the image!!"; \
+	  echo "******************************************************"; \
+	  exit 1; \
+	fi
+
+
+$(PROFILE_DIR)/vmlinux: $(PROFILE_DIR)/$(PROFILE)
+ifneq ($(strip $(DONT_CLEAN)),1)
+	@if [ -e $(PROFILE_DIR)/vmlinux ]; then \
+	  echo "The specified profile, $(PROFILE), has been modified since the last build."; \
+	  echo "The entire image must be rebuilt from the top of CommEngine."; \
+	  echo "To skip this check, build with DONT_CLEAN=1."; \
+	  read -p "Press ENTER to rebuild the entire image or CTRL-C to abort. " resp; \
+	  rm $(PROFILE_DIR)/vmlinux; \
+	  $(MAKE) PROFILE=$(PROFILE) clean; \
+	  $(MAKE) PROFILE=$(PROFILE); \
+	  echo "Ignore the make exit error, Error 1"; \
+	  exit 1; \
+	fi
+endif
+
+
+sanity_check: profile_changed_check
+
+
+profile_saved_check: $(PROFILE_DIR)/vmlinux
+
+
+$(LAST_PROFILE_COOKIE): sanity_check
+
+
+$(OBJS) : $(LAST_PROFILE_COOKIE)
+
+
+generic_oaldir:
+	$(MAKE) -C $(OALDIR)
+
+oal.a: $(OBJS)
+	$(AR) -rcs $@ $(OBJS)
+
+generic_exe_install: $(EXE)
+	mkdir -p $(INSTALL_DIR)/bin
+	install -m 755 $(EXE) $(INSTALL_DIR)/bin
+
+generic_public_lib_install: $(LIB)
+	mkdir -p $(INSTALL_DIR)/lib/public
+	install -m 755 $(LIB) $(INSTALL_DIR)/lib/public
+
+generic_private_lib_install: $(LIB)
+	mkdir -p $(INSTALL_DIR)/lib/private
+	install -m 755 $(LIB) $(INSTALL_DIR)/lib/private
+
+generic_clean:
+	rm -f *.o *.d *.d.* core.* *.a output.txt $(EXE) $(LIB)
+	rm -rf output
+
+generic_oalclean:
+	$(MAKE) -C $(OALDIR) clean
+

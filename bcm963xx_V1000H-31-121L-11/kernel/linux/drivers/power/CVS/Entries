@@ -1,0 +1,18 @@
+/Kconfig/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/apm_power.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/bq27x00_battery.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/da9030_battery.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/ds2760_battery.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/olpc_battery.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/pcf50633-charger.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/pda_power.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/pmu_battery.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/power_supply.h/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/power_supply_core.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/power_supply_leds.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/power_supply_sysfs.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/tosa_battery.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/wm8350_power.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/wm97xx_battery.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+D

@@ -1,0 +1,24 @@
+D/alpha////
+D/arm////
+D/avr32////
+D/blackfin////
+D/cris////
+D/frv////
+D/h8300////
+D/ia64////
+D/m32r////
+D/m68k////
+D/m68knommu////
+D/microblaze////
+D/mips////
+D/mn10300////
+D/parisc////
+D/powerpc////
+D/s390////
+D/sh////
+D/sparc////
+D/um////
+D/x86////
+D/xtensa////
+/.gitignore/1.1.1.1/Wed Feb 22 10:22:54 2012/-ko/Tmain_branch_sdk1204
+/Kconfig/1.1.1.1/Wed Feb 22 10:22:54 2012/-ko/Tmain_branch_sdk1204

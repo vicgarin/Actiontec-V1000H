@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo 1 >/dev/oprofile/enable                                                                                                                                                                                                                 
+#kill -16 `cat $OP_BASE_DIR/lock`                                                                                                                                                                                                             
+echo "Profiler running."        
+

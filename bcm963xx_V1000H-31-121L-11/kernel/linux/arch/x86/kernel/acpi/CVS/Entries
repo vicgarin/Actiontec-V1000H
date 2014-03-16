@@ -1,0 +1,10 @@
+D/realmode////
+/Makefile/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/boot.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/cstate.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/processor.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/sleep.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/sleep.h/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/wakeup_32.S/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/wakeup_64.S/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/wakeup_rm.S/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204

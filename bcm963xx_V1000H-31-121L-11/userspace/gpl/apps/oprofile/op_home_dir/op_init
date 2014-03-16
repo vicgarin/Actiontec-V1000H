@@ -1,0 +1,27 @@
+#!/bin/sh
+
+OP_BASE_DIR='/var/lib/oprofile'
+#kill `cat $OP_BASE_DIR/lock 2>/dev/null` 2>/dev/null
+
+mkdir /dev/oprofile >/dev/null 2>&1
+mount -t oprofilefs nodev /dev/oprofile >/dev/null
+
+rm -rf $OP_BASE_DIR
+mkdir -p $OP_BASE_DIR
+mkdir -p $OP_BASE_DIR/samples/current                                                                                                                                                                                                        
+
+OP_VERBOSE="--verbose=all"
+OP_SESSION_DIR="--session-dir=$OP_BASE_DIR"
+OP_VMLINUX="--vmlinux=/mnt/usb1_1/op/bin_symbols/vmlinux"
+OP_KERNEL_RANGE="--kernel-range=80010000,80365048"
+OP_EVENTS="--events=CYCLES:0:0:15000:0:1:1"
+
+OP_ARGS="$OP_VERBOSE $OP_SESSION_DIR $OP_VMLINUX $OP_KERNEL_RANGE $OP_EVENTS"
+
+#export OP_ARGS                                                                                                                                                                                                                                             
+echo "OP_ARG=$OP_ARGS"
+# events -- name:value:counter:count:um:kernel:user                                                                                                                                                                                          
+#          ..    18     0    10   0   1    1                                                                                                                                                                                                 
+                                                                                                                                                                                                                                             
+/mnt/usb1_1/op/oprofiled $OP_ARGS                                                      
+                                                                                                                                                                                                                                             

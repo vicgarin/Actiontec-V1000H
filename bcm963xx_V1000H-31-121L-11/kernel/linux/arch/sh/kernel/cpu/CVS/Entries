@@ -1,0 +1,13 @@
+D/irq////
+D/sh2////
+D/sh2a////
+D/sh3////
+D/sh4////
+D/sh4a////
+D/sh5////
+D/shmobile////
+/Makefile/1.1.1.1/Wed Feb 22 10:23:37 2012/-ko/Tmain_branch_sdk1204
+/adc.c/1.1.1.1/Wed Feb 22 10:23:37 2012/-ko/Tmain_branch_sdk1204
+/clock.c/1.1.1.1/Wed Feb 22 10:23:37 2012/-ko/Tmain_branch_sdk1204
+/init.c/1.1.1.1/Wed Feb 22 10:23:37 2012/-ko/Tmain_branch_sdk1204
+/ubc.S/1.1.1.1/Wed Feb 22 10:23:37 2012/-ko/Tmain_branch_sdk1204

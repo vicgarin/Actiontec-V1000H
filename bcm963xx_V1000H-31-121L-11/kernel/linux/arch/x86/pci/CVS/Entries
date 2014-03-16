@@ -1,0 +1,19 @@
+/Makefile/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/acpi.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/amd_bus.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/common.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/direct.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/early.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/fixup.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/i386.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/init.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/irq.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/legacy.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/mmconfig-shared.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/mmconfig_32.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/mmconfig_64.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/numaq_32.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/olpc.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/pcbios.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+/visws.c/1.1.1.1/Wed Feb 22 10:23:43 2012/-ko/Tmain_branch_sdk1204
+D

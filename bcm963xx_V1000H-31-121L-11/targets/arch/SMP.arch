@@ -1,0 +1,19 @@
+--- 96362GW/96362GW	2010-05-04 09:30:48.000000000 -0700
++++ 96362GW_SMP/96362GW_SMP	2010-05-04 09:30:49.000000000 -0700
+@@ -47,8 +47,8 @@
+ #
+ # Kernel configuration selection
+ #
+-# BRCM_SMP_EN is not set
+-# BRCM_KERNEL_PREEMPT is not set
++BRCM_SMP_EN=y
++BRCM_KERNEL_PREEMPT=y
+ 
+ #
+ # Kernel Cryptographic selection
+@@ -336,4 +335,4 @@
+ # CMS_BYPASS_LOGIN is not set
+ # BUILD_SOAP is not set
+ # BUILD_DIAGAPP is not set
+-# BENCHMARKS_SMP is not set
++BENCHMARKS_SMP=y

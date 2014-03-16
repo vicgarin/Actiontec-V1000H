@@ -1,0 +1,23 @@
+D/gameport////
+D/joystick////
+D/keyboard////
+D/misc////
+D/mouse////
+D/serio////
+D/tablet////
+D/touchscreen////
+/Kconfig/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/apm-power.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/evbug.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/evdev.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/ff-core.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/ff-memless.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/fixp-arith.h/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/input-compat.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/input-compat.h/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/input-polldev.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/input.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/joydev.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/mousedev.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204
+/xen-kbdfront.c/1.1.1.1/Wed Feb 22 10:23:52 2012/-ko/Tmain_branch_sdk1204

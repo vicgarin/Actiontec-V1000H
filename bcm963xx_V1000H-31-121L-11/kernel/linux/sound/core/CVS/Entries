@@ -1,0 +1,34 @@
+D/oss////
+D/seq////
+/Kconfig/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/control.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/control_compat.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/device.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/hrtimer.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/hwdep.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/hwdep_compat.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/info.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/info_oss.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/init.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/isadma.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/jack.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/memalloc.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/memory.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/misc.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/pcm.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/pcm_compat.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/pcm_lib.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/pcm_memory.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/pcm_misc.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/pcm_native.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/pcm_timer.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/rawmidi.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/rawmidi_compat.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/rtctimer.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/sgbuf.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/sound.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/sound_oss.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/timer.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/timer_compat.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/vmaster.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204

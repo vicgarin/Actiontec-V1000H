@@ -1,0 +1,14 @@
+/auth.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/auth_builtin.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/auth_compat.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/auth_domain.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/auth_ntlmssp.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/auth_sam.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/auth_script.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/auth_server.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/auth_unix.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/auth_util.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/auth_winbind.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/pampass.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+/pass_check.c/1.1.1.1/Wed Apr  6 22:29:15 2011/-ko/Tmain_branch_sdk1204
+D

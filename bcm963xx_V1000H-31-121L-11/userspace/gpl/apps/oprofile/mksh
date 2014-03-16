@@ -1,0 +1,34 @@
+
+#
+# Set our CommEngine directory (by splitting the pwd into two words
+# at /userspace and taking the first word only).
+# Then include the common defines under CommEngine.
+#
+
+CURR_DIR := $(shell pwd)
+BUILD_DIR:=$(subst /userspace, /userspace,$(CURR_DIR))
+BUILD_DIR:=$(word 1, $(BUILD_DIR))
+
+include $(BUILD_DIR)/make.common
+
+
+EXE=tcpdump
+
+#
+# Various configurable paths (remember to edit Makefile.in, not Makefile)
+#
+
+# Top level hierarchy
+prefix = /usr/local
+exec_prefix = ${prefix}
+# Pathname of directory to install the binary
+sbindir = ${exec_prefix}/sbin
+# Pathname of directory to install the man page
+mandir = ${prefix}/share/man
+
+# VPATH
+srcdir = .
+
+sh: 
+	bash -i
+

@@ -1,0 +1,25 @@
+D/cpufreq////
+D/mcheck////
+D/mtrr////
+/.gitignore/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/addon_cpuid_features.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/amd.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/bugs.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/bugs_64.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/centaur.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/cmpxchg.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/common.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/cpu.h/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/cpu_debug.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/cyrix.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/hypervisor.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/intel.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/intel_cacheinfo.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/mkcapflags.pl/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/perfctr-watchdog.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/powerflags.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/proc.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/transmeta.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/umc.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/vmware.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204

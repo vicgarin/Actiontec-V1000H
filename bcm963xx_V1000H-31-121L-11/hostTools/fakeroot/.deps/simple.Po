@@ -1,0 +1,1 @@
+simple.o: simple.c

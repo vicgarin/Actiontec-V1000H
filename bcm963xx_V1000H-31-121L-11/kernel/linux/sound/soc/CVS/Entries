@@ -1,0 +1,15 @@
+D/atmel////
+D/au1x////
+D/blackfin////
+D/codecs////
+D/davinci////
+D/fsl////
+D/omap////
+D/pxa////
+D/s3c24xx////
+D/sh////
+/Kconfig/1.1.1.1/Wed Feb 22 10:25:13 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:25:13 2012/-ko/Tmain_branch_sdk1204
+/soc-core.c/1.1.1.1/Wed Feb 22 10:25:13 2012/-ko/Tmain_branch_sdk1204
+/soc-dapm.c/1.1.1.1/Wed Feb 22 10:25:13 2012/-ko/Tmain_branch_sdk1204
+/soc-jack.c/1.1.1.1/Wed Feb 22 10:25:13 2012/-ko/Tmain_branch_sdk1204

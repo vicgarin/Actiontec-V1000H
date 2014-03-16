@@ -1,0 +1,198 @@
+--- targets/96368GW/96368GW	2011-10-19 11:28:51.000000000 -0700
++++ targets/96368BGWEXT/96368BGWEXT	2011-10-19 12:06:18.000000000 -0700
+@@ -117,7 +117,7 @@
+ BRCM_EXT_SWITCH=53115
+ BRCM_EXT_SWITCH_REV="a0"
+ BUILD_MDK_SHELL=y
+-BUILD_ETHWAN=y
++
+ # BCM_ETH_JUMBO_FRAME is not set
+ 
+ #
+@@ -132,33 +132,33 @@
+ #
+ # USB and Storage Options Selection
+ #
+-BRCM_DRIVER_USB=m
+-LINUX_DRIVER_USB_HOST=y
++
++
+ # LINUX_DRIVER_CDCETHER is not set
+-LINUX_KERNEL_USBMASS=y
++
+ # LINUX_KERNEL_USB_DEVICEFS is not set
+ # BUILD_LIBUSB is not set
+-BUILD_FTPD=dynamic
+-# BUILD_FTPD_STORAGE is not set
+-BUILD_STORAGESERVICE=y
+-BUILD_NTFS_3G=y
+-# BUILD_SAMBA is not set
++
++
++
++
++
+ 
+ #
+ # WLAN Selection
+ #
+-BRCM_DRIVER_WIRELESS=m
++
+ # BRCM_WAPI is not set
+-BRCM_WLALTBLD="ap_2gn"
+-BUILD_WLCTL=dynamic
+-BUILD_NAS=dynamic
+-WLSETUP_WPS=y
+-# WLSETUP_none is not set
+-BUILD_WPS_BTN=dynamic
+-BUILD_LLTD=dynamic
+-BUILD_WSC=dynamic
+-BUILD_NVRAM=dynamic
+-# BRCM_DRIVER_WIRELESS_USBAP is not set
++
++
++
++
++
++
++
++
++
++
+ 
+ #
+ # Voice/Phone Selection
+@@ -169,13 +169,13 @@
+ #
+ # WAN Protocols and VPN
+ #
+-BUILD_PPPD=dynamic
+-PPP_AUTODISCONN=y
+-BUILD_WANVLANMUX=y
+-BUILD_IPSEC_TOOLS=dynamic
+-BRCM_DRIVER_SPU=y
++
++
++
++
++
+ # BRCM_DRIVER_SPU_TEST is not set
+-BUILD_SPUCTL=dynamic
++
+ # BUILD_L2TPAC is not set
+ # BUILD_PPTPAC is not set
+ 
+@@ -207,26 +207,24 @@
+ BRCM_KERNEL_NF_LOG=m
+ # BRCM_KERNEL_NF_PPPREMOTE is not set
+ # BUILD_CONNTRACK_TOOLS is not set
+-BUILD_IPTABLES=dynamic
+-BUILD_EBTABLES=dynamic
++
++
+ # BUILD_DYNAHELPER is not set
+-BUILD_TOD=dynamic
+-BUILD_URLFILTER=dynamic
+-BUILD_BRCTL=dynamic
+-BUILD_UDHCP=dynamic
+-# BUILD_UDHCP_RELAY is not set
+-BUILD_SNTP=dynamic
++
++
++
++
++
++
+ # DRELAY_DNSPROBE is not set
+ DRELAY_DPROXY=y
+ # DRELAY_DPROXYWITHPROBE is not set
+ BUILD_DNSPROBE=
+ BUILD_DPROXY=dynamic
+ BUILD_DPROXYWITHPROBE=
+-BUILD_DNSSPOOF=dynamic
+-BUILD_DDNSD=dynamic
++
++
+ # BUILD_SUPERDMZ is not set
+-BUILD_IPROUTE2=dynamic
+-BUILD_ZEBRA=dynamic
+ BUILD_MCAST_PROXY=dynamic
+ BUILD_MCAST_SNOOP=y
+ BUILD_MROUTE=dynamic
+@@ -241,21 +239,21 @@
+ #
+ # Packet Acceleration
+ #
+-BRCM_DRIVER_PKTFLOW=m
+-BRCM_DRIVER_PKTFLOW_IPV6=y
+-BRCM_DRIVER_PKTFLOW_MCAST=y
+-# BRCM_DRIVER_PKTFLOW_DEBUG is not set
+-BUILD_FCCTL=dynamic
+-BUILD_CMFCTL=dynamic
++
++
++
++
++
++
+ 
+ #
+ # Buffer Pool Manager and Ingress QoS
+ #
+ BRCM_BUF_MEM_PRCNT=15
+-BRCM_DRIVER_BPM=m
+-BUILD_BPMCTL=dynamic
+-BRCM_DRIVER_INGQOS=m
+-BUILD_IQCTL=dynamic
++
++
++
++
+ 
+ #
+ # OSGI/JVM
+@@ -396,3 +394,43 @@
+ # BRCM_MEMORY_RESTRICTION_16M is not set
+ # BRCM_MEMORY_RESTRICTION_32M is not set
+ # BRCM_MEMORY_RESTRICTION_64M is not set
++
++BRCM_EXT_PHY_BONDING=y
++BRCM_DRIVER_EXT_BONDING=m
++# BUILD_ETHWAN is not set
++# BRCM_DRIVER_USB is not set
++# LINUX_DRIVER_USB_HOST is not set
++# LINUX_KERNEL_USBMASS is not set
++# BUILD_FTPD is not set
++BUILD_FTPD_STORAGE=
++# BUILD_STORAGESERVICE is not set
++# BRCM_DRIVER_WIRELESS is not set
++# BUILD_WLCTL is not set
++# BUILD_NAS is not set
++# WLSETUP_WPS is not set
++WLSETUP_none=y
++BUILD_WPS_BTN=
++BUILD_LLTD=
++BUILD_WSC=
++# BUILD_NVRAM is not set
++# BUILD_PPPD is not set
++# PPP_AUTODISCONN is not set
++# BUILD_WANVLANMUX is not set
++# BUILD_IPSEC_TOOLS is not set
++# BRCM_DRIVER_SPU is not set
++# BUILD_SPUCTL is not set
++# BUILD_IPTABLES is not set
++# BUILD_EBTABLES is not set
++# BUILD_TOD is not set
++# BUILD_URLFILTER is not set
++# BUILD_BRCTL is not set
++# BUILD_UDHCP is not set
++# BUILD_SNTP is not set
++# BUILD_DNSSPOOF is not set
++# BUILD_DDNSD is not set
++# BUILD_IPROUTE2 is not set
++# BUILD_ZEBRA is not set
++# BRCM_DRIVER_PKTFLOW is not set
++# BUILD_CMFCTL is not set
++# BRCM_DRIVER_BPM is not set
++# BRCM_DRIVER_INGQOS is not set
+\ No newline at end of file

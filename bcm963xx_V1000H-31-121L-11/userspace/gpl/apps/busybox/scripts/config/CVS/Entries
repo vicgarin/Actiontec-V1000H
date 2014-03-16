@@ -1,0 +1,27 @@
+/.cvsignore/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/Kconfig-language.txt/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/checklist.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/colors.h/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/conf.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/confdata.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/dialog.h/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/expr.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/expr.h/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/inputbox.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/lex.zconf.c_shipped/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/lkc.h/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/lkc_proto.h/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/mconf.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/menu.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/menubox.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/msgbox.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/symbol.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/textbox.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/util.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/yesno.c/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/zconf.l/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/zconf.tab.c_shipped/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/zconf.tab.h_shipped/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+/zconf.y/1.1.1.1/Wed Apr  6 22:10:23 2011/-ko/Tmain_branch_sdk1204
+D

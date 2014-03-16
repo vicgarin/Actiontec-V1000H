@@ -1,0 +1,13 @@
+/xfs_dquot.c/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_dquot.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_dquot_item.c/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_dquot_item.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_qm.c/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_qm.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_qm_bhv.c/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_qm_stats.c/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_qm_stats.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_qm_syscalls.c/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_quota_priv.h/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+/xfs_trans_dquot.c/1.1.1.1/Wed Feb 22 10:24:43 2012/-ko/Tmain_branch_sdk1204
+D

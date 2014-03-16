@@ -1,0 +1,21 @@
+/ads_status.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/ads_struct.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/ads_utils.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/authdata.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/cldap.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/disp_sec.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/dns.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/kerberos.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/kerberos_keytab.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/kerberos_verify.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/krb5_errs.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/krb5_setpw.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/ldap.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/ldap_printer.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/ldap_schema.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/ldap_user.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/ldap_utils.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/sasl.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/smb_krb5_locator.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+/util.c/1.1.1.1/Wed Apr  6 22:29:14 2011/-ko/Tmain_branch_sdk1204
+D

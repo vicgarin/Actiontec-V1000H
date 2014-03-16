@@ -1,0 +1,19 @@
+/Makefile/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_device.h/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_event.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_event.h/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_init.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_ioctl.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_midi.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_midi.h/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_readq.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_readq.h/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_rw.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_synth.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_synth.h/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_timer.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_timer.h/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_writeq.c/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+/seq_oss_writeq.h/1.1.1.1/Wed Feb 22 10:25:09 2012/-ko/Tmain_branch_sdk1204
+D

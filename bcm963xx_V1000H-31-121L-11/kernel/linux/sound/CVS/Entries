@@ -1,0 +1,25 @@
+D/aoa////
+D/arm////
+D/atmel////
+D/core////
+D/drivers////
+D/i2c////
+D/isa////
+D/mips////
+D/oss////
+D/parisc////
+D/pci////
+D/pcmcia////
+D/ppc////
+D/sh////
+D/soc////
+D/sparc////
+D/spi////
+D/synth////
+D/usb////
+/Kconfig/1.1.1.1/Wed Feb 22 10:25:08 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:25:08 2012/-ko/Tmain_branch_sdk1204
+/ac97_bus.c/1.1.1.1/Wed Feb 22 10:25:08 2012/-ko/Tmain_branch_sdk1204
+/last.c/1.1.1.1/Wed Feb 22 10:25:08 2012/-ko/Tmain_branch_sdk1204
+/sound_core.c/1.1.1.1/Wed Feb 22 10:25:08 2012/-ko/Tmain_branch_sdk1204
+/sound_firmware.c/1.1.1.1/Wed Feb 22 10:25:08 2012/-ko/Tmain_branch_sdk1204

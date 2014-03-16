@@ -1,0 +1,11 @@
+/Makefile/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/rpc_rdma.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/svc_rdma.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/svc_rdma_marshal.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/svc_rdma_recvfrom.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/svc_rdma_sendto.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/svc_rdma_transport.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/transport.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/verbs.c/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+/xprt_rdma.h/1.1.1.1/Wed Feb 22 10:25:06 2012/-ko/Tmain_branch_sdk1204
+D

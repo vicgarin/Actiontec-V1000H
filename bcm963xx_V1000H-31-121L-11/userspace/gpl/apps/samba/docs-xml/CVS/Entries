@@ -1,0 +1,27 @@
+/.gitignore/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/Makefile.settings.in/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/README/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/Samba-EventLog-HOWTO.txt/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/Samba.desktop/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/aclocal.m4/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/configure/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/configure.ac/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/gpl-3.0.xml/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/htmldocs.html/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+/structure.svg/1.1.1.1/Wed Apr  6 22:29:16 2011/-ko/Tmain_branch_sdk1204
+D/Samba3-ByExample////
+D/Samba3-Developers-Guide////
+D/Samba3-HOWTO////
+D/Samba4-HOWTO////
+D/archives////
+D/autom4te.cache////
+D/build////
+D/linux-client////
+D/manpages-3////
+D/registry////
+D/scripts////
+D/smbdotconf////
+D/templates////
+D/test////
+D/xslt////

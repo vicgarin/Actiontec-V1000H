@@ -1,0 +1,14 @@
+/Makefile/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/aes-i586-asm_32.S/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/aes-x86_64-asm_64.S/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/aes_glue.c/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/aesni-intel_asm.S/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/aesni-intel_glue.c/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/crc32c-intel.c/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/salsa20-i586-asm_32.S/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/salsa20-x86_64-asm_64.S/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/salsa20_glue.c/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/twofish-i586-asm_32.S/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/twofish-x86_64-asm_64.S/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+/twofish_glue.c/1.1.1.1/Wed Feb 22 10:23:41 2012/-ko/Tmain_branch_sdk1204
+D

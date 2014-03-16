@@ -1,0 +1,23 @@
+/Makefile/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emu10k1.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emu10k1_callback.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emu10k1_main.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emu10k1_patch.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emu10k1_synth.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emu10k1_synth_local.h/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emu10k1x.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emufx.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emumixer.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emumpu401.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emupcm.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/emuproc.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/io.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/irq.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/memory.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/p16v.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/p16v.h/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/p17v.h/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/timer.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/tina2.h/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+/voice.c/1.1.1.1/Wed Feb 22 10:25:11 2012/-ko/Tmain_branch_sdk1204
+D

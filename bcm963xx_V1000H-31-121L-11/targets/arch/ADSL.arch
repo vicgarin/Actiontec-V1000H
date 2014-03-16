@@ -1,0 +1,11 @@
+--- ./targets/96368GW/96368GW.old	2011-06-15 18:56:21.900796106 -0700
++++ ./targets/96368GW/96368GW	2011-06-16 14:03:13.282045152 -0700
+@@ -80,9 +80,9 @@
+ #
+ # DSL/XTM selection
+ #
+-# BUILD_PHY_ADSL is not set
++BUILD_PHY_ADSL=y
+ # BUILD_PHY_VDSL is not set
+-BUILD_PHY_MULTIMODE=y
++# BUILD_PHY_MULTIMODE is not set

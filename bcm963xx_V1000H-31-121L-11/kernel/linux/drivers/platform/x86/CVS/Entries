@@ -1,0 +1,20 @@
+/Kconfig/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/acer-wmi.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/asus-laptop.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/asus_acpi.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/compal-laptop.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/dell-laptop.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/dell-wmi.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/eeepc-laptop.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/fujitsu-laptop.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/hp-wmi.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/intel_menlow.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/msi-laptop.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/panasonic-laptop.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/sony-laptop.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/tc1100-wmi.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/thinkpad_acpi.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/toshiba_acpi.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+/wmi.c/1.1.1.1/Wed Feb 22 10:24:10 2012/-ko/Tmain_branch_sdk1204
+D

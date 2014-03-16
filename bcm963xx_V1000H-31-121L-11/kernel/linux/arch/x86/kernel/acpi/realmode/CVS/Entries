@@ -1,0 +1,12 @@
+/.gitignore/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/copy.S/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/video-bios.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/video-mode.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/video-vesa.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/video-vga.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/wakemain.c/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/wakeup.S/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/wakeup.h/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+/wakeup.lds.S/1.1.1.1/Wed Feb 22 10:23:42 2012/-ko/Tmain_branch_sdk1204
+D

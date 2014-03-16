@@ -1,0 +1,1040 @@
+#!/bin/bash
+
+# Save specific values if passed as parameters to the script
+SAVED_BRCM_DRIVER_BCMDSP=$BRCM_DRIVER_BCMDSP
+
+driver_setup ()
+{
+
+  BRCM_DRIVER_NAME=BRCM_DRIVER_$1
+  eval BRCM_DRIVER_VAL=\$$BRCM_DRIVER_NAME
+  LINUX_CONFIG_NAME=CONFIG_BCM_"$2"
+  LINUX_IMPL_NAME=CONFIG_BCM9"$BRCM_CHIP"_"$2"_IMPL
+
+  if [ "$BRCM_DRIVER_VAL" != "" ]; then
+     SEDCMD="$SEDCMD -e 's/# $LINUX_CONFIG_NAME is not set/$LINUX_CONFIG_NAME="$BRCM_DRIVER_VAL"/'"
+  fi
+  SEDCMD="$SEDCMD -e 's/# "$LINUX_IMPL_NAME"/"$LINUX_CONFIG_NAME"_IMPL/'"
+}
+
+
+netfilter_setup ()
+{
+
+  SEDCMD="$SEDCMD -e 's/# CONFIG_"$1" is not set/CONFIG_"$1"="$2"/'"
+
+}
+
+general_setup ()
+{
+
+  SEDCMD="$SEDCMD -e 's/# "$1" is not set/"$1"="$2"/'"
+
+}
+
+TEMPLATE=$HOSTTOOLS_DIR/scripts/defconfig-bcm.template
+#TEMPLATE=defconfig-bcm.template
+
+. $1
+
+# Restore values if they were passed as parameters to the script
+if [ "$SAVED_BRCM_DRIVER_BCMDSP" != "" ]; then
+     BRCM_DRIVER_BCMDSP=$SAVED_BRCM_DRIVER_BCMDSP
+     echo Restoring BRCM_DRIVER_BCMDSP=$BRCM_DRIVER_BCMDSP
+fi
+
+
+
+############################################################
+# 	Driver config generation
+############################################################
+
+if [ "$BRCM_KERNEL_ROOTFS" = "nfs" ]; then
+  # Ethernet must be static for NFS
+  BRCM_DRIVER_ETHERNET="y"
+fi
+
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP" is not set/CONFIG_BCM9"$BRCM_CHIP"=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_BOARD is not set/CONFIG_BCM_BOARD=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_BOARD_IMPL/CONFIG_BCM_BOARD_IMPL/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_CHIPINFO is not set/CONFIG_BCM_CHIPINFO=m/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_CHIPINFO_IMPL/CONFIG_BCM_CHIPINFO_IMPL/'"
+
+#if [ "$BRCM_CHIP" = "63268" -o "$BRCM_CHIP" = "6328" -o "$BRCM_CHIP" = "6362" -o "$BRCM_CHIP" = "6368" ]; then
+driver_setup "XTM" "XTMCFG"
+driver_setup "XTM" "XTMRT"
+driver_setup "ADSL" "ADSL"
+#fi
+
+#if [ "$BRCM_CHIP" = "63268" -o "$BRCM_CHIP" = "6368" ]; then
+driver_setup "EXT_BONDING" "EXT_BONDING"
+#fi
+
+driver_setup "ETHERNET" "ENET"
+
+if [ "$BRCM_EXT_SWITCH" != "" ]; then
+      SEDCMD="$SEDCMD -e 's/CONFIG_BCM_EXT_SWITCH=./CONFIG_BCM_EXT_SWITCH="$BRCM_EXT_SWITCH"/'"
+fi
+
+driver_setup "VLAN" "VLAN"
+
+driver_setup "USB" "USB"
+
+driver_setup "LOG" "LOG"
+
+driver_setup "LASER" "LASER"
+
+if [ "$BRCM_CHIP" = "6816" ]; then
+    driver_setup "GPON" "GPON"
+
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_LASER is not set/CONFIG_BCM_LASER=m/'"
+
+    if [ "$BRCM_GPON_FPGA" = "y" ]; then
+      SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_GPON_FPGA is not set/CONFIG_BCM_GPON_FPGA=y/'"
+    fi
+
+    if [ "$BCM_GPON_160MHz_FFE" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_GPON_160MHz_FFE is not set/CONFIG_BCM_GPON_160MHz_FFE=y/'"
+    fi
+
+    if [ "$BCM_GPON_802_1Q_ENABLED" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_GPON_802_1Q_ENABLED is not set/CONFIG_BCM_GPON_802_1Q_ENABLED=y/'"
+    fi
+
+    if [ "$BCM_GPON_AE_AUTO_SWITCH" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_GPON_AE_AUTO_SWITCH is not set/CONFIG_BCM_GPON_AE_AUTO_SWITCH=y/'"
+    fi
+fi
+
+if [ "$BRCM_CHIP" = "6816" ]; then
+   driver_setup "MoCA" "MoCA"
+   SEDCMD="$SEDCMD -e 's/CONFIG_BCM_MoCA_IMPL=./CONFIG_BCM_MoCA_IMPL=2/'"
+   if [ "$BRCM_MOCA_SOFT_SWITCHING" != ""  ] ; then
+      general_setup CONFIG_BCM_MOCA_SOFT_SWITCHING $BRCM_MOCA_SOFT_SWITCHING
+   fi      
+fi
+
+if [ "$BRCM_CHIP" = "6816" ]; then
+   driver_setup "I2C" "I2C_BUS"
+   driver_setup "I2C" "I2C_CHIP"
+   if [ "$BRCM_DRIVER_I2C" != "" ]; then
+      SEDCMD="$SEDCMD -e 's/# CONFIG_I2C is not set/CONFIG_I2C=y/'"
+      SEDCMD="$SEDCMD -e 's/# CONFIG_I2C_CHARDEV is not set/CONFIG_I2C_CHARDEV=y/'"
+   fi
+fi
+
+if [ "$BRCM_CHIP" = "63268" -o "$BRCM_CHIP" = "6362" -o "$BRCM_CHIP" = "6368" -o "$BRCM_CHIP" = "6816" ]; then
+driver_setup "SPU" "SPU"
+fi
+
+driver_setup "PWRMNGT" "PWRMNGT"
+
+driver_setup "WATCHDOG" "WATCHDOG"
+
+if [ "$BRCM_CHIP" = "63268" -o "$BRCM_CHIP" = "6362" -o "$BRCM_CHIP" = "6368" -o "$BRCM_CHIP" = "6816" ]; then
+driver_setup "TRNG" "TRNG"
+fi
+
+if [ "$BRCM_CHIP" = "63268" -o "$BRCM_CHIP" = "6362" -o "$BRCM_CHIP" = "6328" ]; then
+driver_setup "ARL" "ARL"
+fi
+
+if [ "$BCM_DEF_NR_RX_DMA_CHANNELS" != "" ]; then
+   SEDCMD="$SEDCMD -e '/CONFIG_BCM_DEF_NR_RX_DMA_CHANNELS/ c\CONFIG_BCM_DEF_NR_RX_DMA_CHANNELS=$BCM_DEF_NR_RX_DMA_CHANNELS'"
+fi
+if [ "$BCM_DEF_NR_TX_DMA_CHANNELS" != "" ]; then
+   SEDCMD="$SEDCMD -e '/CONFIG_BCM_DEF_NR_TX_DMA_CHANNELS/ c\CONFIG_BCM_DEF_NR_TX_DMA_CHANNELS=$BCM_DEF_NR_TX_DMA_CHANNELS'"
+fi
+
+############################################################
+#       EPON
+############################################################
+if [ "$BUILD_EPON_SDK" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_EPON_SDK is not set/CONFIG_EPON_SDK=y/'"
+if [ "$BUILD_EPON_SDK_VOICE_OAM" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_EPON_SDK_VOICE_OAM is not set/CONFIG_EPON_SDK_VOICE_OAM=y/'"
+fi
+if [ "$EPON_NUM_GE_PORTS" != "" ]; then
+   SEDCMD="$SEDCMD -e '/CONFIG_EPON_NUM_GE_PORTS/ c\CONFIG_EPON_NUM_GE_PORTS=$EPON_NUM_GE_PORTS'"
+fi
+if [ "$EPON_NUM_FE_PORTS" != "" ]; then
+   SEDCMD="$SEDCMD -e '/CONFIG_EPON_NUM_FE_PORTS/ c\CONFIG_EPON_NUM_FE_PORTS=$EPON_NUM_FE_PORTS'"
+fi
+if [ "$EPON_NUM_VOIP_PORTS" != "" ]; then
+   SEDCMD="$SEDCMD -e '/CONFIG_EPON_NUM_VOIP_PORTS/ c\CONFIG_EPON_NUM_VOIP_PORTS=$EPON_NUM_VOIP_PORTS'"
+fi
+if [ "$EPON_ONU_TYPE" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_"$EPON_ONU_TYPE" is not set/CONFIG_"$EPON_ONU_TYPE"=y/'"
+fi
+fi
+
+############################################################
+# Enabling FlowCache via menuconfig:
+# - Enables BLOG static kernel compile.
+# - 6368, 6816: Enables Packet CMF module.
+#
+# See "Root file system config generation"
+# Only if Packet Flow, CMF and FAP source code is available, will it be included
+# in static builds for NFS support.
+############################################################
+
+driver_setup "PKTFLOW" "PKTFLOW"
+
+# Determine whether Packet Flow is available for static builds
+PKTFLOW_SRCFILE=$BRCMDRIVERS_DIR/broadcom/char/pktflow/impl1/fcache.c
+PKTFLOW_SRC_COMPILE="n"             # Customer releases
+if [ -f $PKTFLOW_SRCFILE ] ; then
+   PKTFLOW_SRC_COMPILE="y"          # Brcm Designer builds
+fi
+
+if [ "$BRCM_DRIVER_PKTFLOW" != "" ]; then
+#  echo "[0;31m Flow Cache and Blog Build Enabled [0m"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BLOG is not set/CONFIG_BLOG=y/'"
+   if [ "$BRCM_DRIVER_PKTFLOW_IPV6" != "" ]; then
+      SEDCMD="$SEDCMD -e 's/# CONFIG_BLOG_IPV6 is not set/CONFIG_BLOG_IPV6=y/'"
+#     echo "[0;31m ++++++++++ IPV6 Blog Build Enabled ++++++++++ [0m"
+   fi
+   if [ "$BRCM_DRIVER_PKTFLOW_MCAST" != "" ]; then
+      SEDCMD="$SEDCMD -e 's/# CONFIG_BLOG_MCAST is not set/CONFIG_BLOG_MCAST=y/'"
+   fi
+   if [ "$BRCM_CHIP" = "6368" -o "$BRCM_CHIP" = "6816" ]; then
+#     echo "[0;31m Packet CMF Build Enabled [0m"
+      SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_PKTCMF is not set/CONFIG_BCM_PKTCMF=m/'"
+   fi
+fi
+
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_PKTCMF_IMPL/CONFIG_BCM_PKTCMF_IMPL/'"
+
+driver_setup "FAP" "FAP"
+
+if [ "$BRCM_CHIP" = "63268" -o "$BRCM_CHIP" = "6362" -o "$BRCM_CHIP" = "6328" -o "$BRCM_CHIP" = "6368" -o "$BRCM_CHIP" = "6816" ]; then
+        echo "[0;31m PKTDMA Build Enabled [0m"
+        SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_PKTDMA is not set/CONFIG_BCM_PKTDMA=y/'"
+    fi
+
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_PKTDMA_IMPL/CONFIG_BCM_PKTDMA_IMPL/'"
+
+if [ "$BRCM_DRIVER_SPU" != "" ]; then
+if [ "$BRCM_CHIP" = "63268" -o "$BRCM_CHIP" = "6362" -o "$BRCM_CHIP" = "6368" -o "$BRCM_CHIP" = "6816" ]; then
+#  echo "^[[0;31m SPU Build Enabled ^[[0m"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_SPU is not set/CONFIG_BCM_SPU=y/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_SPU_IMPL/CONFIG_BCM_SPU_IMPL/'"
+	if [ "$BRCM_DRIVER_SPU_TEST" != "" ]; then
+	    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_SPU_TEST is not set/CONFIG_BCM_SPU_TEST=y/'"
+	fi
+fi
+fi
+
+driver_setup "INGQOS" "INGQOS"
+
+if [ "$BRCM_KERNEL_NF_MATCH_RECENT" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_NETFILTER_XT_MATCH_RECENT is not set/CONFIG_NETFILTER_XT_MATCH_RECENT=m/'"
+fi
+
+if [ "$BRCM_DRIVER_INGQOS" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_INGQOS is not set/CONFIG_BCM_INGQOS=m/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_INGQOS_IMPL/CONFIG_BCM_INGQOS_IMPL/'"    
+fi
+
+if [ "$BRCM_BUF_MEM_PRCNT" != "" ]; then
+    SEDCMD="$SEDCMD -e '/CONFIG_BRCM_BUF_MEM_PRCNT/ c\CONFIG_BRCM_BUF_MEM_PRCNT=$BRCM_BUF_MEM_PRCNT'"
+fi
+
+driver_setup "BPM" "BPM"
+if [ "$BRCM_DRIVER_BPM" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_BPM is not set/CONFIG_BCM_BPM=m/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_BPM_IMPL/CONFIG_BCM_BPM_IMPL/'"    
+fi
+
+if [ "$BRCM_DRIVER_PWRMNGT" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_PWRMNGT is not set/CONFIG_BCM_PWRMNGT=m/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_PWRMNGT_IMPL/CONFIG_BCM_PWRMNGT_IMPL/'"    
+fi
+
+#Force watchdog enabled for every project
+#if [ "$BRCM_DRIVER_WATCHDOG" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_WATCHDOG is not set/CONFIG_BCM_WATCHDOG=m/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_WATCHDOG_IMPL/CONFIG_BCM_WATCHDOG_IMPL/'"
+#fi
+
+if [ "$BRCM_DRIVER_ARL" != "" ]; then
+if [ "$BRCM_CHIP" = "63268" -o "$BRCM_CHIP" = "6362" -o "$BRCM_CHIP" = "6328" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_ARL is not set/CONFIG_BCM_ARL=y/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_ARL_IMPL/CONFIG_BCM_ARL_IMPL/'"
+fi
+fi
+
+if [ "$BRCM_ETH_PWRSAVE" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_ETH_PWRSAVE is not set/CONFIG_BCM_ETH_PWRSAVE=y/'"   
+    if [ "$BRCM_CHIP" = "63268" ]; then
+        SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_ETH_HWAPD_PWRSAVE is not set/CONFIG_BCM_ETH_HWAPD_PWRSAVE=y/'"   
+    fi
+fi
+
+if [ "$BRCM_HOSTMIPS_PWRSAVE" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_HOSTMIPS_PWRSAVE is not set/CONFIG_BCM_HOSTMIPS_PWRSAVE=y/'"   
+    if [ "$BRCM_CHIP" = "6368" -o "$BRCM_CHIP" = "6362" -o "$BRCM_CHIP" = "6328" -o "$BRCM_CHIP" = "6816" ]; then
+        SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_HOSTMIPS_PWRSAVE_TIMERS is not set/CONFIG_BCM_HOSTMIPS_PWRSAVE_TIMERS=y/'"
+    fi
+fi
+
+if [ "$BRCM_DDR_SELF_REFRESH_PWRSAVE" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_DDR_SELF_REFRESH_PWRSAVE is not set/CONFIG_BCM_DDR_SELF_REFRESH_PWRSAVE=y/'"   
+fi
+
+if [ "$BRCM_AVS_PWRSAVE" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_AVS_PWRSAVE is not set/CONFIG_BCM_AVS_PWRSAVE=y/'"   
+fi
+
+if [ "$BRCM_1V2REG_AUTO_SHUTDOWN" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_1V2REG_AUTO_SHUTDOWN is not set/CONFIG_BCM_1V2REG_AUTO_SHUTDOWN=y/'"   
+    SEDCMD="$SEDCMD -e 's/CONFIG_BCM_1V2REG_ALWAYS_SHUTDOWN=y/# CONFIG_BCM_1V2REG_ALWAYS_SHUTDOWN is not set/'"   
+    SEDCMD="$SEDCMD -e 's/CONFIG_BCM_1V2REG_NEVER_SHUTDOWN=y/# CONFIG_BCM_1V2REG_NEVER_SHUTDOWN is not set/'"   
+fi
+
+if [ "$BRCM_1V2REG_ALWAYS_SHUTDOWN" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/CONFIG_BCM_1V2REG_AUTO_SHUTDOWN=y/# CONFIG_BCM_1V2REG_AUTO_SHUTDOWN is not set/'"   
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_1V2REG_ALWAYS_SHUTDOWN is not set/CONFIG_BCM_1V2REG_ALWAYS_SHUTDOWN=y/'"   
+    SEDCMD="$SEDCMD -e 's/CONFIG_BCM_1V2REG_NEVER_SHUTDOWN=y/# CONFIG_BCM_1V2REG_NEVER_SHUTDOWN is not set/'"   
+fi
+
+if [ "$BRCM_1V2REG_NEVER_SHUTDOWN" != "" ]; then
+    SEDCMD="$SEDCMD -e 's/CONFIG_BCM_1V2REG_AUTO_SHUTDOWN=y/# CONFIG_BCM_1V2REG_AUTO_SHUTDOWN is not set/'"   
+    SEDCMD="$SEDCMD -e 's/CONFIG_BCM_1V2REG_ALWAYS_SHUTDOWN=y/# CONFIG_BCM_1V2REG_ALWAYS_SHUTDOWN is not set/'"   
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_1V2REG_NEVER_SHUTDOWN is not set/CONFIG_BCM_1V2REG_NEVER_SHUTDOWN=y/'"   
+fi
+
+if [ "$BRCM_STANDBY" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_CPLD1 is not set/CONFIG_BCM_CPLD1=y/'"
+fi
+
+if [ "$BRCM_DRIVER_TRNG" != "" ]; then
+if [ "$BRCM_CHIP" = "63268" -o "$BRCM_CHIP" = "6362" -o "$BRCM_CHIP" = "6368" -o "$BRCM_CHIP" = "6816" ]; then
+    SEDCMD="$SEDCMD -e 's/# CONFIG_HW_RANDOM is not set/CONFIG_HW_RANDOM=m/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_TRNG is not set/CONFIG_BCM_TRNG=m/'"
+    SEDCMD="$SEDCMD -e 's/# CONFIG_BCM9"$BRCM_CHIP"_TRNG_IMPL/CONFIG_BCM_TRNG_IMPL/'"
+fi
+fi
+
+driver_setup "WIRELESS" "WLAN"
+   
+if [ "$BRCM_DRIVER_WIRELESS" != "" ]; then
+if [ "$BRCM_IKOS" != "y" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_HOTPLUG is not set/CONFIG_HOTPLUG=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_SYSFS is not set/CONFIG_SYSFS=y/'"   
+fi
+if [ "$BRCM_WAPI" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_WAPI is not set/CONFIG_BCM_WAPI=y/'"
+fi
+
+if [ "$BRCM_WLALTBLD" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_WLALTBLD=/CONFIG_BCM_WLALTBLD=\"$BRCM_WLALTBLD\"/'"
+else
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_WLALTBLD/CONFIG_BCM_WLALTBLD/'"
+fi
+
+if [ "$BRCM_WLBRAND" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_$BRCM_WLBRAND is not set/CONFIG_BCM_$BRCM_WLBRAND=y/'"
+fi
+if [ "$BCM_WLIMPL" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/CONFIG_BCM_WLAN_IMPL_SELECT=""/CONFIG_BCM_WLAN_IMPL_SELECT=\"$BCM_WLIMPL\"/'"
+fi
+fi
+
+driver_setup "PCI" "PCI"
+if [ "$BRCM_DRIVER_PCI" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_PCI is not set/CONFIG_PCI=y/'"
+fi
+
+driver_setup "ISDN" "ISDN"
+if [ "$BRCM_DRIVER_ISDN" != "" ]; then
+   echo "BUILDING ISDN"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_ISDN is not set/CONFIG_BCM_ISDN=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_ISDN is not set/CONFIG_ISDN=m/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_ISDN_CAPI is not set/CONFIG_ISDN_CAPI=m/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_ISDN_CAPI_MIDDLEWARE is not set/CONFIG_ISDN_CAPI_MIDDLEWARE=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_ISDN_CAPI_CAPI20 is not set/CONFIG_ISDN_CAPI_CAPI20=m/'"
+fi
+
+if [ "$LINUX_DRIVER_USB_HOST" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_USB is not set/CONFIG_USB=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_USB_OHCI_HCD is not set/CONFIG_USB_OHCI_HCD=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_USB_EHCI_HCD is not set/CONFIG_USB_EHCI_HCD=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_USB_PRINTER is not set/CONFIG_USB_PRINTER=y/'"
+if [ "$LINUX_DRIVER_CDCETHER" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_USB_USBNET is not set/CONFIG_USB_USBNET=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_USB_NET_CDCETHER is not set/CONFIG_USB_NET_CDCETHER=y/'"
+fi
+if [ "$LINUX_KERNEL_USBMASS" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_HOTPLUG is not set/CONFIG_HOTPLUG=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_EXT3_FS is not set/CONFIG_EXT3_FS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_EXT3_FS_XATTR is not set/CONFIG_EXT3_FS_XATTR=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_SCSI is not set/CONFIG_SCSI=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_SCSI_PROC_FS is not set/CONFIG_SCSI_PROC_FS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BLK_DEV_SD is not set/CONFIG_BLK_DEV_SD=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_USB_STORAGE is not set/CONFIG_USB_STORAGE=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_FUSE_FS is not set/CONFIG_FUSE_FS=y/'"   
+   SEDCMD="$SEDCMD -e 's/# CONFIG_FAT_FS is not set/CONFIG_FAT_FS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_VFAT_FS is not set/CONFIG_VFAT_FS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_FAT_DEFAULT_CODEPAGE is not set/CONFIG_FAT_DEFAULT_CODEPAGE=437/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_FAT_DEFAULT_IOCHARSET is not set/CONFIG_FAT_DEFAULT_IOCHARSET=\"iso8859-1\"/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_SYSFS is not set/CONFIG_SYSFS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_RAMFS is not set/CONFIG_RAMFS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_PARTITION_ADVANCED is not set/CONFIG_PARTITION_ADVANCED=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_LDM_PARTITION is not set/CONFIG_LDM_PARTITION=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_MSDOS_PARTITION is not set/CONFIG_MSDOS_PARTITION=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NLS is not set/CONFIG_NLS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NLS_DEFAULT is not set/CONFIG_NLS_DEFAULT=\"iso8859-1\"/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NLS_CODEPAGE_437 is not set/CONFIG_NLS_CODEPAGE_437=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NLS_ISO8859_1 is not set/CONFIG_NLS_ISO8859_1=y/'"
+fi
+if [ "LINUX_KERNEL_USB_DEVICEFS" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_USB_DEVICEFS is not set/CONFIG_USB_DEVICEFS=y/'"
+fi
+if [ "$BRCM_DRIVER_WIRELESS_USBAP" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_WLAN_USBAP is not set/CONFIG_BCM_WLAN_USBAP=y/'"
+fi
+fi
+
+driver_setup "BCMDSP" "BCMDSP"
+driver_setup "PHONE" "ENDPOINT"
+if [ "$BRCM_CHIP" = "63268" -o "$BRCM_CHIP" = "6362" ]; then   
+   driver_setup "DECT" "DECT"
+   driver_setup "DECTSHIM" "DECTSHIM"
+fi
+
+driver_setup "BCMPROF" "BCMPROF"
+
+driver_setup "PROCFS" "PROCFS"
+driver_setup "P8021AG" "P8021AG"
+
+driver_setup "SERIAL" "SERIAL"
+if [ "$BRCM_DRIVER_SERIAL" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_SERIAL_CONSOLE is not set/CONFIG_BCM_SERIAL_CONSOLE=y/'" 
+fi
+
+# CFI Not needed anymore and all flash sectores used for rootfs are treated as ROM
+if [ "$BRCM_KERNEL_ROOTFS" = "squashfs" -o "$BRCM_KERNEL_ROOTFS" = "cramfs" ]; then
+ 
+ SEDCMD="$SEDCMD -e 's/# CONFIG_MTD_BLOCK_RO is not set/CONFIG_MTD_BLOCK_RO=y/'"
+ SEDCMD="$SEDCMD -e 's/# CONFIG_MTD_BCM963XX is not set/CONFIG_MTD_BCM963XX=y/'"
+ SEDCMD="$SEDCMD -e 's/# CONFIG_MTD_ROM is not set/CONFIG_MTD_ROM=y/'"
+ SEDCMD="$SEDCMD -e 's/# CONFIG_MTD_COMPLEX_MAPPINGS is not set/CONFIG_MTD_COMPLEX_MAPPINGS=y/'"
+
+fi
+
+if [ "$BRCM_KERNEL_ROOTFS" = "jffs2" ] ; then
+  # Configure JFFS2 filesystem
+  SEDCMD="$SEDCMD -e 's/# CONFIG_JFFS2_FS is not set/CONFIG_JFFS2_FS=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_JFFS2_FS_WRITEBUFFER is not set/CONFIG_JFFS2_FS_WRITEBUFFER=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_JFFS2_FS_DEBUG/CONFIG_JFFS2_FS_DEBUG/'"
+
+  # JFFS2 implies NAND flash support
+  SEDCMD="$SEDCMD -e 's/# CONFIG_MTD_CHAR is not set/CONFIG_MTD_CHAR=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_MTD_BLOCK is not set/CONFIG_MTD_BLOCK=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_MTD_PARTITIONS is not set/CONFIG_MTD_PARTITIONS=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_MTD_BRCMNAND is not set/CONFIG_MTD_BRCMNAND=y/'"
+
+if [ "$BRCM_CHIP" = "6362" -o "$BRCM_CHIP" = "6328" ]; then
+  SEDCMD="$SEDCMD -e 's/CONFIG_BRCMNAND_MINOR_VERS=1/CONFIG_BRCMNAND_MINOR_VERS=2/'"
+elif [ "$BRCM_CHIP" = "63268" ]; then
+  SEDCMD="$SEDCMD -e 's/# BRCMNAND_MTD_EXTENSION is not set/BRCMNAND_MTD_EXTENSION=y/'"
+  SEDCMD="$SEDCMD -e 's/CONFIG_BRCMNAND_MAJOR_VERS=2/CONFIG_BRCMNAND_MAJOR_VERS=4/'"
+  SEDCMD="$SEDCMD -e 's/CONFIG_BRCMNAND_MINOR_VERS=1/CONFIG_BRCMNAND_MINOR_VERS=0/'"
+fi
+
+  # Unconfigure SQUASHFS filesystem
+  SEDCMD="$SEDCMD -e 's/CONFIG_SQUASHFS=y/# CONFIG_SQUASHFS is not set/'"
+  SEDCMD="$SEDCMD -e 's/CONFIG_SQUASHFS_EMBEDDED=y/# CONFIG_SQUASHFS_EMBEDDED is not set/'"
+fi
+
+############################################################
+# 	Root file system config generation
+############################################################
+
+if [ "$BRCM_KERNEL_ROOTFS" = "nfs" ]; then
+  SEDCMD="$SEDCMD -e 's/CONFIG_BCM_ENET=m/CONFIG_BCM_ENET=y/'"
+
+  # Only permitted for builds that include Packet Flow source files
+  if [ "$PKTFLOW_SRC_COMPILE" = "y" ]; then
+    SEDCMD="$SEDCMD -e 's/CONFIG_BCM_PKTFLOW=m/CONFIG_BCM_PKTFLOW=y/'"
+    SEDCMD="$SEDCMD -e 's/CONFIG_BCM_PKTCMF=m/CONFIG_BCM_PKTCMF=y/'"
+  else
+    SEDCMD="$SEDCMD -e 's/CONFIG_BLOG=y/# CONFIG_BLOG is not set/'"
+    SEDCMD="$SEDCMD -e 's/CONFIG_BCM_PKTFLOW=m/# CONFIG_BCM_PKTFLOW is not set/'"
+    SEDCMD="$SEDCMD -e 's/CONFIG_BCM_PKTCMF=m/# CONFIG_BCM_PKTCMF is not set/'"
+  fi
+
+  if [ "$BRCM_NFS_ROOT_DIR" = "" ]; then
+     SEDCMD="$SEDCMD -e 's?# CONFIG_ROOT_NFS_DIR is not set?CONFIG_ROOT_NFS_DIR=\"$PROFILE_DIR/fs\"?'"
+  else
+     SEDCMD="$SEDCMD -e 's?# CONFIG_ROOT_NFS_DIR is not set?CONFIG_ROOT_NFS_DIR=\"$BRCM_NFS_ROOT_DIR\"?'"
+  fi
+  SEDCMD="$SEDCMD -e 's/# CONFIG_ROOTFS_NFS is not set/CONFIG_ROOTFS_NFS=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_NETWORK_FILESYSTEMS is not set/CONFIG_NETWORK_FILESYSTEMS=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_NFS_FS is not set/CONFIG_NFS_FS=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_ROOT_NFS is not set/CONFIG_ROOT_NFS=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_IP_PNP is not set/CONFIG_IP_PNP=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_SUNRPC is not set/CONFIG_SUNRPC=y/'"
+  SEDCMD="$SEDCMD -e 's/# CONFIG_LOCKD is not set/CONFIG_LOCKD=y/'"
+
+elif [ "$BRCM_KERNEL_ROOTFS" = "jffs2" ]; then
+  SEDCMD="$SEDCMD -e 's/# CONFIG_ROOTFS_JFFS2 is not set/CONFIG_ROOTFS_JFFS2=y/'"
+  if [ "$BRCM_ROOTFS_JFFS2_RW" = "" ]; then
+    ROOTDEV="root=mtd:rootfs ro rootfstype=jffs2"
+  else
+    ROOTDEV="root=mtd:rootfs rw rootfstype=jffs2"
+  fi
+  SEDCMD="$SEDCMD -e 's?.*CONFIG_ROOT_FLASHFS.*\$?CONFIG_ROOT_FLASHFS=\"$ROOTDEV\"?'"
+
+else
+  if [ "$BRCM_KERNEL_ROOTFS" = "squashfs" ]; then
+     SEDCMD="$SEDCMD -e 's/# CONFIG_ROOTFS_SQUASHFS is not set/CONFIG_ROOTFS_SQUASHFS=y/'"
+     SEDCMD="$SEDCMD -e 's/# CONFIG_SQUASHFS is not set/CONFIG_SQUASHFS=y/'"
+     SEDCMD="$SEDCMD -e 's/# CONFIG_SQUASHFS_EMBEDDED is not set/CONFIG_SQUASHFS_EMBEDDED=y/'"     
+     #SEDCMD="$SEDCMD -e 's/# CONFIG_ZLIB_FS_INFLATE is not set/CONFIG_ZLIB_FS_INFLATE=y/'"
+     SEDCMD="$SEDCMD -e 's/# CONFIG_LZMA_FS_INFLATE is not set/CONFIG_LZMA_FS_INFLATE=y/'"
+     SEDCMD="$SEDCMD -e 's/# CONFIG_SQUASHFS_BLOCK_SIZE=/CONFIG_SQUASHFS_BLOCK_SIZE=$BRCM_SQUASHFS_BLOCK_SIZE/'"
+     SEDCMD="$SEDCMD -e 's/# CONFIG_SQUASHFS_FRAGMENT_CACHE_SIZE=/CONFIG_SQUASHFS_FRAGMENT_CACHE_SIZE=$BRCM_SQUASHFS_FRAGMENT_CACHE_SIZE/'"
+  fi
+  if [ "$BRCM_KERNEL_ROOTFS" = "cramfs" ]; then
+     SEDCMD="$SEDCMD -e 's/# CONFIG_ROOTFS_CRAMFS is not set/CONFIG_ROOTFS_CRAMFS=y/'"
+     SEDCMD="$SEDCMD -e 's/# CONFIG_CRAMFS is not set/CONFIG_CRAMFS=y/'"
+     SEDCMD="$SEDCMD -e 's/# CONFIG_LZMA_FS_INFLATE is not set/CONFIG_LZMA_FS_INFLATE=y/'"
+  fi  
+
+  #ROOTDEV="root=/dev/mtdblock0 ro noinitrd"
+  ROOTDEV="root=31:0 ro noinitrd"
+  SEDCMD="$SEDCMD -e 's?# CONFIG_ROOT_FLASHFS is not set?CONFIG_ROOT_FLASHFS=\"$ROOTDEV\"?'"
+fi
+
+
+############################################################
+# 	Kernel Debug config generation
+############################################################
+
+if [ "$BRCM_KTOOLS" = "y" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_KTOOLS is not set/CONFIG_BRCM_KTOOLS=y/'"
+fi
+
+
+if [ "$BRCM_PMON" = "y" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_PMON is not set/CONFIG_PMON=y/'"
+fi
+
+if [ "$BRCM_BOUNCE" = "y" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_BOUNCE is not set/CONFIG_BRCM_BOUNCE=y/'"
+   if [ "$BRCM_BOUNCE_EXIT" = "y" ]; then
+      SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_BOUNCE_EXIT is not set/CONFIG_BRCM_BOUNCE_EXIT=y/'"
+   fi
+   if [ "$BRCM_BOUNCE_DATAPATH" = "y" ]; then
+      SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_BOUNCE_DATAPATH is not set/CONFIG_BRCM_BOUNCE_DATAPATH=y/'"
+   fi
+fi
+
+if [ "$BRCM_KERNEL_FTRACE" = "y" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_TRACEPOINTS is not set/CONFIG_TRACEPOINTS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_MARKERS is not set/CONFIG_MARKERS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_DEBUG_FS is not set/CONFIG_DEBUG_FS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_STACKTRACE is not set/CONFIG_STACKTRACE=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NOP_TRACER is not set/CONFIG_NOP_TRACER=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_TRACER_MAX_TRACE is not set/CONFIG_TRACER_MAX_TRACE=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_RING_BUFFER is not set/CONFIG_RING_BUFFER=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_TRACING is not set/CONFIG_TRACING=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_FUNCTION_TRACER is not set/CONFIG_FUNCTION_TRACER=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_FUNCTION_GRAPH_TRACER is not set/CONFIG_FUNCTION_GRAPH_TRACER=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_PREEMPT_TRACER is not set/CONFIG_PREEMPT_TRACER=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_SCHED_TRACER is not set/CONFIG_SCHED_TRACER=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_CONTEXT_SWITCH_TRACER is not set/CONFIG_CONTEXT_SWITCH_TRACER=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BINARY_PRINTF is not set/CONFIG_BINARY_PRINTF=y/'"
+fi
+
+if [ "$BRCM_KERNEL_KALLSYMS" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_KALLSYMS is not set/CONFIG_KALLSYMS=y/'"
+fi
+
+if [ "$BRCM_KERNEL_DEBUG" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_REMOTE_DEBUG is not set/CONFIG_REMOTE_DEBUG=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_GDB_CONSOLE is not set/CONFIG_GDB_CONSOLE=y/'"
+fi
+
+if [ "$BCM_COLORIZE_PRINTS" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_COLORIZE_PRINTS is not set/CONFIG_BCM_COLORIZE_PRINTS=y/'"
+fi
+
+if [ "$BCM_ASSERTS" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_ASSERTS is not set/CONFIG_BCM_ASSERTS=y/'"
+fi
+
+if [ "$BCM_FATAL_ASSERTS" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_FATAL_ASSERTS is not set/CONFIG_BCM_FATAL_ASSERTS=y/'"
+fi
+
+if [ "$BCM_KERNEL_HACKING" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_DEBUG_KERNEL is not set/CONFIG_DEBUG_KERNEL=y/'"
+fi
+
+if [ "$BCM_DEBUG_SPINLOCK" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_DEBUG_SPINLOCK is not set/CONFIG_DEBUG_SPINLOCK=y/'"
+fi
+
+if [ "$BCM_DEBUG_MUTEXES" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_DEBUG_MUTEXES is not set/CONFIG_DEBUG_MUTEXES=y/'"
+fi
+
+if [ "$BCM_RCU_CPU_STALL_DETECTOR" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_RCU_CPU_STALL_DETECTOR is not set/CONFIG_RCU_CPU_STALL_DETECTOR=y/'"
+fi
+
+if [ "$BCM_DEBUG_PREEMPT" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_DEBUG_PREEMPT is not set/CONFIG_DEBUG_PREEMPT=y/'"
+fi
+
+if [ "$BCM_MAGIC_SYSRQ" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_MAGIC_SYSRQ is not set/CONFIG_MAGIC_SYSRQ=y/'"
+fi
+
+if [ "$BRCM_KERNEL_VMTOOLS" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_VMTOOLS is not set/CONFIG_BRCM_VMTOOLS=y/'"
+fi
+
+if [ "$BRCM_KERNEL_CSTAT" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_CSTAT is not set/CONFIG_BRCM_CSTAT=y/'"
+fi
+
+if [ "$BRCM_KERNEL_OPROFILE" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_PROFILING is not set/CONFIG_PROFILING=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_OPROFILE is not set/CONFIG_OPROFILE=y/'"
+fi
+
+if [ "$BRCM_IKOS" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_IKOS is not set/CONFIG_BRCM_IKOS=y/'"
+fi
+
+
+############################################################
+# 	Kernel configuration
+############################################################
+
+if [ "$BRCM_SMP_EN" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_SMP is not set/CONFIG_SMP=y/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_KLOB=y/# CONFIG_KLOB is not set/'"
+fi
+
+if [ "$BRCM_KERNEL_PREEMPT" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/CONFIG_PREEMPT_NONE=y/# CONFIG_PREEMPT_NONE is not set/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_PREEMPT_VOLUNTARY=y/# CONFIG_PREEMPT_VOLUNTARY is not set/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_PREEMPT is not set/CONFIG_PREEMPT=y/'"
+fi
+
+general_setup CONFIG_BCM_SCHED_RT_PERIOD  $BRCM_SCHED_RT_PERIOD
+general_setup CONFIG_BCM_SCHED_RT_RUNTIME $BRCM_SCHED_RT_RUNTIME
+
+if [ "$BRCM_CONFIG_HIGH_RES_TIMERS" = "y" ]; then
+	SEDCMD="$SEDCMD -e 's/# CONFIG_HIGH_RES_TIMERS is not set/CONFIG_HIGH_RES_TIMERS=y/'"
+fi
+
+if [ "$BCM_HARDIRQ_COUNT_CYCLES" = "y" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BCM_HARDIRQ_COUNT_CYCLES is not set/CONFIG_BCM_HARDIRQ_COUNT_CYCLES=y/'"
+fi
+
+############################################################
+# 	Netfilter config generation
+############################################################
+NETFILTER_MODULES="NETFILTER_XTABLES IP_NF_IPTABLES IP_NF_FILTER NETFILTER_XT_TARGET_TCPMSS NETFILTER_XT_TARGET_SKIPLOG NETFILTER_NETLINK NETFILTER_NETLINK_QUEUE NETFILTER_XT_MATCH_MULTIPORT" 
+
+if [ "$BUILD_CONNTRACK_TOOLS" == "y" ]; then
+   NETFILTER_MODULES+=" NF_CT_NETLINK" 
+#CONNTRACK_EVENTS can be only be linked statically 
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NF_CONNTRACK_EVENTS is not set/CONFIG_NF_CONNTRACK_EVENTS=y/'"
+fi
+
+NF_NAT_MODULES="NF_CONNTRACK NF_CONNTRACK_IPV4 NF_NAT IP_NF_TARGET_MASQUERADE IP_NF_TARGET_REDIRECT"
+
+NF_FIREWALL_MODULES="NETFILTER_XT_MATCH_STATE NETFILTER_XT_MATCH_LIMIT IP_NF_TARGET_LOG" 
+
+NF_MANGLE_MODULES="IP_NF_MANGLE NETFILTER_XT_MATCH_MARK NETFILTER_XT_TARGET_MARK NETFILTER_XT_MATCH_DSCP NETFILTER_XT_TARGET_DSCP NETFILTER_XT_MATCH_MAC IP_NF_TARGET_IP"
+
+NF_DYNDSCP_MODULES="NF_CONNTRACK NF_CONNTRACK_IPV4 NF_DYNDSCP" 
+
+NF_PPPREMOTE_MODULES="NF_CONNTRACK NF_CONNTRACK_IPV4 NF_NAT NETFILTER_XT_MATCH_LIMIT" 
+
+NF_LOG_MODULES="IP_NF_TARGET_LOG"
+
+ALGS="FTP TFTP H323 SIP IRC PPTP SNMP RTSP PT"
+# ALGS="FTP TFTP TALK H323 H323_SIGNAL_PROXY SIP IRC PPTP SNMP RTSP"
+BCM_ALGS="IPSEC DTX8 WM PT"
+FTP_ALG_MODULES="NF_CONNTRACK_FTP NF_NAT_FTP"
+SIP_ALG_MODULES="NF_CONNTRACK_SIP NF_NAT_SIP"
+TFTP_ALG_MODULES="NF_CONNTRACK_TFTP NF_NAT_TFTP"
+H323_ALG_MODULES="NF_CONNTRACK_H323 NF_NAT_H323"
+# H323_SIGNAL_PROXY_ALG_MODULES="H323_SIGNAL_PROXY"
+IRC_ALG_MODULES="NF_CONNTRACK_IRC NF_NAT_IRC"
+# DTX8_ALG_MODULES="DTX8"
+# WM_ALG_MODULES="WM"
+PT_ALG_MODULES="NF_NAT_PT"
+PPTP_ALG_MODULES="NF_CONNTRACK_PPTP NF_NAT_PPTP"
+IPSEC_ALG_MODULES="NF_CONNTRACK_IPSEC NF_NAT_IPSEC"
+RTSP_ALG_MODULES="NF_CONNTRACK_RTSP NF_NAT_RTSP"
+SNMP_ALG_MODULES="NF_NAT_SNMP_BASIC"
+# TALK_ALG_MODULES="TALK NAT_TALK"
+
+
+if [ "$BRCM_KERNEL_NETFILTER" != "" ]; then
+
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NETFILTER is not set/CONFIG_NETFILTER=y/'"
+
+   for mod in $NETFILTER_MODULES; do
+      netfilter_setup $mod $BRCM_KERNEL_NETFILTER
+   done
+   # set up firewall related modules
+   if [ "$BRCM_KERNEL_NF_FIREWALL" != "" ]; then
+      for mod in $NF_FIREWALL_MODULES; do
+          netfilter_setup $mod $BRCM_KERNEL_NF_FIREWALL
+      done
+   fi
+
+   # set up packet mangling related modules
+   if [ "$BRCM_KERNEL_NF_MANGLE" != "" ]; then
+      for mod in $NF_MANGLE_MODULES; do
+          netfilter_setup $mod $BRCM_KERNEL_NF_MANGLE
+      done
+   fi
+
+   # set up dynamic tos mangling module
+   if [ "$BRCM_KERNEL_NF_DYNDSCP" != "" ]; then
+      for mod in $NF_DYNDSCP_MODULES; do
+          netfilter_setup $mod $BRCM_KERNEL_NF_DYNDSCP
+      done
+   fi
+
+   # set up NAT related modules
+   if [ "$BRCM_KERNEL_NF_NAT" != "" ]; then
+
+      # set up required NAT modules
+      for mod in $NF_NAT_MODULES; do
+            netfilter_setup $mod $BRCM_KERNEL_NF_NAT
+      done
+      #set up ALGs
+      for alg in $ALGS; do
+        ALG_NAME=BRCM_KERNEL_NF_NAT_ALG_"$alg"
+        ALG_MODULE_NAME="$alg"_ALG_MODULES
+        eval ALG_VAL=\$$ALG_NAME
+        eval ALG_MODULE_VAL=\$$ALG_MODULE_NAME
+        if [ "$ALG_VAL" != "" ]; then
+          for mod in $ALG_MODULE_VAL; do
+              netfilter_setup $mod $ALG_VAL
+          done
+        fi
+      done
+      #set up BCM_ALGs
+      for alg in $BCM_ALGS; do
+        ALG_NAME=BRCM_KERNEL_NF_NAT_ALG_"$alg"
+        ALG_MODULE_NAME="$alg"_ALG_MODULES
+        eval ALG_VAL=\$$ALG_NAME
+        eval ALG_MODULE_VAL=\$$ALG_MODULE_NAME
+        if [ "$ALG_VAL" != "" ]; then
+          for mod in $ALG_MODULE_VAL; do
+              netfilter_setup $mod "m"
+          done
+        fi
+      done
+
+      # set up modules for dynahelper
+      if [ "$BUILD_DYNAHELPER" != "" ]; then
+         netfilter_setup "IP_NF_QUEUE" "m"
+         netfilter_setup "IP_NF_RAW" "m"
+         netfilter_setup "NETFILTER_BRCM_DYNAHELPER" "y"
+      fi
+   fi
+
+   # set up logging module
+   if [ "$BRCM_KERNEL_NF_LOG" != "" ]; then
+      for mod in $NF_LOG_MODULES; do
+          netfilter_setup $mod $BRCM_KERNEL_NF_LOG
+      done
+   fi
+
+   # set up special remote access support modules in PPP IP extension mode
+   if [ "$BRCM_KERNEL_NF_PPPREMOTE" != "" ]; then
+      for mod in $NF_PPPREMOTE_MODULES; do
+          netfilter_setup $mod $BRCM_KERNEL_NF_PPPREMOTE
+      done
+   fi
+
+fi
+
+############################################################
+# 	Cryptographic config generation
+############################################################
+if [ "$BRCM_KERNEL_CRYPTO" != "" ]; then
+
+   # set up networking options
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_KEY is not set/CONFIG_NET_KEY=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_INET_AH is not set/CONFIG_INET_AH=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_INET_ESP is not set/CONFIG_INET_ESP=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_INET_XFRM_TUNNEL is not set/CONFIG_INET_XFRM_TUNNEL=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_INET_TUNNEL is not set/CONFIG_INET_TUNNEL=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_INET_XFRM_MODE_TRANSPORT is not set/CONFIG_INET_XFRM_MODE_TRANSPORT=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_INET_XFRM_MODE_TUNNEL is not set/CONFIG_INET_XFRM_MODE_TUNNEL=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_XFRM_USER is not set/CONFIG_XFRM_USER=y/'"
+   
+   # set up cryptographic options
+   SEDCMD="$SEDCMD -e 's/# CONFIG_CRYPTO is not set/CONFIG_CRYPTO=y/'"
+   if [ "$BRCM_KERNEL_CRYPTO_HMAC" != "" ]; then
+	  SEDCMD="$SEDCMD -e 's/# CONFIG_CRYPTO_HMAC is not set/CONFIG_CRYPTO_HMAC=y/'"
+   fi
+   if [ "$BRCM_KERNEL_CRYPTO_NULL" != "" ]; then
+	  SEDCMD="$SEDCMD -e 's/# CONFIG_CRYPTO_NULL is not set/CONFIG_CRYPTO_NULL=y/'"
+   fi
+   if [ "$BRCM_KERNEL_CRYPTO_MD5" != "" ]; then
+	  SEDCMD="$SEDCMD -e 's/# CONFIG_CRYPTO_MD5 is not set/CONFIG_CRYPTO_MD5=y/'"
+   fi
+   if [ "$BRCM_KERNEL_CRYPTO_SHA1" != "" ]; then
+	  SEDCMD="$SEDCMD -e 's/# CONFIG_CRYPTO_SHA1 is not set/CONFIG_CRYPTO_SHA1=y/'"
+   fi
+   if [ "$BRCM_KERNEL_CRYPTO_DES" != "" ]; then
+	  SEDCMD="$SEDCMD -e 's/# CONFIG_CRYPTO_DES is not set/CONFIG_CRYPTO_DES=y/'"
+   fi
+   if [ "$BRCM_KERNEL_CRYPTO_AES" != "" ]; then
+	  SEDCMD="$SEDCMD -e 's/# CONFIG_CRYPTO_AES is not set/CONFIG_CRYPTO_AES=y/'"
+   fi
+fi
+
+############################################################
+# 	Bridge Layer filter config generation
+############################################################
+if [ "$BUILD_EBTABLES" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_NF_EBTABLES is not set/CONFIG_BRIDGE_NF_EBTABLES=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_T_FILTER is not set/CONFIG_BRIDGE_EBT_T_FILTER=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_T_NAT is not set/CONFIG_BRIDGE_EBT_T_NAT=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_BROUTE is not set/CONFIG_BRIDGE_EBT_BROUTE=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_IP is not set/CONFIG_BRIDGE_EBT_IP=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_MARK is not set/CONFIG_BRIDGE_EBT_MARK=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_VLAN is not set/CONFIG_BRIDGE_EBT_VLAN=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_TIME is not set/CONFIG_BRIDGE_EBT_TIME=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_MARK_T is not set/CONFIG_BRIDGE_EBT_MARK_T=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_FTOS_T is not set/CONFIG_BRIDGE_EBT_FTOS_T=y/'"
+
+if [ "$BRCM_DRIVER_WIRELESS" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_WMM_MARK is not set/CONFIG_BRIDGE_EBT_WMM_MARK=y/'"
+fi
+
+fi
+
+
+############################################################
+# 	IGMP/MLD PROXY filter config generation
+############################################################
+if [ "$BUILD_MCAST_PROXY" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP_MROUTE is not set/CONFIG_IP_MROUTE=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP_MULTICAST is not set/CONFIG_IP_MULTICAST=y/'"
+
+   if [ "$BUILD_IPV6" != "" ]; then
+      SEDCMD="$SEDCMD -e 's/# CONFIG_IPV6_MROUTE is not set/CONFIG_IPV6_MROUTE=y/'"
+      SEDCMD="$SEDCMD -e 's/# CONFIG_IPV6_PIMSM_V2 is not set/CONFIG_IPV6_PIMSM_V2=y/'"
+   fi
+fi
+
+############################################################
+#       IGMP/MLD Snooping filter config generation
+############################################################
+if [ "$BUILD_MCAST_SNOOP" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_BR_IGMP_SNOOP is not set/CONFIG_BR_IGMP_SNOOP=y/'"
+   #SEDCMD="$SEDCMD -e 's/# CONFIG_BR_IGMP_SNOOP_SWITCH_PATCH is not set/CONFIG_BR_IGMP_SNOOP_SWITCH_PATCH=y/'"
+
+   if [ "$BUILD_IPV6" != "" ]; then
+      SEDCMD="$SEDCMD -e 's/# CONFIG_BR_MLD_SNOOP is not set/CONFIG_BR_MLD_SNOOP=y/'"
+   fi
+fi
+
+############################################################
+# 	Network QoS config generation
+############################################################
+if [ "$BRCM_KERNEL_NETQOS" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IFB is not set/CONFIG_IFB=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_SCHED is not set/CONFIG_NET_SCHED=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_SCH_CLK_JIFFIES is not set/CONFIG_NET_SCH_CLK_JIFFIES=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_SCH_CBQ is not set/CONFIG_NET_SCH_CBQ=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_SCH_HTB is not set/CONFIG_NET_SCH_HTB=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_SCH_PRIO is not set/CONFIG_NET_SCH_PRIO=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_SCH_SFQ is not set/CONFIG_NET_SCH_SFQ=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_SCH_TBF is not set/CONFIG_NET_SCH_TBF=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_SCH_DSMARK is not set/CONFIG_NET_SCH_DSMARK=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_SCH_INGRESS is not set/CONFIG_NET_SCH_INGRESS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_QOS is not set/CONFIG_NET_QOS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_ESTIMATOR is not set/CONFIG_NET_ESTIMATOR=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_CLS is not set/CONFIG_NET_CLS=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_CLS_TCINDEX is not set/CONFIG_NET_CLS_TCINDEX=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_CLS_ROUTE4 is not set/CONFIG_NET_CLS_ROUTE4=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_CLS_ROUTE is not set/CONFIG_NET_CLS_ROUTE=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_CLS_FW is not set/CONFIG_NET_CLS_FW=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_CLS_IND is not set/CONFIG_NET_CLS_IND=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_CLS_U32 is not set/CONFIG_NET_CLS_U32=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_CLS_ACT is not set/CONFIG_NET_CLS_ACT=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_ACT_POLICE is not set/CONFIG_NET_ACT_POLICE=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_ACT_GACT is not set/CONFIG_NET_ACT_GACT=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NET_ACT_MIRRED is not set/CONFIG_NET_ACT_MIRRED=y/'"
+fi
+
+############################################################
+# 	VLAN config generation
+############################################################
+if [ "$BUILD_VCONFIG" != "" -o "$BUILD_WANVLANMUX" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_VLAN_8021Q is not set/CONFIG_VLAN_8021Q=y/'"
+fi
+
+############################################################
+#       WAN operation over Ethernet
+############################################################
+if [ "$BUILD_ETHWAN" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_ETHWAN is not set/CONFIG_ETHWAN=y/'"
+fi
+
+
+############################################################
+# 	IPV6 support	
+############################################################
+if [ "$BUILD_IPV6" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IPV6 is not set/CONFIG_IPV6=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_INET6_TUNNEL is not set/CONFIG_INET6_TUNNEL=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IPV6_TUNNEL is not set/CONFIG_IPV6_TUNNEL=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP6_NF_IPTABLES is not set/CONFIG_IP6_NF_IPTABLES=m/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP6_NF_FILTER is not set/CONFIG_IP6_NF_FILTER=m/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP6_NF_MANGLE is not set/CONFIG_IP6_NF_MANGLE=m/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP6_NF_RAW is not set/CONFIG_IP6_NF_RAW=m/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP6_NF_QUEUE is not set/CONFIG_IP6_NF_QUEUE=m/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP6_NF_TARGET_LOG is not set/CONFIG_IP6_NF_TARGET_LOG=m/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP6_NF_TARGET_REJECT is not set/CONFIG_IP6_NF_TARGET_REJECT=m/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_NF_CONNTRACK_IPV6 is not set/CONFIG_NF_CONNTRACK_IPV6=m/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IPV6_MULTIPLE_TABLES is not set/CONFIG_IPV6_MULTIPLE_TABLES=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IPV6_SIT is not set/CONFIG_IPV6_SIT=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_TUN is not set/CONFIG_TUN=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IPV6_SIT_6RD is not set/CONFIG_IPV6_SIT_6RD=y/'"	
+
+   if [ "$BRCM_KERNEL_CRYPTO" != "" ]; then
+      # set up networking options
+      SEDCMD="$SEDCMD -e 's/# CONFIG_INET6_AH is not set/CONFIG_INET6_AH=y/'"
+      SEDCMD="$SEDCMD -e 's/# CONFIG_INET6_ESP is not set/CONFIG_INET6_ESP=y/'"
+      SEDCMD="$SEDCMD -e 's/# CONFIG_INET6_XFRM_MODE_TRANSPORT is not set/CONFIG_INET6_XFRM_MODE_TRANSPORT=y/'"
+      SEDCMD="$SEDCMD -e 's/# CONFIG_INET6_XFRM_MODE_TUNNEL is not set/CONFIG_INET6_XFRM_MODE_TUNNEL=y/'"
+   fi
+
+   if [ "$BUILD_EBTABLES" != "" ]; then
+      SEDCMD="$SEDCMD -e 's/# CONFIG_BRIDGE_EBT_IP6 is not set/CONFIG_BRIDGE_EBT_IP6=y/'"
+   fi
+fi
+
+############################################################
+#  Policy routing support
+############################################################
+if [ "$BUILD_IPROUTE2" != "" ]; then
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP_ADVANCED_ROUTER is not set/CONFIG_IP_ADVANCED_ROUTER=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_ASK_IP_FIB_HASH is not set/CONFIG_ASK_IP_FIB_HASH=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP_MULTIPLE_TABLES is not set/CONFIG_IP_MULTIPLE_TABLES=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP_ROUTE_FWMARK is not set/CONFIG_IP_ROUTE_FWMARK=y/'"
+elif [ "$BRCM_CHIP" = "6816" -a "$BUILD_GPONRG_OMCI_FULL" != "" ]; then   
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP_ADVANCED_ROUTER is not set/CONFIG_IP_ADVANCED_ROUTER=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_ASK_IP_FIB_HASH is not set/CONFIG_ASK_IP_FIB_HASH=y/'"
+   SEDCMD="$SEDCMD -e 's/# CONFIG_IP_MULTIPLE_TABLES is not set/CONFIG_IP_MULTIPLE_TABLES=y/'"
+fi
+
+############################################################
+#   To save the memory,  IPSEC is supported by default and if
+#   IPSEC is enabled, set the following related CONFIG_XXXX to 'y'.
+############################################################
+if [ "$BUILD_IPSEC_TOOLS" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_XFRM is not set/CONFIG_XFRM=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_XFRM_USER is not set/CONFIG_XFRM_USER=m/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_XFRM_MIGRATE is not set/CONFIG_XFRM_MIGRATE=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_NET_KEY is not set/CONFIG_NET_KEY=y/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_NET_KEY_MIGRATE is not set/CONFIG_NET_KEY_MIGRATE=y/'"
+fi
+
+###########################################################
+#   to enable l2tp
+###########################################################
+if [ "$BUILD_L2TPAC" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_L2TP is not set/CONFIG_L2TP=y/'"
+fi
+
+###########################################################
+#   to enable pptp
+###########################################################
+if [ "$BUILD_PPTPAC" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_PPTP is not set/CONFIG_PPTP=y/'"
+fi
+
+############################################################
+#   For smaller footprint board, CONFIG_PRINKT and CONFIG_BUG 
+#	can be left out. So change from "=y" to "is not set
+############################################################
+if [ "$ENABLE_PRINTK_AND_BUG" == "" ]; then
+SEDCMD="$SEDCMD -e 's/CONFIG_PRINTK=y/# CONFIG_PRINTK is not set/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_BUG=y/# CONFIG_BUG is not set/'"
+fi
+
+if [ "$BCM_DEFAULT_CONSOLE_LOGLEVEL" != "" ]; then
+SEDCMD="$SEDCMD -e 's/CONFIG_BCM_DEFAULT_CONSOLE_LOGLEVEL=8/CONFIG_BCM_DEFAULT_CONSOLE_LOGLEVEL=$BCM_DEFAULT_CONSOLE_LOGLEVEL/'"
+fi
+
+
+############################################################
+#   Set Maximum Sessions for Telnet and SSH(BSD Pseudo Terminals)
+############################################################
+if [ "$BRCM_MAX_BSD_PTP" != "" ]; then
+SEDCMD="$SEDCMD -e '/CONFIG_LEGACY_PTY_COUNT/ c\CONFIG_LEGACY_PTY_COUNT=$BRCM_MAX_BSD_PTP'"
+fi
+
+############################################################
+#   Fap Splitting
+############################################################
+if [ "$BCM_IUDMA_RX_SPLITTING" == "" -o "$BRCM_CHIP" = "63268" ]; then
+SEDCMD="$SEDCMD -e 's/CONFIG_BCM_PKTDMA_RX_SPLITTING=y/# CONFIG_BCM_PKTDMA_RX_SPLITTING is not set/'"
+fi
+if [ "$BCM_IUDMA_TX_SPLITTING" == "" -o "$BRCM_CHIP" = "63268" ]; then
+SEDCMD="$SEDCMD -e 's/CONFIG_BCM_PKTDMA_TX_SPLITTING=y/# CONFIG_BCM_PKTDMA_TX_SPLITTING is not set/'"
+fi
+
+
+############################################################
+#   Set Memory Restrictions
+############################################################
+if [ "$BRCM_MEMORY_RESTRICTION_OFF" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_MEMORY_RESTRICTION_OFF is not set/CONFIG_BRCM_MEMORY_RESTRICTION_OFF=y/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_16M=y/# CONFIG_BRCM_MEMORY_RESTRICTION_16M is not set/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_32M=y/# CONFIG_BRCM_MEMORY_RESTRICTION_32M is not set/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_64M=y/# CONFIG_BRCM_MEMORY_RESTRICTION_64M is not set/'"
+fi
+if [ "$BRCM_MEMORY_RESTRICTION_16M" != "" ]; then
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_OFF=y/# CONFIG_BRCM_MEMORY_RESTRICTION_OFF is not set/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_MEMORY_RESTRICTION_16M is not set/CONFIG_BRCM_MEMORY_RESTRICTION_16M=y/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_32M=y/# CONFIG_BRCM_MEMORY_RESTRICTION_32M is not set/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_64M=y/# CONFIG_BRCM_MEMORY_RESTRICTION_64M is not set/'"
+fi
+if [ "$BRCM_MEMORY_RESTRICTION_32M" != "" ]; then
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_OFF=y/# CONFIG_BRCM_MEMORY_RESTRICTION_OFF is not set/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_16M=y/# CONFIG_BRCM_MEMORY_RESTRICTION_16M is not set/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_MEMORY_RESTRICTION_32M is not set/CONFIG_BRCM_MEMORY_RESTRICTION_32M=y/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_64M=y/# CONFIG_BRCM_MEMORY_RESTRICTION_64M is not set/'"
+fi
+if [ "$BRCM_MEMORY_RESTRICTION_64M" != "" ]; then
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_OFF=y/# CONFIG_BRCM_MEMORY_RESTRICTION_OFF is not set/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_16M=y/# CONFIG_BRCM_MEMORY_RESTRICTION_16M is not set/'"
+SEDCMD="$SEDCMD -e 's/CONFIG_BRCM_MEMORY_RESTRICTION_32M=y/# CONFIG_BRCM_MEMORY_RESTRICTION_32M is not set/'"
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_MEMORY_RESTRICTION_64M is not set/CONFIG_BRCM_MEMORY_RESTRICTION_64M=y/'"
+fi
+############################################################
+#   Kernel Support for GPON OLT FPGA
+############################################################
+if [ "$BUILD_GPONOLT_TEST_UTILS" != "" ]; then
+SEDCMD="$SEDCMD -e 's/# CONFIG_BRCM_OLT_FPGA_RESTORE is not set/CONFIG_BRCM_OLT_FPGA_RESTORE=y/'"
+fi
+
+
+gen="sed $SEDCMD $TEMPLATE"
+#echo $gen
+#eval $gen
+eval $gen > $KERNEL_DIR/arch/mips/defconfig
+
+

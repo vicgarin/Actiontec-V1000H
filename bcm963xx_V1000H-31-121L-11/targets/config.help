@@ -1,0 +1,46 @@
+BUILD_FAPCTL
+  Build with or without FAP Control Utility userspace app.
+  If building with this app then "FAP Support" should also be enabled.
+  See "FAP Support" under "Packet Acceleration" (top level menu).
+END
+
+BUILD_SAMBA
+  Build with or without Samba (Windows interoperability) userspace app.
+END
+
+BRCM_UCLIBC
+DESKTOP_LINUX
+# Help text goes here
+END
+
+BRCM_ROOTFS_SQUASHFS
+BRCM_ROOTFS_JFFS2
+BRCM_ROOTFS_NFS
+# Help text goes here
+END
+
+BRCM_PHY_BONDING
+# Help text goes here
+END
+ 
+BUILD_PHY_ADSL
+BUILD_PHY_MULTIMODE
+BUILD_PHY_VDSL
+# Help text goes here
+END
+
+BRCM_ADSL_ANNEX_A
+BRCM_ADSL_ANNEX_B
+BRCM_ADSL_ANNEX_C
+BRCM_ADSL_SADSL
+# Help text goes here
+END
+
+USE_GPONRG_OMCI_LIGHT
+USE_GPONRG_OMCI_FULL
+USE_GONRG_NONE
+# Help text goes here
+END
+
+
+

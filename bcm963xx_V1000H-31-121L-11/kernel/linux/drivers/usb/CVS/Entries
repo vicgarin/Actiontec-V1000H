@@ -1,0 +1,18 @@
+D/atm////
+D/c67x00////
+D/class////
+D/core////
+D/gadget////
+D/host////
+D/image////
+D/misc////
+D/mon////
+D/musb////
+D/otg////
+D/serial////
+D/storage////
+D/wusbcore////
+/Kconfig/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/Makefile/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/README/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
+/usb-skeleton.c/1.1.1.1/Wed Feb 22 10:24:24 2012/-ko/Tmain_branch_sdk1204
