@@ -22,29 +22,29 @@ IMPORTANT: When entering the file name at the command prompt be sure to replace 
 $ su
                     (open a console window and login as "su")
 
-# mkdir /tmp/consumer
+ mkdir /tmp/consumer
                     (create a temp directory to install the source to)
 
-# cp bcm963xx_??.???.??_consumer_release_V1000H.tar.gz /tmp/consumer  
+$ cp bcm963xx_??.???.??_consumer_release_V1000H.tar.gz /tmp/consumer  
                     (copy source code to temp directory)
 
-# cd /tmp/consumer
+$ cd /tmp/consumer
                     (make /tmp/consumer the working directory)
 
-# tar xvfz bcm963xx_??.???.??_consumer_release_V1000H.tar.gz
+$ tar xvfz bcm963xx_??.???.??_consumer_release_V1000H.tar.gz
                     (decompress and extract the files so they can be installed)
 
-# ./consumer_install
+$ ./consumer_install
                     (install the source code and software tools)
 
 
 
 2. BUILD THE DESIRED IMAGE.
 
-# cd /opt/bcm963xx_router
+$ cd /opt/bcm963xx_router
                     (make /opt/bcm963xx_router the working directory)
 
-# make PROFILE=96368BGW
+$ make PROFILE=96368BGW
                     (running this "make" command will build the firmware image)
 
 
