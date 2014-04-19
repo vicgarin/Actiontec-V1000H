@@ -1,6 +1,6 @@
 HOW TO BUILD A FIRMWARE FOR THE BROADCOM BCM963XX V1000H DSL MODEM/ROUTER
 
-Warning!! These instructions do not build a fully functional modem/router. <b>You will need to add a way to access the device into the code, before compiling it. (i.e. SSH, Telnet, or some type of GUI)</b>
+Warning!! These instructions do not build a fully functional modem/router. <b>You will need to add a way to access the device into the code, before compiling it. (i.e. SSH, Telnet, or some type of GUI). Unless you want a brick :) </b>
 
 These Instructions Explain:
  
